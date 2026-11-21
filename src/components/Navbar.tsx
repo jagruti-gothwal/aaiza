@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import { Menu, X, Download, ChevronRight, Globe, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { usePathname } from "next/navigation";
@@ -63,7 +64,7 @@ export default function Navbar() {
       >
         <Link href="/" className="flex items-center gap-3 group flex-shrink-0">
           <div className="relative overflow-hidden rounded-2xl p-1 bg-white group-hover:scale-110 transition-transform">
-             <img src="/transparent/TREE-INDIA-LOGO-CDR.png" alt="Tree India" className="h-10 w-auto object-contain" />
+             <Image src="/transparent/TREE-INDIA-LOGO-CDR.png" alt="Tree India" width={160} height={40} priority className="h-10 w-auto object-contain" />
           </div>
         </Link>
         

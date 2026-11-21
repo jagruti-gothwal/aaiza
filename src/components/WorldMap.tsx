@@ -14,8 +14,8 @@ import { cn } from "@/lib/utils";
 
 import { useLanguage } from "@/context/LanguageContext";
 
-// TopoJSON for high fidelity world map
-const geoUrl = "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json";
+// TopoJSON for high fidelity world map (served locally for instant load)
+const geoUrl = "/data/countries-110m.json";
 
 const pinnedCountries = [
   { name: "Nigeria", coords: [8.6753, 9.0820], yOffset: -12, anchor: "start" },

@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import { Target, Eye, ShieldCheck, HeartHandshake, FileCheck, Anchor, Handshake, ShieldCheck as ShieldIcon, Factory, Globe } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
 
@@ -40,8 +41,8 @@ export default function AboutUs() {
 
         {/* Hero Image/Banner placeholder style */}
         <div className="w-full h-80 md:h-96 rounded-[3rem] mb-24 relative flex flex-col items-center justify-center overflow-hidden border-4 border-white shadow-[0_30px_60px_rgba(0,0,0,0.1)] bg-gradient-to-br from-[#014995] via-[#2e1065] to-[#ff5c8a] group">
-          <div className="absolute inset-0 bg-white/5 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] animate-pulse mix-blend-overlay"></div>
-          <img src="/TREE-INDIA-LOGO-CDR.jpg" alt="Tree India Corporate" className="h-40 relative z-10 bg-white rounded-3xl p-4 shadow-2xl group-hover:scale-105 transition-transform duration-500" />
+          <div className="absolute inset-0 bg-white/5 opacity-40 mix-blend-overlay"></div>
+          <Image src="/TREE-INDIA-LOGO-CDR.jpg" alt="Tree India Corporate" width={160} height={160} className="h-40 w-auto relative z-10 bg-white rounded-3xl p-4 shadow-2xl group-hover:scale-105 transition-transform duration-500" />
         </div>
 
         {/* Mission & Vision */}

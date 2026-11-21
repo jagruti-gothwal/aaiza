@@ -54,7 +54,7 @@ export default function Export() {
           <div className="absolute inset-0 bg-gradient-to-br from-[#014995] via-[#3b0764] to-[#ff5c8a] opacity-95"></div>
           <div className="absolute top-[-10%] right-[-5%] w-[60vw] h-[60vw] bg-pink-500/30 rounded-full blur-[120px] animate-pulse"></div>
           <div className="absolute bottom-[-10%] left-[-5%] w-[50vw] h-[50vw] bg-blue-400/20 rounded-full blur-[150px]"></div>
-          <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10 mix-blend-overlay"></div>
+          <div className="absolute inset-0 bg-white/5 opacity-10 mix-blend-overlay"></div>
           
           {/* Animated SVG Lines */}
           <svg className="absolute inset-0 w-full h-full opacity-20" viewBox="0 0 100 100" preserveAspectRatio="none">
@@ -437,7 +437,7 @@ export default function Export() {
               className="relative rounded-[5rem] bg-gradient-to-br from-[#014995] to-[#2e1065] p-12 lg:p-24 shadow-[0_80px_150px_rgba(1,73,149,0.3)] border-[16px] border-[#f8fafc]"
             >
                <div className="absolute inset-0 opacity-10 mix-blend-overlay">
-                  <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/grid-me.png')]"></div>
+                  <div className="absolute inset-0 bg-white/5"></div>
                </div>
                
                <div className="grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
@@ -504,7 +504,7 @@ export default function Export() {
            viewport={{ once: true }}
            className="max-w-4xl mx-auto bg-gradient-to-br from-[#ff5c8a] to-[#ff9800] rounded-[5rem] p-12 md:p-24 text-center shadow-[0_40px_100px_rgba(255,92,138,0.3)] relative overflow-hidden"
          >
-            <div className="absolute inset-0 bg-white/10 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/black-twill.png')]"></div>
+            <div className="absolute inset-0 bg-white/10 opacity-20 bg-white/5"></div>
             <h2 className="text-4xl md:text-7xl font-black text-white uppercase tracking-tighter mb-10 heading-font leading-none relative z-10">
               {t("exportReadyToExpand")}
             </h2>

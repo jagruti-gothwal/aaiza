@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Nunito, Fredoka } from "next/font/google";
+import { Nunito, Fredoka, Outfit } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -7,12 +7,14 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 
 import { LanguageProvider } from "@/context/LanguageContext";
 
-const nunito = Nunito({ subsets: ["latin"], variable: "--font-inter", weight: ["400", "500", "600", "700", "800", "900"] });
-const fredoka = Fredoka({ subsets: ["latin"], variable: "--font-outfit", weight: ["400", "500", "600", "700"] });
+const nunito = Nunito({ subsets: ["latin"], variable: "--font-inter", weight: ["400", "500", "600", "700", "800", "900"], display: "swap" });
+const fredoka = Fredoka({ subsets: ["latin"], variable: "--font-fredoka", weight: ["400", "500", "600", "700"], display: "swap" });
+const outfit = Outfit({ subsets: ["latin"], variable: "--font-outfit", weight: ["400", "500", "600", "700", "800", "900"], display: "swap" });
 
 const baseUrl = 'https://www.treeindiaexports.com';
 
 export const metadata: Metadata = {
+  metadataBase: new URL(baseUrl),
   title: "Tree India | Premium Confectionery & Beverage Export",
   description: "Global leader in confectionery export. Tree India delivers high-quality candies, biscuits, chocolates, and beverages to international markets with consistency and competitive pricing.",
   alternates: {
@@ -58,7 +60,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${nunito.variable} ${fredoka.variable} font-sans antialiased flex flex-col min-h-screen bg-slate-50 text-slate-900`}>
+      <body className={`${nunito.variable} ${fredoka.variable} ${outfit.variable} font-sans antialiased flex flex-col min-h-screen bg-slate-50 text-slate-900`}>
         <LanguageProvider>
           <Navbar />
           <script

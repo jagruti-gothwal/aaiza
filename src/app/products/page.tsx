@@ -26,79 +26,72 @@ interface ProductGroup {
   variants: ProductVariant[];
 }
 
+const groupProducts = (rawProducts: any[]) => {
+  const groups: { [key: string]: ProductGroup } = {};
+  const suffixes = [
+    "BLUEBERRY", "GUAVA", "MANGO", "ORANGE", "STRAWBERRY ICECREAM", "STRAWBERRY", "WATERMELON",
+    "Chocolate", "Strawberry", "Vanilla", "Orange", "Pineapple", "Mango", "Lemon", "Lychee", "Menthol", "Peanut", "Tamarind", "Pistachio",
+    "Jar", "Pouch", "Combine", "wheat", "Toffee", "Lollipop", "Lollipops", "Bubblegum", "Milky", "Fruity"
+  ];
+
+  const normalizationMap: { [key: string]: string } = {
+    "Maravilha": "Maravila",
+    "Creamy topper": "Creamy Topper",
+  };
+
+  rawProducts.forEach(p => {
+    let baseName = p.name;
+    Object.keys(normalizationMap).forEach(key => {
+      if (baseName.includes(key)) baseName = baseName.replace(key, normalizationMap[key]);
+    });
+
+    let flavor = "";
+    const sortedSuffixes = [...suffixes].sort((a, b) => b.length - a.length);
+
+    for (const suffix of sortedSuffixes) {
+      const regex = new RegExp(`\\s+${suffix}$`, 'i');
+      if (regex.test(baseName)) {
+        flavor = suffix;
+        baseName = baseName.replace(regex, '').trim();
+        break;
+      }
+    }
+
+    if (!groups[baseName]) {
+      groups[baseName] = { ...p, name: baseName, variants: [] };
+    }
+
+    if (flavor.toLowerCase() === "combine" || p.name.toLowerCase().includes("combine")) {
+      groups[baseName].image = p.image;
+    }
+
+    groups[baseName].variants.push({
+      id: p.id,
+      name: flavor || "Original",
+      image: p.image
+    });
+  });
+  return Object.values(groups);
+};
+
 export default function Products() {
   const { t, isRTL } = useLanguage();
   const [activeCategory, setActiveCategory] = useState("All");
   const [selectedProductIds, setSelectedProductIds] = useState<string[]>([]);
   const [detailProduct, setDetailProduct] = useState<ProductGroup | null>(null);
-  const [products, setProducts] = useState<ProductGroup[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
+  const [products, setProducts] = useState<ProductGroup[]>(() => groupProducts(staticProductsFallback));
+  const [isLoading, setIsLoading] = useState(false);
   const [activeImage, setActiveImage] = useState<string | null>(null);
 
   useEffect(() => {
-    const groupProducts = (rawProducts: any[]) => {
-      const groups: { [key: string]: ProductGroup } = {};
-      const suffixes = [
-        "BLUEBERRY", "GUAVA", "MANGO", "ORANGE", "STRAWBERRY ICECREAM", "STRAWBERRY", "WATERMELON",
-        "Chocolate", "Strawberry", "Vanilla", "Orange", "Pineapple", "Mango", "Lemon", "Lychee", "Menthol", "Peanut", "Tamarind", "Pistachio",
-        "Jar", "Pouch", "Combine", "wheat", "Toffee", "Lollipop", "Lollipops", "Bubblegum", "Milky", "Fruity"
-      ];
-
-      const normalizationMap: { [key: string]: string } = {
-        "Maravilha": "Maravila",
-        "Creamy topper": "Creamy Topper",
-      };
-
-      rawProducts.forEach(p => {
-        let baseName = p.name;
-        Object.keys(normalizationMap).forEach(key => {
-          if (baseName.includes(key)) baseName = baseName.replace(key, normalizationMap[key]);
-        });
-
-        let flavor = "";
-        const sortedSuffixes = [...suffixes].sort((a, b) => b.length - a.length);
-
-        for (const suffix of sortedSuffixes) {
-          const regex = new RegExp(`\\s+${suffix}$`, 'i');
-          if (regex.test(baseName)) {
-            flavor = suffix;
-            baseName = baseName.replace(regex, '').trim();
-            break;
-          }
-        }
-
-        if (!groups[baseName]) {
-          groups[baseName] = { ...p, name: baseName, variants: [] };
-        }
-
-        if (flavor.toLowerCase() === "combine" || p.name.toLowerCase().includes("combine")) {
-          groups[baseName].image = p.image;
-        }
-
-        groups[baseName].variants.push({
-          id: p.id,
-          name: flavor || "Original",
-          image: p.image
-        });
-      });
-      return Object.values(groups);
-    };
-
     const loadProducts = async () => {
       try {
-        setIsLoading(true);
         const res = await fetchAllProducts();
         if (res.success && res.products && res.products.length > 0) {
           setProducts(groupProducts(res.products));
-        } else {
-          // Fallback to static if DB is empty or fails
-          setProducts(groupProducts(staticProductsFallback));
         }
       } catch (err) {
         console.error("Error loading products:", err);
-        setProducts(groupProducts(staticProductsFallback));
-      } finally {
-        setIsLoading(false);
       }
     };
     loadProducts();

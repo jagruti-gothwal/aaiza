@@ -63,6 +63,9 @@ export async function checkAdminPassword(password: string) {
 }
 
 export async function fetchAllProducts() {
+  if (!process.env.MONGODB_URI) {
+    return { success: false, error: "MongoDB not configured" };
+  }
   try {
     const db = await getDb()
     const products = await db.collection("products").find({}).sort({ name: 1 }).toArray()

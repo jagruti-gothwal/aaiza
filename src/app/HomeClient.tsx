@@ -2,14 +2,19 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import dynamic from "next/dynamic";
 import { ArrowRight, CheckCircle2, TrendingUp, PackageSearch, Truck, Award, Globe, ShoppingBag, ShieldCheck, Zap, Download } from "lucide-react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
-import WorldMap from "@/components/WorldMap";
 import Certificates from "@/components/Certificates";
 import { Spotlight } from "@/components/ui/Spotlight";
 import { TextGenerateEffect } from "@/components/ui/TextGenerateEffect";
+
+const WorldMap = dynamic(() => import("@/components/WorldMap"), {
+  ssr: false,
+  loading: () => <div className="py-40 bg-white h-[600px] flex items-center justify-center" />
+});
 
 import { useLanguage } from "@/context/LanguageContext";
 
@@ -27,20 +32,6 @@ export default function Home() {
 
   return (
     <div className="flex flex-col min-h-screen bg-white font-sans text-slate-900 overflow-x-hidden relative">
-
-      {/* Super Candy Pro Aesthetic: Vibrant Gradients & Chunky Type */}
-      <style jsx global>{`
-        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@900&family=Fredoka+One&display=swap');
-        .heading-font { font-family: 'Outfit', sans-serif; letter-spacing: -0.04em; }
-        .wavy-divider { position: absolute; bottom: -1px; left: 0; width: 100%; line-height: 0; z-index: 40; pointer-events: none; }
-        .wavy-divider svg { display: block; width: 101%; height: 120px; }
-        .candy-shimmer {
-          background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4) 50%, rgba(255, 255, 255, 0) 100%);
-          background-size: 200% 100%;
-          animation: shimmer 3s infinite linear;
-        }
-        @keyframes shimmer { 0% { background-position: -150% 0%; } 100% { background-position: 150% 0%; } }
-      `}</style>
 
       {/* Cinematic Pink Hero Section */}
       <section className="relative min-h-[95vh] flex items-center justify-center pt-32 pb-44 z-10 overflow-visible bg-gradient-to-br from-[#ff5c8a] via-[#ff7eb3] to-[#ff5c8a]">
@@ -105,7 +96,7 @@ export default function Home() {
               src={p.src} 
               alt="Decorative Product" 
               fill 
-              priority 
+              loading="lazy" 
               className="object-contain" 
               sizes="(max-width: 1200px) 30vw, 400px"
             />

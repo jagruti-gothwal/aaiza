@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
 import { Mail, Phone, MapPin, Globe, ShieldCheck, Factory } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
 import { usePathname } from "next/navigation";
@@ -59,7 +60,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="col-span-1 md:col-span-4">
             <div className="bg-white p-6 inline-block mb-10 rounded-[2.5rem] shadow-2xl">
-              <img src="/transparent/TREE-INDIA-LOGO-CDR.png" alt="Tree India Logo" className="h-32 w-auto object-contain" />
+              <Image src="/transparent/TREE-INDIA-LOGO-CDR.png" alt="Tree India Logo" width={240} height={128} className="h-32 w-auto object-contain" />
             </div>
             <p className="text-[14px] text-white font-black leading-relaxed max-w-sm uppercase tracking-widest mb-6 px-4">
               {t("footerBrand")}

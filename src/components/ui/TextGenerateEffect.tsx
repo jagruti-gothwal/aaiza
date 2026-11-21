@@ -19,11 +19,11 @@ export const TextGenerateEffect = ({
         opacity: 1,
       },
       {
-        duration: 2,
-        delay: stagger(0.2),
+        duration: 0.4,
+        delay: stagger(0.03),
       }
     );
-  }, [animate]);
+  }, [words, animate]);
 
   const renderWords = () => {
     return (

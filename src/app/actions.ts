@@ -25,13 +25,15 @@ export async function submitInquiry(formData: FormData): Promise<{ success: bool
   let lastError = "";
 
   // 1. Save to MongoDB
-  try {
-    const db = await getDb()
-    await db.collection("inquiries").insertOne(data)
-    dbSuccess = true;
-  } catch (dbError: any) {
-    console.error("MongoDB Connection Crash:", dbError.message)
-    lastError = dbError.message;
+  if (process.env.MONGODB_URI) {
+    try {
+      const db = await getDb()
+      await db.collection("inquiries").insertOne(data)
+      dbSuccess = true;
+    } catch (dbError: any) {
+      console.error("MongoDB Connection Crash:", dbError.message)
+      lastError = dbError.message;
+    }
   }
 
   // 2. Send Email Notification
