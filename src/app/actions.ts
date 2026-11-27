@@ -39,20 +39,20 @@ export async function submitInquiry(formData: FormData): Promise<{ success: bool
   // 2. Send Email Notification
   try {
     const transporter = nodemailer.createTransport({
-      service: "yahoo",
+      service: "gmail",
       auth: {
-        user: process.env.EMAIL_USER || "tree.india@yahoo.com",
+        user: process.env.EMAIL_USER || "AAIZAFOODTRADING@GMAIL.COM",
         pass: process.env.EMAIL_PASS,
       },
     })
 
     const mailOptions = {
-      from: `"Tree India Website" <${process.env.EMAIL_USER || "tree.india@yahoo.com"}>`,
-      to: "tree.india@yahoo.com",
+      from: `"AAIZA FOOD TRADING FZCO Website" <${process.env.EMAIL_USER || "AAIZAFOODTRADING@GMAIL.COM"}>`,
+      to: "AAIZAFOODTRADING@GMAIL.COM",
       subject: `New B2B Inquiry: ${name}`,
       html: `
         <div style="font-family: sans-serif; padding: 20px; color: #333;">
-          <h2 style="color: #014995;">New Website Inquiry</h2>
+          <h2 style="color: #0B4F43;">New Website Inquiry</h2>
           <p><strong>Name:</strong> ${name}</p>
           <p><strong>Email:</strong> ${email}</p>
           <p><strong>Phone:</strong> ${phone}</p>
@@ -62,7 +62,7 @@ export async function submitInquiry(formData: FormData): Promise<{ success: bool
             ${message}
           </div>
           <hr style="margin-top: 30px; border: 0; border-top: 1px solid #eee;" />
-          <p style="font-size: 12px; color: #888;">This email was sent from the Tree India B2B Inquiry Form.</p>
+          <p style="font-size: 12px; color: #888;">This email was sent from the AAIZA FOOD TRADING FZCO B2B Inquiry Form.</p>
         </div>
       `,
     }

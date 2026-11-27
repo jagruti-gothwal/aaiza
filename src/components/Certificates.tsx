@@ -1,50 +1,60 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
+import { ShieldCheck } from "lucide-react";
+import { useLanguage } from "@/context/LanguageContext";
+import { cn } from "@/lib/utils";
 
 const certificates = [
-  { name: "FIEO", image: "/certificates/fieo.png", fallback: "FIEO" },
-  { name: "APEDA", image: "/certificates/apeda.png", fallback: "APEDA" },
-  { name: "GST", image: "/certificates/gst.png", fallback: "GST" },
-  { name: "IEC", image: "/certificates/iec.png", fallback: "IEC" },
-  { name: "FSSAI", image: "/certificates/fssai.png", fallback: "FSSAI" },
-  { name: "Udyam", image: "/certificates/udyam.png", fallback: "Udyam" },
+  { name: "FIEO", label: "Export Council" },
+  { name: "APEDA", label: "Agri & Food" },
+  { name: "GST", label: "Tax Verified" },
+  { name: "IEC", label: "Import-Export" },
+  { name: "FSSAI", label: "Food Safety" },
+  { name: "HALAL", label: "100% Certified" },
 ];
-
-import { useLanguage } from "@/context/LanguageContext";
 
 export default function Certificates() {
   const { t } = useLanguage();
   return (
-    <section className="py-14 bg-slate-50/50 backdrop-blur-sm overflow-hidden border-y border-slate-200/60 relative">
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-blue-50/10 to-transparent pointer-events-none"></div>
-      
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <section className="py-14 bg-[#FFFDF9] border-t border-[#0B4F43]/10 relative overflow-hidden">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-10">
-          <span className="text-[#C59238] font-black tracking-[0.4em] text-[10px] uppercase mb-5 block">{t("certTrust")}</span>
-          <h3 className="text-4xl md:text-5xl font-black text-slate-900 uppercase tracking-tighter heading-font leading-tight">
-            {t("certRecognized")} <br className="sm:hidden" />
-            <span className="bg-gradient-to-r from-[#0B4F43] to-[#C59238] bg-clip-text text-transparent">
-               {t("certCertified")}
-            </span>
+          <span className="inline-flex items-center gap-1.5 px-4 py-1 rounded-full bg-[#EAF4F1] border border-[#0B4F43]/15 text-[#0B4F43] font-black tracking-[0.2em] text-[10px] uppercase mb-3">
+            <ShieldCheck className="w-3.5 h-3.5 text-[#C59238]" />
+            {t("certTrust")}
+          </span>
+          <h3 className="text-2xl sm:text-4xl font-black text-[#1A2B27] uppercase tracking-tight heading-font leading-tight">
+            {t("certRecognized")}{" "}
+            <span className="text-[#C59238]">{t("certCertified")}</span>
           </h3>
         </div>
-        
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 md:gap-8">
+
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
           {certificates.map((cert, idx) => (
             <motion.div
               key={cert.name}
-              initial={{ opacity: 0, scale: 0.9, y: 20 }}
-              whileInView={{ opacity: 1, scale: 1, y: 0 }}
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: idx * 0.1, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-              whileHover={{ y: -8, transition: { duration: 0.3 } }}
-              className="flex items-center justify-center p-8 bg-white border border-slate-100 rounded-[2rem] shadow-sm hover:shadow-xl hover:border-[#C59238]/30 transition-all group relative overflow-hidden"
+              transition={{ delay: idx * 0.06, duration: 0.4 }}
+              whileHover={{ y: -5 }}
+              className={cn(
+                "flex flex-col items-center justify-center p-5 rounded-3xl border transition-all shadow-xs hover:shadow-md text-center",
+                idx % 2 === 0
+                  ? "bg-[#FAF8F2] border-[#C59238]/25 hover:border-[#C59238]"
+                  : "bg-[#EAF4F1]/70 border-[#0B4F43]/15 hover:border-[#0B4F43]"
+              )}
             >
-              <div className="absolute inset-0 bg-[#EAF4F1]/0 group-hover:bg-[#EAF4F1]/60 transition-colors"></div>
-              <div className="text-xl md:text-2xl font-black text-slate-400 select-none tracking-[0.1em] uppercase group-hover:text-[#0B4F43] transition-colors cursor-default heading-font relative z-10 w-full text-center">
+              <div className="w-9 h-9 rounded-xl bg-white flex items-center justify-center mb-2.5 shadow-xs">
+                <ShieldCheck className="w-4 h-4 text-[#C59238]" strokeWidth={2.5} />
+              </div>
+              <div className="text-lg font-black text-[#0B4F43] tracking-wider uppercase heading-font">
                 {cert.name}
               </div>
+              <span className="text-[9px] font-bold uppercase tracking-widest text-slate-500 mt-0.5">
+                {cert.label}
+              </span>
             </motion.div>
           ))}
         </div>

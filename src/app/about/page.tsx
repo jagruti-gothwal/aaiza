@@ -15,76 +15,90 @@ export default function AboutUs() {
   ];
 
   return (
-    <div className="pt-36 pb-36 min-h-screen relative overflow-hidden bg-[#faf7f2]">
-      {/* Decorative Glow Elements */}
-      <div className="absolute top-10 right-0 w-[45vw] h-[45vw] bg-amber-200/20 rounded-full blur-[130px] pointer-events-none"></div>
-      <div className="absolute bottom-10 left-0 w-[45vw] h-[45vw] bg-[#C59238]/15 rounded-full blur-[140px] pointer-events-none"></div>
+    <div className="pt-28 pb-20 min-h-screen relative overflow-hidden bg-[#FFFDF9]">
+      {/* Subtle Dubai Skyline Watermark */}
+      <div className="absolute top-0 inset-x-0 h-[420px] pointer-events-none opacity-[0.06]">
+        <Image src="/dubai/dubai-burj-sketch.jpg" alt="" fill className="object-cover object-bottom mix-blend-multiply" sizes="100vw" />
+      </div>
       
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
-        {/* Header Section */}
-        <div className="text-center max-w-3xl mx-auto mb-16 relative">
-          <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-amber-300/70 bg-white/80 backdrop-blur-md shadow-xs mb-6">
-            <Sparkles className="w-4 h-4 text-amber-600 animate-sparkle" />
-            <span className="text-amber-900 font-black text-[11px] tracking-[0.25em] uppercase">
-              🇦🇪 Dubai Corporate Identity • Global Sweet House
-            </span>
-          </div>
-
-          <h1 className="text-4xl sm:text-5xl md:text-7xl font-black text-[#0b192c] uppercase tracking-tight leading-[0.95] mb-6 heading-font">
-            {t("aboutTitle1")} <br className="hidden md:block"/>
-            <span className="gold-gradient-text">{t("aboutTitle2")}</span>
-          </h1>
-
-          <p className="text-base sm:text-lg text-slate-600 font-medium leading-relaxed max-w-2xl mx-auto">
-            {t("aboutHeaderDesc")} Operating with Dubai&apos;s trademark precision, we connect the finest confectionery craft with rapid maritime dispatch to 25+ global markets.
-          </p>
-        </div>
-
-        {/* Hero Banner Showcase */}
-        <div className="w-full h-72 md:h-84 rounded-[3rem] mb-20 relative flex flex-col items-center justify-center overflow-hidden border-4 border-white shadow-[0_25px_60px_rgba(212,175,55,0.15)] bg-gradient-to-r from-[#0D5E4F] via-[#0B4F43] to-[#07382F] group">
-          <div className="absolute inset-0 bg-radial from-amber-400/10 via-transparent to-transparent pointer-events-none"></div>
-          <div className="relative z-10 text-center px-6">
-            <div className="bg-white/95 px-6 py-4 inline-block mb-4 rounded-3xl">
-              <Image 
-                src="/aaiza-logo.jpg" 
-                alt="Tree India Dubai" 
-                width={200} 
-                height={55} 
-                className="h-12 w-auto object-contain" 
-              />
+        {/* Editorial Header Section */}
+        <div className="flex flex-col md:flex-row items-center justify-between gap-6 mb-12 relative pt-4">
+          <div className="relative text-center md:text-left max-w-2xl">
+            <svg viewBox="0 0 100 100" fill="#EAF4F1" className="w-24 h-24 absolute -top-6 -left-6 -z-10 hidden md:block">
+              <path d="M50 5 L58 18 L73 13 L73 28 L88 30 L81 44 L93 54 L80 63 L86 78 L71 78 L69 93 L55 86 L45 96 L36 83 L21 88 L22 73 L7 70 L14 56 L3 46 L16 37 L11 22 L26 22 L29 7 L43 15 Z" />
+            </svg>
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#0B4F43]/15 bg-[#EAF4F1] mb-4">
+              <Sparkles className="w-3.5 h-3.5 text-[#C59238]" />
+              <span className="text-[#0B4F43] font-black text-[10px] tracking-[0.2em] uppercase">
+                🇦🇪 Dubai Main Office • Global Sweet House
+              </span>
             </div>
-            <div className="text-[#f3e5ab] font-black text-xs uppercase tracking-[0.25em] mb-1">
-              Dubai Regional Trade Desk • Direct Jebel Ali Transit
-            </div>
-            <p className="text-white/70 text-xs font-medium max-w-md mx-auto">
-              Empowering bulk importers, supermarket distributors, and retail partners worldwide with certified Halal confectionery.
+
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-black text-[#1A2B27] uppercase tracking-tight leading-[0.95] mb-4 heading-font">
+              {t("aboutTitle1")} <br className="hidden md:block"/>
+              <span className="text-[#C59238]">{t("aboutTitle2")}</span>
+            </h1>
+
+            <p className="text-sm sm:text-base text-slate-600 font-medium leading-relaxed">
+              {t("aboutHeaderDesc")} Operating from Dubai, UAE, we connect the finest confectionery craft with rapid maritime dispatch to 25+ global markets.
             </p>
           </div>
+
+          <div className="flex flex-wrap items-center justify-center gap-2.5 shrink-0">
+            <span className="px-4 py-1.5 rounded-full bg-[#FAF8F2] border border-[#0B4F43]/15 text-[#0B4F43] text-xs font-bold -rotate-6 shadow-xs">#ourstory</span>
+            <span className="px-4 py-1.5 rounded-full bg-[#E6C260] text-[#06332B] text-xs font-black rotate-3 shadow-xs">#dubaihq</span>
+            <span className="px-4 py-1.5 rounded-full bg-[#9ED9CC] text-[#06332B] text-xs font-black -rotate-3 shadow-xs">#halal</span>
+          </div>
         </div>
 
-        {/* Mission & Vision */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
-          <div className="bg-white p-8 md:p-12 rounded-[2.5rem] border-2 border-amber-200/60 shadow-[0_15px_35px_rgba(212,175,55,0.06)] hover:border-amber-300 transition-all group relative overflow-hidden flex flex-col justify-center">
-            <div className="w-16 h-16 bg-amber-50 rounded-2xl flex items-center justify-center mb-6 text-amber-600 shadow-xs group-hover:bg-amber-400 group-hover:text-amber-950 transition-colors">
-              <Target className="w-8 h-8" strokeWidth={2.5} />
+        {/* Clean Editorial Logo + Dubai Banner */}
+        <div className="w-full rounded-[2.5rem] mb-12 p-6 sm:p-8 border border-[#0B4F43]/10 bg-gradient-to-br from-[#FAF8F2] via-white to-[#EAF4F1] flex flex-col md:flex-row items-center justify-between gap-6">
+          <div className="flex flex-col sm:flex-row items-center gap-5 text-center sm:text-left">
+            <Image
+              src="/aaiza-logo.jpg"
+              alt="AAIZA Food Trading FZCO"
+              width={180}
+              height={90}
+              className="h-20 w-auto object-contain mix-blend-multiply shrink-0"
+            />
+            <div>
+              <div className="text-[#0B4F43] font-black text-xs uppercase tracking-[0.2em] mb-1">
+                Dubai Regional Trade Desk • Direct Jebel Ali Transit
+              </div>
+              <p className="text-slate-600 text-xs sm:text-sm font-medium max-w-md">
+                Empowering bulk importers, supermarket distributors, and retail partners worldwide with certified Halal confectionery.
+              </p>
             </div>
-            <h2 className="text-3xl font-black text-[#0b192c] mb-4 uppercase tracking-tight heading-font">
+          </div>
+          <div className="relative w-full md:w-64 h-32 rounded-2xl overflow-hidden border border-[#C59238]/25 bg-[#FAF8F2] shrink-0">
+            <Image src="/dubai/dubai-museum-sketch.jpg" alt="Dubai Museum of the Future" fill className="object-cover mix-blend-multiply" sizes="260px" />
+          </div>
+        </div>
+
+        {/* Mission & Vision (Pastel Rounded-Square Cards) */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-14">
+          <div className="bg-[#EAF4F1] p-7 md:p-9 rounded-[2.2rem] border border-[#0B4F43]/10 relative overflow-hidden flex flex-col justify-center">
+            <div className="w-12 h-12 bg-white rounded-2xl flex items-center justify-center mb-4 text-[#0B4F43] shadow-xs">
+              <Target className="w-6 h-6" strokeWidth={2.5} />
+            </div>
+            <h2 className="text-2xl font-black text-[#1A2B27] mb-2 uppercase tracking-tight heading-font">
               {t("aboutMissionTitle")}
             </h2>
-            <p className="text-sm md:text-base text-slate-600 font-medium leading-relaxed">
+            <p className="text-xs sm:text-sm text-slate-600 font-medium leading-relaxed">
               {t("aboutMissionDesc")}
             </p>
           </div>
 
-          <div className="bg-gradient-to-br from-[#0B4F43] to-[#07382F] p-8 md:p-12 rounded-[2.5rem] border-2 border-amber-400/40 shadow-[0_20px_45px_rgba(11,25,44,0.3)] transition-all group relative overflow-hidden text-white flex flex-col justify-center">
-            <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mb-6 text-[#E6C260] shadow-lg border border-white/10">
-              <Eye className="w-8 h-8" strokeWidth={2.5} />
+          <div className="bg-[#F5DFB0] p-7 md:p-9 rounded-[2.2rem] border border-[#C59238]/25 relative overflow-hidden flex flex-col justify-center">
+            <div className="w-12 h-12 bg-white rounded-2xl flex items-center justify-center mb-4 text-[#C59238] shadow-xs">
+              <Eye className="w-6 h-6" strokeWidth={2.5} />
             </div>
-            <h2 className="text-3xl font-black text-[#f3e5ab] mb-4 uppercase tracking-tight heading-font">
+            <h2 className="text-2xl font-black text-[#06332B] mb-2 uppercase tracking-tight heading-font">
               {t("aboutVisionTitle")}
             </h2>
-            <p className="text-sm md:text-base text-slate-300 font-medium leading-relaxed">
+            <p className="text-xs sm:text-sm text-[#083830]/85 font-medium leading-relaxed">
               {t("aboutVisionDesc")}
             </p>
           </div>

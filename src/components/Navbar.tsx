@@ -55,20 +55,20 @@ export default function Navbar() {
   return (
     <>
       <motion.div
-        initial={{ y: -100, opacity: 0 }}
-        animate={{ y: visible ? 0 : -100, opacity: visible ? 1 : 0 }}
+        initial={{ y: -80, opacity: 0 }}
+        animate={{ y: visible ? 0 : -80, opacity: visible ? 1 : 0 }}
         transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
         className={cn(
-          "flex w-full max-w-7xl fixed top-4 md:top-6 inset-x-4 md:mx-auto border shadow-sm border-[#C59238]/20 rounded-full bg-white/90 backdrop-blur-2xl z-[5000] px-4 md:px-8 py-3.5 items-center justify-between transition-all"
+          "flex w-full max-w-6xl fixed top-3 md:top-4 inset-x-4 md:mx-auto rounded-full bg-[#FAF8F2]/90 backdrop-blur-xl border border-[#0B4F43]/10 z-[5000] px-4 md:px-6 py-2.5 items-center justify-between transition-all shadow-[0_4px_20px_rgba(11,79,67,0.06)]"
         )}
       >
-        <Link href="/" className="flex items-center gap-3 group flex-shrink-0">
+        <Link href="/" className="flex items-center gap-2 group flex-shrink-0">
           <div className="relative overflow-hidden px-1 py-0.5 group-hover:scale-105 transition-transform">
-             <Image src="/aaiza-logo.jpg" alt="AAIZA Food Trading FZCO" width={140} height={44} priority className="h-10 w-auto object-contain mix-blend-multiply" />
+             <Image src="/aaiza-logo.jpg" alt="AAIZA Food Trading FZCO" width={130} height={40} priority className="h-9 w-auto object-contain mix-blend-multiply" />
           </div>
         </Link>
         
-        <div className="hidden lg:flex items-center space-x-2 flex-grow justify-center px-4">
+        <div className="hidden lg:flex items-center gap-2 flex-grow justify-center px-4">
           {navLinks.map((navItem, idx: number) => {
             const isActive = pathname === navItem.href;
             return (
@@ -78,8 +78,10 @@ export default function Navbar() {
                 onMouseEnter={() => setHoveredIndex(idx)}
                 onMouseLeave={() => setHoveredIndex(null)}
                 className={cn(
-                  "relative items-center flex text-[13px] font-black px-6 py-2.5 rounded-full transition-all duration-300 uppercase tracking-widest",
-                  isActive ? "text-white bg-[#0B4F43]" : "text-[#0B4F43] hover:text-[#06332B]"
+                  "relative items-center flex text-[11px] font-bold px-4 py-1.5 rounded-full transition-all duration-200 capitalize tracking-wide border",
+                  isActive
+                    ? "bg-[#EAF4F1] text-[#0B4F43] border-[#0B4F43]/25 shadow-xs"
+                    : "bg-white text-slate-600 border-slate-200/90 hover:border-[#C59238] hover:text-[#0B4F43]"
                 )}
               >
                 <span className="relative z-10 hidden sm:block">{navItem.name}</span>
@@ -88,16 +90,16 @@ export default function Navbar() {
           })}
         </div>
 
-        <div className="flex items-center gap-3 flex-shrink-0">
-          {/* Language Selector (Playful) */}
+        <div className="flex items-center gap-2.5 flex-shrink-0">
+          {/* Language Selector */}
           <div className="relative">
             <button 
               onClick={() => setLangOpen(!langOpen)}
-              className="flex items-center gap-2 px-4 py-2.5 rounded-full bg-white/40 hover:bg-white/60 transition-colors text-[#0B4F43] font-black text-[12px] uppercase tracking-wider"
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white border border-slate-200 hover:border-[#C59238] transition-colors text-[#0B4F43] font-bold text-[11px] uppercase tracking-wider"
             >
-              <Globe className="w-4 h-4" />
+              <Globe className="w-3.5 h-3.5 text-[#C59238]" />
               <span>{language}</span>
-              <ChevronDown className={cn("w-3.5 h-3.5 transition-transform", langOpen && "rotate-180")} />
+              <ChevronDown className={cn("w-3 h-3 transition-transform", langOpen && "rotate-180")} />
             </button>
             
             <AnimatePresence>
@@ -106,15 +108,15 @@ export default function Navbar() {
                   initial={{ opacity: 0, y: 10, scale: 0.95 }}
                   animate={{ opacity: 1, y: 0, scale: 1 }}
                   exit={{ opacity: 0, y: 10, scale: 0.95 }}
-                  className="absolute top-full mt-4 right-0 bg-white border-none rounded-[2rem] shadow-2xl p-2 min-w-[180px] z-[6000]"
+                  className="absolute top-full mt-3 right-0 bg-white border border-slate-100 rounded-2xl shadow-xl p-1.5 min-w-[160px] z-[6000]"
                 >
                   {languages.map((l) => (
                     <button
                       key={l.code}
                       onClick={() => { setLanguage(l.code); setLangOpen(false); }}
                       className={cn(
-                        "w-full text-left px-5 py-3 text-[12px] font-black uppercase tracking-widest rounded-2xl transition-all",
-                        language === l.code ? "bg-[#0B4F43] text-white" : "text-slate-600 hover:bg-slate-50"
+                        "w-full text-left px-4 py-2 text-[11px] font-bold uppercase tracking-wider rounded-xl transition-all",
+                        language === l.code ? "bg-[#0B4F43] text-white" : "text-slate-600 hover:bg-[#FAF8F2]"
                       )}
                     >
                       {l.name}
@@ -125,7 +127,7 @@ export default function Navbar() {
             </AnimatePresence>
           </div>
           
-          <Link href="/contact" className="hidden sm:flex items-center gap-2 bg-[#0B4F43] text-white text-[12px] font-black px-8 py-3 rounded-full hover:bg-[#06332B] transition-all hover:scale-105 active:scale-95 shadow-lg uppercase tracking-widest border border-[#C59238]/30">
+          <Link href="/contact" className="hidden sm:flex items-center gap-2 bg-[#0B4F43] text-white text-[11px] font-bold px-5 py-2 rounded-full hover:bg-[#06332B] transition-all hover:-translate-y-0.5 active:translate-y-0 shadow-[0_3px_0_#06332B] tracking-wide">
             {t("navQuote")}
           </Link>
           

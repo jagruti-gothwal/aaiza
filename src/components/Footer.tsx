@@ -14,127 +14,133 @@ export default function Footer() {
   }
 
   return (
-    <footer className="bg-[#0B4F43] border-none font-sans text-white relative overflow-visible">
-      <div className="absolute top-0 left-0 w-full h-[150px] -translate-y-[149px] pointer-events-none">
-        <svg viewBox="0 0 1440 100" preserveAspectRatio="none" className="w-full h-full">
-           <path fill="#0B4F43" d="M0,64L80,74.7C160,85,320,107,480,101.3C640,96,800,64,960,53.3C1120,43,1280,53,1360,58.7L1440,64L1440,100L1360,100C1280,100,1120,100,960,100C800,100,640,100,480,100C320,100,160,100,80,100L0,100Z"></path>
-        </svg>
-      </div>
-      
-      {/* Top Footer Banner */}
-      <div className="bg-white/10 backdrop-blur-md py-10 px-4 sm:px-6 lg:px-8 border-b border-[#C59238]/20">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 text-center md:text-left">
-          <div className="flex flex-col md:flex-row items-center gap-5 group">
-             <div className="w-16 h-16 rounded-[1.5rem] bg-white flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
-               <ShieldCheck className="w-8 h-8 text-[#0B4F43]" strokeWidth={2.5} />
-             </div>
-             <div>
-               <h3 className="text-[12px] font-black uppercase tracking-[0.2em] text-[#E6C260] mb-1">{t("footerISO")}</h3>
-               <p className="text-sm font-bold text-white/80">{t("footerISOList")}</p>
-             </div>
+    <footer className="bg-[#FAF8F2] border-t border-[#0B4F43]/10 font-sans text-[#1A2B27] relative overflow-hidden">
+      {/* Top Trust Pills Strip */}
+      <div className="bg-white/70 border-b border-[#0B4F43]/10 py-8 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 text-center md:text-left">
+          <div className="flex flex-col md:flex-row items-center gap-4 p-4 rounded-3xl bg-[#EAF4F1] border border-[#0B4F43]/10">
+            <div className="w-12 h-12 rounded-2xl bg-white flex items-center justify-center shadow-xs shrink-0">
+              <ShieldCheck className="w-6 h-6 text-[#0B4F43]" strokeWidth={2.5} />
+            </div>
+            <div>
+              <h3 className="text-[11px] font-black uppercase tracking-[0.18em] text-[#0B4F43] mb-0.5">{t("footerISO")}</h3>
+              <p className="text-xs font-bold text-slate-600">{t("footerISOList")}</p>
+            </div>
           </div>
-          <div className="flex flex-col md:flex-row items-center gap-5 group">
-             <div className="w-16 h-16 rounded-[1.5rem] bg-white flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
-               <Factory className="w-8 h-8 text-[#0B4F43]" strokeWidth={2.5} />
-             </div>
-             <div>
-               <h3 className="text-[12px] font-black uppercase tracking-[0.2em] text-[#E6C260] mb-1">{t("footerBulk")}</h3>
-               <p className="text-sm font-bold text-white/80">{t("footerBulkList")}</p>
-             </div>
+
+          <div className="flex flex-col md:flex-row items-center gap-4 p-4 rounded-3xl bg-[#F5DFB0]/60 border border-[#C59238]/20">
+            <div className="w-12 h-12 rounded-2xl bg-white flex items-center justify-center shadow-xs shrink-0">
+              <Factory className="w-6 h-6 text-[#C59238]" strokeWidth={2.5} />
+            </div>
+            <div>
+              <h3 className="text-[11px] font-black uppercase tracking-[0.18em] text-[#06332B] mb-0.5">{t("footerBulk")}</h3>
+              <p className="text-xs font-bold text-slate-600">{t("footerBulkList")}</p>
+            </div>
           </div>
-          <div className="flex flex-col md:flex-row items-center gap-5 group">
-             <div className="w-16 h-16 rounded-[1.5rem] bg-white flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
-               <Globe className="w-8 h-8 text-[#0B4F43]" strokeWidth={2.5} />
-             </div>
-             <div>
-               <h3 className="text-[12px] font-black uppercase tracking-[0.2em] text-[#E6C260] mb-1">{t("footerChain")}</h3>
-               <p className="text-sm font-bold text-white/80">{t("footerChainList")}</p>
-             </div>
+
+          <div className="flex flex-col md:flex-row items-center gap-4 p-4 rounded-3xl bg-[#9ED9CC]/45 border border-[#0B4F43]/10">
+            <div className="w-12 h-12 rounded-2xl bg-white flex items-center justify-center shadow-xs shrink-0">
+              <Globe className="w-6 h-6 text-[#0B4F43]" strokeWidth={2.5} />
+            </div>
+            <div>
+              <h3 className="text-[11px] font-black uppercase tracking-[0.18em] text-[#0B4F43] mb-0.5">{t("footerChain")}</h3>
+              <p className="text-xs font-bold text-slate-600">{t("footerChainList")}</p>
+            </div>
           </div>
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 lg:gap-8 text-center md:text-left">
-          
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-10 lg:gap-8 text-center md:text-left">
+
           {/* Brand */}
-          <div className="col-span-1 md:col-span-4">
-            <div className="bg-white/95 px-5 py-3 inline-block mb-6 rounded-2xl">
-              <Image src="/aaiza-logo.jpg" alt="AAIZA Food Trading FZCO" width={200} height={100} className="h-24 w-auto object-contain mix-blend-multiply" />
+          <div className="col-span-1 md:col-span-4 flex flex-col items-center md:items-start">
+            <div className="mb-4">
+              <Image
+                src="/aaiza-logo.jpg"
+                alt="AAIZA Food Trading FZCO"
+                width={180}
+                height={90}
+                className="h-20 w-auto object-contain mix-blend-multiply"
+              />
             </div>
-            <p className="text-[14px] text-white font-black leading-relaxed max-w-sm uppercase tracking-widest mb-6 px-4">
+            <p className="text-xs text-slate-600 font-bold leading-relaxed max-w-xs uppercase tracking-wider">
               {t("footerBrand")}
             </p>
           </div>
 
           {/* Quick Links */}
           <div className="col-span-1 md:col-span-2">
-            <h3 className="text-white font-black mb-8 text-[12px] uppercase tracking-[0.3em] heading-font">{t("footerOrg")}</h3>
-            <ul className="space-y-5">
-              <li><Link href="/about" className="text-[11px] font-black text-white/80 hover:text-white transition-colors uppercase tracking-widest">{t("navAbout")}</Link></li>
-              <li><Link href="/export" className="text-[11px] font-black text-white/80 hover:text-white transition-colors uppercase tracking-widest">{t("navExport")}</Link></li>
-              <li><Link href="/products" className="text-[11px] font-black text-white/80 hover:text-white transition-colors uppercase tracking-widest">{t("navProducts")}</Link></li>
-              <li><Link href="/contact" className="text-[11px] font-black text-white/80 hover:text-white transition-colors uppercase tracking-widest">{t("navContact")}</Link></li>
+            <h3 className="text-[#0B4F43] font-black mb-5 text-[11px] uppercase tracking-[0.25em] heading-font">{t("footerOrg")}</h3>
+            <ul className="space-y-3">
+              <li><Link href="/about" className="text-xs font-bold text-slate-600 hover:text-[#0B4F43] transition-colors uppercase tracking-wider">{t("navAbout")}</Link></li>
+              <li><Link href="/export" className="text-xs font-bold text-slate-600 hover:text-[#0B4F43] transition-colors uppercase tracking-wider">{t("navExport")}</Link></li>
+              <li><Link href="/products" className="text-xs font-bold text-slate-600 hover:text-[#0B4F43] transition-colors uppercase tracking-wider">{t("navProducts")}</Link></li>
+              <li><Link href="/contact" className="text-xs font-bold text-slate-600 hover:text-[#0B4F43] transition-colors uppercase tracking-wider">{t("navContact")}</Link></li>
             </ul>
           </div>
 
           {/* Categories */}
           <div className="col-span-1 md:col-span-3">
-            <h3 className="text-white font-black mb-8 text-[12px] uppercase tracking-[0.3em] heading-font">{t("footerCommodities")}</h3>
-            <ul className="space-y-5">
-              <li><Link href="/products" className="text-[11px] font-black text-white/80 hover:text-white transition-colors uppercase tracking-widest">{t("footerBiscuits")}</Link></li>
-              <li><Link href="/products" className="text-[11px] font-black text-white/80 hover:text-white transition-colors uppercase tracking-widest">{t("footerCandies")}</Link></li>
-              <li><Link href="/products" className="text-[11px] font-black text-white/80 hover:text-white transition-colors uppercase tracking-widest">{t("footerLollipops")}</Link></li>
-              <li><Link href="/products" className="text-[11px] font-black text-white/80 hover:text-white transition-colors uppercase tracking-widest">{t("footerGums")}</Link></li>
+            <h3 className="text-[#0B4F43] font-black mb-5 text-[11px] uppercase tracking-[0.25em] heading-font">{t("footerCommodities")}</h3>
+            <ul className="space-y-3">
+              <li><Link href="/products" className="text-xs font-bold text-slate-600 hover:text-[#0B4F43] transition-colors uppercase tracking-wider">{t("footerBiscuits")}</Link></li>
+              <li><Link href="/products" className="text-xs font-bold text-slate-600 hover:text-[#0B4F43] transition-colors uppercase tracking-wider">{t("footerCandies")}</Link></li>
+              <li><Link href="/products" className="text-xs font-bold text-slate-600 hover:text-[#0B4F43] transition-colors uppercase tracking-wider">{t("footerLollipops")}</Link></li>
+              <li><Link href="/products" className="text-xs font-bold text-slate-600 hover:text-[#0B4F43] transition-colors uppercase tracking-wider">{t("footerGums")}</Link></li>
             </ul>
           </div>
 
           {/* Contact Details */}
           <div className="col-span-1 md:col-span-3 text-center md:text-left">
-            <h3 className="text-white font-black mb-8 text-[12px] uppercase tracking-[0.3em] heading-font">{t("footerComm")}</h3>
-            <ul className="space-y-6">
-              <li className="flex flex-col md:flex-row items-center md:items-start gap-4">
-                <MapPin className="w-5 h-5 text-white shrink-0" />
-                <span className="text-[11px] font-black text-white uppercase tracking-widest leading-loose">AAIZA Food Trading FZCO • Dubai, United Arab Emirates (Main Office)</span>
+            <h3 className="text-[#0B4F43] font-black mb-5 text-[11px] uppercase tracking-[0.25em] heading-font">{t("footerComm")}</h3>
+            <ul className="space-y-4">
+              <li className="flex flex-col md:flex-row items-center md:items-start gap-3">
+                <MapPin className="w-4 h-4 text-[#C59238] shrink-0 mt-0.5" />
+                <span className="text-[11px] font-bold text-slate-600 uppercase tracking-wider leading-relaxed">
+                  AAIZA Food Trading FZCO • Building A1, Dubai Digital Park, Dubai Silicon Oasis, Dubai, UAE
+                </span>
               </li>
-              <li className="flex flex-col md:flex-row items-center gap-4">
-                <Phone className="w-5 h-5 text-white shrink-0" />
-                <span className="text-[11px] font-black text-white uppercase tracking-widest">+91 94084 36732</span>
+              <li className="flex flex-col md:flex-row items-center gap-3">
+                <Phone className="w-4 h-4 text-[#C59238] shrink-0" />
+                <span className="text-[11px] font-bold text-slate-600 uppercase tracking-wider">+971545897386</span>
               </li>
-              <li className="flex flex-col md:flex-row items-center gap-4">
-                <Mail className="w-5 h-5 text-white shrink-0" />
-                <span 
-                  className="text-[11px] font-black text-white cursor-pointer hover:underline uppercase tracking-widest"
-                  onClick={() => window.location.href = `mailto:${'tree.india' + '@' + 'yahoo.com'}`}
+              <li className="flex flex-col md:flex-row items-center gap-3">
+                <Mail className="w-4 h-4 text-[#C59238] shrink-0" />
+                <span
+                  className="text-[11px] font-bold text-[#0B4F43] cursor-pointer hover:underline uppercase tracking-wider"
+                  onClick={() => (window.location.href = `mailto:${"AAIZAFOODTRADING@GMAIL.COM"}`)}
                 >
                   Contact via Email
                 </span>
               </li>
             </ul>
 
-            {/* Social Links */}
-             <div className="flex items-center justify-center md:justify-start gap-6 mt-12">
-               <a href="https://www.linkedin.com/company/treeindiaexports" target="_blank" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white hover:text-[#0B4F43] transition-all"><Globe className="w-5 h-5" /></a>
-               <a href="https://www.facebook.com/treeindiaexports" target="_blank" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white hover:text-[#C59238] transition-all"><ShieldCheck className="w-5 h-5" /></a>
-               <a href="https://twitter.com/treeindiaexports" target="_blank" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white hover:text-[#0B4F43] transition-all"><Globe className="w-5 h-5" /></a>
-             </div>
+            <div className="flex items-center justify-center md:justify-start gap-3 mt-6">
+              <a href="https://www.linkedin.com/company/treeindiaexports" target="_blank" className="w-9 h-9 rounded-full bg-white border border-[#0B4F43]/15 flex items-center justify-center text-[#0B4F43] hover:bg-[#0B4F43] hover:text-white transition-all"><Globe className="w-4 h-4" /></a>
+              <a href="https://www.facebook.com/treeindiaexports" target="_blank" className="w-9 h-9 rounded-full bg-white border border-[#C59238]/25 flex items-center justify-center text-[#C59238] hover:bg-[#C59238] hover:text-white transition-all"><ShieldCheck className="w-4 h-4" /></a>
+              <a href="https://twitter.com/treeindiaexports" target="_blank" className="w-9 h-9 rounded-full bg-white border border-[#0B4F43]/15 flex items-center justify-center text-[#0B4F43] hover:bg-[#0B4F43] hover:text-white transition-all"><Globe className="w-4 h-4" /></a>
+            </div>
           </div>
         </div>
-        
-        <div className="border-t border-white/20 mt-20 pt-10 flex flex-col md:flex-row justify-between items-center gap-6 text-center md:text-left">
-          <p className="text-[10px] text-white/60 font-black tracking-[0.2em] uppercase">&copy; {new Date().getFullYear()} Tree India. Authorized Export Division.</p>
-          <a
-            href="https://ajstudio.pro/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-[10px] text-white/70 hover:text-[#ffd93d] font-black tracking-[0.2em] uppercase transition-colors"
-          >
-            Design &amp; Developed by <span className="underline decoration-white/40 underline-offset-4 hover:decoration-[#ffd93d]">AJ Studio</span>
-          </a>
+
+        <div className="border-t border-[#0B4F43]/10 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
+          <p className="text-[10px] text-slate-500 font-bold tracking-[0.18em] uppercase">
+            &copy; {new Date().getFullYear()} AAIZA Food Trading FZCO • Dubai, UAE.
+          </p>
+          <p className="text-[10px] text-slate-500 font-bold tracking-[0.18em] uppercase">
+            Developed by{" "}
+            <a
+              href="https://www.ajstudio.dev/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#0B4F43] underline decoration-[#C59238]/50 underline-offset-4 hover:text-[#C59238]"
+            >
+              AJ Studio
+            </a>
+          </p>
         </div>
       </div>
     </footer>
-
-
   );
 }

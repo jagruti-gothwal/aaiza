@@ -1,23 +1,23 @@
 "use client";
-import { 
-  Globe2, FileText, Truck, Network, ShieldCheck, Factory, 
-  Clock, PackageCheck, Handshake, Map, Download, 
-  ArrowRight, CheckCircle2, Award, Zap
+import {
+  FileText, Truck, Network, ShieldCheck, Factory,
+  Clock, PackageCheck, Handshake, Download,
+  ArrowRight, CheckCircle2, Award, Zap, Ship
 } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
-import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
-import { useRef } from "react";
+import Image from "next/image";
+import { motion } from "framer-motion";
+import DubaiSkyline from "@/components/DubaiSkyline";
 
 export default function Export() {
   const { t, isRTL } = useLanguage();
-  const containerRef = useRef(null);
 
   const offerings = [
-    { name: t("exportOffering1Title"), desc: t("exportOffering1Desc"), icon: PackageCheck, color: "from-[#0B4F43] to-[#157A6E]" },
-    { name: t("exportOffering2Title"), desc: t("exportOffering2Desc"), icon: FileText, color: "from-emerald-400 to-teal-600" },
-    { name: t("exportOffering3Title"), desc: t("exportOffering3Desc"), icon: Truck, color: "from-[#C59238] to-[#A87927]" },
+    { name: t("exportOffering1Title"), desc: t("exportOffering1Desc"), icon: PackageCheck, bg: "bg-[#EAF4F1] border-[#0B4F43]/10", iconColor: "text-[#0B4F43]", doodle: "wave" },
+    { name: t("exportOffering2Title"), desc: t("exportOffering2Desc"), icon: FileText, bg: "bg-[#F5DFB0] border-[#C59238]/25", iconColor: "text-[#A87927]", doodle: "arc" },
+    { name: t("exportOffering3Title"), desc: t("exportOffering3Desc"), icon: Truck, bg: "bg-[#9ED9CC] border-[#0B4F43]/15", iconColor: "text-[#06332B]", doodle: "vertical" },
   ];
 
   const whyWorkWithUs = [
@@ -41,184 +41,214 @@ export default function Export() {
   ];
 
   return (
-    <div 
-      className="bg-white min-h-screen pt-20 pb-0 font-sans overflow-x-hidden selection:bg-[#E6C260] selection:text-[#0B4F43]" 
+    <div
+      className="bg-white min-h-screen font-sans text-[#1A2B27] overflow-x-hidden selection:bg-[#E6C260] selection:text-[#0B4F43]"
       dir={isRTL ? "rtl" : "ltr"}
-      ref={containerRef}
     >
-      
-      {/* Hero Section - High Fidelity Mesh Gradient */}
-      <section className="relative min-h-[90vh] flex items-center justify-center py-20 overflow-hidden">
-        {/* Animated Background Elements */}
-        <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-[#0B4F43] via-[#083B32] to-[#C59238] opacity-95"></div>
-          <div className="absolute top-[-10%] right-[-5%] w-[60vw] h-[60vw] bg-[#FBF3DC]0/30 rounded-full blur-[120px] animate-pulse"></div>
-          <div className="absolute bottom-[-10%] left-[-5%] w-[50vw] h-[50vw] bg-[#2E6F2D]/20 rounded-full blur-[150px]"></div>
-          <div className="absolute inset-0 bg-white/5 opacity-10 mix-blend-overlay"></div>
-          
-          {/* Animated SVG Lines */}
-          <svg className="absolute inset-0 w-full h-full opacity-20" viewBox="0 0 100 100" preserveAspectRatio="none">
-             <motion.path 
-               d="M0 50 Q 25 30 50 50 T 100 50" 
-               stroke="white" 
-               strokeWidth="0.1" 
-               fill="none"
-               animate={{ d: ["M0 50 Q 25 30 50 50 T 100 50", "M0 50 Q 25 70 50 50 T 100 50", "M0 50 Q 25 30 50 50 T 100 50"] }}
-               transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-             />
-          </svg>
+
+      {/* =========================================================================
+          SECTION 1: STYLISH EDITORIAL HERO WITH WAVE, RIBBONS & FLOATING TREATS
+      ========================================================================= */}
+      <section className="relative pt-24 sm:pt-28 pb-24 sm:pb-28 overflow-hidden bg-gradient-to-br from-[#FAF3E8] via-[#FFFDF9] to-[#EAF4F1]">
+
+        {/* Subtle Burj Khalifa Sketch Watermark */}
+        <div className="absolute inset-0 pointer-events-none opacity-[0.07]">
+          <Image
+            src="/dubai/dubai-burj-sketch.jpg"
+            alt=""
+            fill
+            className="object-cover object-bottom mix-blend-multiply"
+            sizes="100vw"
+            priority
+          />
         </div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 pt-20">
-          <motion.div 
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8 }}
-            className="inline-flex items-center space-x-2 px-6 py-2 rounded-full border border-white/30 bg-white/10 backdrop-blur-xl shadow-2xl mb-12 group"
-          >
-             <span className="relative flex h-3 w-3">
-               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#E6C260] opacity-75"></span>
-               <span className="relative inline-flex rounded-full h-3 w-3 bg-[#E6C260]"></span>
-             </span>
-             <span className="text-white font-black text-[12px] tracking-[0.4em] uppercase">{t("exportCapabilities")}</span>
-          </motion.div>
+        {/* Playful Looping Ribbons */}
+        <svg
+          viewBox="0 0 1200 380"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          className="absolute inset-0 w-full h-full pointer-events-none opacity-65"
+        >
+          <path
+            d="M50 260 C 240 100, 480 320, 650 160 C 820 0, 990 240, 1160 110"
+            stroke="#E6C260"
+            strokeWidth="9"
+            strokeLinecap="round"
+            strokeOpacity="0.45"
+          />
+          <path
+            d="M120 120 C 310 250, 540 40, 760 200 C 920 300, 1060 150, 1180 200"
+            stroke="#BCE6DC"
+            strokeWidth="7"
+            strokeLinecap="round"
+            strokeOpacity="0.55"
+          />
+        </svg>
 
-          <motion.h1 
-            initial={{ opacity: 0, y: 30 }}
+        {/* Floating Confectionery Accents */}
+        <motion.div
+          animate={{ y: [0, -10, 0], rotate: [-8, 4, -8] }}
+          transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+          className="hidden lg:block absolute bottom-20 left-8 xl:left-16 w-28 h-28 pointer-events-none z-20 filter drop-shadow-[0_14px_20px_rgba(11,79,67,0.16)]"
+        >
+          <Image src="/transparent/DJ American Biscuits Markup Combine.png" alt="Export Biscuits" fill className="object-contain" sizes="120px" />
+        </motion.div>
+
+        <motion.div
+          animate={{ y: [0, 10, 0], rotate: [6, -4, 6] }}
+          transition={{ duration: 5.5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
+          className="hidden lg:block absolute bottom-20 right-8 xl:right-16 w-28 h-28 pointer-events-none z-20 filter drop-shadow-[0_14px_20px_rgba(197,146,56,0.2)]"
+        >
+          <Image src="/transparent/DJ Conico Chocolate.png" alt="Export Chocolates" fill className="object-contain" sizes="120px" />
+        </motion.div>
+
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 pt-4">
+          <div className="flex flex-wrap items-center justify-center gap-2 mb-5">
+            <span className="px-4 py-1.5 rounded-full bg-white border border-[#0B4F43]/15 text-[#0B4F43] text-[10px] font-black uppercase tracking-widest shadow-xs">
+              🇦🇪 {t("exportCapabilities")}
+            </span>
+            <span className="px-3.5 py-1 rounded-full bg-[#E6C260] text-[#06332B] text-xs font-black -rotate-3 shadow-xs">
+              #jebelali
+            </span>
+            <span className="px-3.5 py-1 rounded-full bg-[#9ED9CC] text-[#06332B] text-xs font-black rotate-3 shadow-xs">
+              #fclcontainers
+            </span>
+          </div>
+
+          <motion.h1
+            initial={{ opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-6xl sm:text-7xl md:text-9xl font-black text-white heading-font tracking-tighter uppercase leading-[0.85] mb-10"
+            transition={{ duration: 0.5 }}
+            className="text-4xl sm:text-6xl md:text-7xl font-black text-[#1A2B27] heading-font tracking-tight uppercase leading-[0.95] mb-5"
           >
             {t("exportDeskTitle").split(" ").map((word, i) => (
-              <span key={i} className="block last:text-[#E6C260]">{word}</span>
+              <span key={i} className="inline-block mr-3 last:text-[#C59238]">
+                {word}
+              </span>
             ))}
           </motion.h1>
 
-          <motion.p 
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 0.6 }}
-            className="mt-8 text-xl md:text-2xl text-white/90 max-w-3xl mx-auto leading-relaxed font-medium tracking-wide mb-16 px-4"
-          >
+          <p className="text-sm sm:text-base text-slate-600 max-w-xl mx-auto leading-relaxed font-semibold mb-7">
             {t("exportDeskDesc")}
-          </motion.p>
+          </p>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
-            className="flex flex-col sm:flex-row items-center justify-center gap-6"
-          >
-            <Link 
+          <div className="flex flex-wrap items-center justify-center gap-3.5">
+            <Link
               href="/Tree%20India%20Catalogue%20Compressed.pdf"
               target="_blank"
-              className="group relative flex items-center gap-4 bg-[#E6C260] text-[#0B4F43] px-12 py-6 rounded-2xl font-black text-[15px] uppercase tracking-widest hover:bg-white transition-all shadow-[0_20px_50px_rgba(255,217,61,0.4)] hover:-translate-y-1 active:scale-95 overflow-hidden"
+              className="inline-flex items-center gap-2 bg-[#0B4F43] text-white px-7 py-3.5 rounded-full font-bold text-xs uppercase tracking-wider hover:bg-[#06332B] transition-all shadow-[0_4px_0_#06332B] hover:-translate-y-0.5"
             >
-              <div className="absolute inset-0 bg-white/20 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700 skew-x-12"></div>
-              <Download className="w-6 h-6" strokeWidth={3} />
+              <Download className="w-4 h-4" />
               {t("navDownload")}
             </Link>
-            
-            <Link 
+
+            <Link
               href="/contact"
-              className="flex items-center gap-4 bg-white/10 backdrop-blur-md text-white border-2 border-white/30 px-12 py-6 rounded-2xl font-black text-[15px] uppercase tracking-widest hover:bg-white/20 transition-all hover:-translate-y-1 active:scale-95"
+              className="inline-flex items-center gap-2 bg-[#FBF3DC] text-[#0B4F43] border-2 border-[#C59238]/40 px-7 py-3.5 rounded-full font-bold text-xs uppercase tracking-wider hover:bg-[#F7ECD2] transition-all hover:-translate-y-0.5"
             >
               {t("exportContactAgent")}
-              <ArrowRight className="w-6 h-6" />
+              <ArrowRight className="w-4 h-4" />
             </Link>
-          </motion.div>
+          </div>
         </div>
 
-        {/* Floating Elements for depth */}
-        <motion.div 
-          animate={{ y: [0, -20, 0] }}
-          transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute right-[10%] top-[40%] hidden lg:block"
-        >
-          <div className="w-24 h-24 bg-gradient-to-br from-[#E6C260] to-orange-400 rounded-3xl rotate-12 blur-[1px] shadow-2xl flex items-center justify-center">
-            <Globe2 className="w-12 h-12 text-[#0B4F43]" />
-          </div>
-        </motion.div>
-        
-        <motion.div 
-          animate={{ y: [0, 20, 0] }}
-          transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-          className="absolute left-[8%] bottom-[30%] hidden lg:block"
-        >
-          <div className="w-20 h-20 bg-gradient-to-br from-[#E6C260] to-[#C59238] rounded-full -rotate-12 blur-[1px] shadow-2xl flex items-center justify-center">
-            <ShieldCheck className="w-10 h-10 text-white" />
-          </div>
-        </motion.div>
+        {/* Smooth Organic White Wave Transition */}
+        <div className="absolute bottom-0 left-0 right-0 w-full overflow-hidden leading-none pointer-events-none">
+          <svg viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-12 sm:h-16 block" preserveAspectRatio="none">
+            <path d="M0,40 C240,85 480,0 720,40 C960,80 1200,10 1440,45 L1440,80 L0,80 Z" fill="#FFFFFF" />
+          </svg>
+        </div>
       </section>
 
-      {/* Stats / Numbers Section */}
-      <section className="relative z-20 -mt-16 mb-40 px-4">
-        <div className="max-w-7xl mx-auto bg-white rounded-[3rem] shadow-[0_50px_100px_rgba(0,0,0,0.1)] border border-slate-100 p-12 grid grid-cols-2 lg:grid-cols-4 gap-12 divide-x divide-slate-100 divide-dashed">
+      {/* =========================================================================
+          SECTION 2: FLOATING EXPORT STATS PILL BAR
+      ========================================================================= */}
+      <section className="relative z-20 -mt-10 px-4 mb-16">
+        <div className="max-w-5xl mx-auto bg-white rounded-3xl shadow-md border border-[#0B4F43]/10 p-6 sm:p-8 grid grid-cols-2 lg:grid-cols-4 gap-6 divide-x divide-slate-100">
           {[
-            { label: t("exportStatsGlobal"), val: "15+", sub: t("exportStatsCountries") },
+            { label: t("exportStatsGlobal"), val: "25+", sub: t("exportStatsCountries") },
             { label: t("exportStatsProducts"), val: "100+", sub: t("exportStatsSKUs") },
             { label: t("exportStatsExp"), val: "10+", sub: t("exportStatsYears") },
             { label: t("exportStatsSuccess"), val: "99%", sub: t("exportStatsDelivery") },
           ].map((stat, i) => (
-            <motion.div 
-              key={i} 
-              className="text-center px-4"
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
-            >
-              <div className="text-4xl md:text-5xl font-black text-[#0B4F43] mb-2 heading-font">{stat.val}</div>
-              <div className="text-[12px] font-black uppercase tracking-[0.2em] text-[#C59238]">{stat.label}</div>
-              <div className="text-[11px] font-bold text-slate-400 uppercase tracking-widest mt-1">{stat.sub}</div>
-            </motion.div>
+            <div key={i} className="text-center px-3">
+              <div className="text-3xl sm:text-4xl font-black text-[#0B4F43] mb-1 heading-font">{stat.val}</div>
+              <div className="text-[11px] font-black uppercase tracking-widest text-[#C59238]">{stat.label}</div>
+              <div className="text-[10px] font-bold text-slate-400 uppercase tracking-wider mt-0.5">{stat.sub}</div>
+            </div>
           ))}
         </div>
       </section>
 
-      {/* Core Competencies - Grid with Asymmetric Feel */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-40">
-        <div className="mb-20 text-center lg:text-left">
-          <motion.span 
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="inline-flex items-center gap-3 bg-[#EAF4F1] text-[#0B4F43] px-6 py-2 rounded-full font-black tracking-[0.3em] text-[11px] uppercase border border-[#0B4F43]/20 mb-6"
-          >
-            <Zap className="w-4 h-4 fill-current" />
-            {t("exportCoreCompetencies")}
-          </motion.span>
-          <motion.h2 
-             initial={{ opacity: 0, y: 20 }}
-             whileInView={{ opacity: 1, y: 0 }}
-             viewport={{ once: true }}
-             className="text-5xl md:text-7xl font-black text-[#0B4F43] uppercase tracking-tighter heading-font leading-none"
-          >
-            {t("exportOfferingsTitle")}
-          </motion.h2>
+      {/* =========================================================================
+          SECTION 3: 3 PASTEL ROUNDED-SQUARE CORE COMPETENCY CARDS (WITH DOODLES)
+      ========================================================================= */}
+      <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-10 gap-4">
+          <div className="relative">
+            <svg viewBox="0 0 100 100" fill="#EAF4F1" className="w-20 h-20 absolute -top-5 -left-5 -z-10">
+              <path d="M50 5 L58 18 L73 13 L73 28 L88 30 L81 44 L93 54 L80 63 L86 78 L71 78 L69 93 L55 86 L45 96 L36 83 L21 88 L22 73 L7 70 L14 56 L3 46 L16 37 L11 22 L26 22 L29 7 L43 15 Z" />
+            </svg>
+            <span className="inline-flex items-center gap-2 bg-[#EAF4F1] text-[#0B4F43] px-4 py-1 rounded-full font-black tracking-widest text-[10px] uppercase border border-[#0B4F43]/15 mb-3">
+              <Zap className="w-3.5 h-3.5 text-[#C59238]" />
+              {t("exportCoreCompetencies")}
+            </span>
+            <h2 className="text-2xl sm:text-4xl font-black text-[#1A2B27] uppercase tracking-tight heading-font">
+              {t("exportOfferingsTitle")}
+            </h2>
+          </div>
+
+          <div className="flex flex-wrap gap-2">
+            <span className="px-3.5 py-1 rounded-full bg-[#FAF8F2] border border-[#0B4F43]/15 text-[#0B4F43] text-xs font-bold -rotate-3">#fcl</span>
+            <span className="px-3.5 py-1 rounded-full bg-[#E6C260] text-[#06332B] text-xs font-black rotate-2">#customs</span>
+            <span className="px-3.5 py-1 rounded-full bg-[#9ED9CC] text-[#06332B] text-xs font-black -rotate-2">#worldwide</span>
+          </div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {offerings.map((offer, i) => {
             const Icon = offer.icon;
             return (
-              <motion.div 
+              <motion.div
                 key={i}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.2 }}
-                whileHover={{ y: -15 }}
-                className="group relative bg-white rounded-[2.5rem] p-12 shadow-2xl border border-slate-50 overflow-hidden"
+                whileHover={{ y: -6 }}
+                className={cn(
+                  "rounded-[2.2rem] p-7 border relative overflow-hidden flex flex-col justify-between min-h-[250px] shadow-xs",
+                  offer.bg
+                )}
               >
-                <div className={cn("absolute top-0 right-0 w-32 h-32 bg-gradient-to-br opacity-5 rounded-bl-full transition-transform group-hover:scale-150", offer.color)}></div>
-                <div className={cn("inline-flex w-20 h-20 items-center justify-center rounded-3xl mb-10 text-white shadow-xl transition-all group-hover:rotate-6 bg-gradient-to-br", offer.color)}>
-                  <Icon className="w-10 h-10" strokeWidth={2} />
+                {offer.doodle === "wave" && (
+                  <svg viewBox="0 0 120 120" fill="none" className="absolute right-0 bottom-2 w-28 h-28 pointer-events-none opacity-60">
+                    <path d="M10 80 Q 45 20, 70 65 T 115 35" stroke="#C59238" strokeWidth="4" strokeLinecap="round" />
+                  </svg>
+                )}
+                {offer.doodle === "arc" && (
+                  <svg viewBox="0 0 100 100" fill="none" className="absolute right-0 top-0 w-28 h-28 pointer-events-none opacity-45">
+                    <path d="M35 0 Q 35 65, 100 65" stroke="#FFFFFF" strokeWidth="6" />
+                    <path d="M58 0 Q 58 42, 100 42" stroke="#FFFFFF" strokeWidth="6" />
+                  </svg>
+                )}
+                {offer.doodle === "vertical" && (
+                  <svg viewBox="0 0 80 140" fill="none" className="absolute right-3 top-4 w-16 h-32 pointer-events-none opacity-65">
+                    <path d="M15 5 Q 30 25, 15 45 T 15 85 T 15 125" stroke="#FFFFFF" strokeWidth="5" strokeLinecap="round" />
+                    <path d="M40 5 Q 55 25, 40 45 T 40 85 T 40 125" stroke="#FFFFFF" strokeWidth="5" strokeLinecap="round" />
+                  </svg>
+                )}
+
+                <div className="w-14 h-14 rounded-2xl bg-white flex items-center justify-center mb-5 shadow-xs relative z-10">
+                  <Icon className={cn("w-6 h-6", offer.iconColor)} strokeWidth={2.2} />
                 </div>
-                <h3 className="text-2xl font-black text-[#0B4F43] uppercase tracking-tighter mb-6 heading-font leading-tight">{offer.name}</h3>
-                <p className="text-slate-500 font-medium text-lg leading-relaxed mb-8">{offer.desc}</p>
-                <div className="flex items-center gap-2 text-[#C59238] font-black text-[12px] uppercase tracking-widest">
-                  {t("exportLearnMore")} <ArrowRight className="w-4 h-4" />
+                <div className="relative z-10">
+                  <h3 className="text-lg font-black text-[#1A2B27] uppercase tracking-tight mb-2 heading-font">
+                    {offer.name}
+                  </h3>
+                  <p className="text-xs sm:text-sm text-slate-700 font-medium leading-relaxed mb-4">
+                    {offer.desc}
+                  </p>
+                  <Link href="/contact" className="inline-flex items-center gap-1.5 text-[#0B4F43] font-black text-[11px] uppercase tracking-wider hover:text-[#C59238] transition-colors">
+                    {t("exportLearnMore")} <ArrowRight className="w-3.5 h-3.5" />
+                  </Link>
                 </div>
               </motion.div>
             );
@@ -226,306 +256,193 @@ export default function Export() {
         </div>
       </section>
 
-      {/* Featured Highlight - Impactful Dark Section */}
-      <section className="mb-40 px-4">
-        <motion.div 
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="max-w-7xl mx-auto rounded-[4rem] bg-[#0B4F43] relative overflow-hidden flex flex-col lg:flex-row items-stretch border-[12px] border-white shadow-[0_60px_100px_rgba(1,73,149,0.3)]"
-        >
-          <div className="flex-1 p-12 lg:p-24 relative z-10">
-            <div className="flex items-center gap-4 mb-8">
-              <div className="w-16 h-1 bg-[#E6C260]"></div>
-              <span className="text-[#E6C260] font-black uppercase tracking-[0.4em] text-[12px]">{t("exportStrengthTitle")}</span>
-            </div>
-            <h2 className="text-4xl md:text-6xl font-black text-white uppercase tracking-tighter mb-10 heading-font leading-[0.9]">
+      {/* =========================================================================
+          SECTION 4: COMPACT EMERALD STRENGTH BANNER
+      ========================================================================= */}
+      <section className="mb-16 px-4">
+        <div className="max-w-6xl mx-auto rounded-[2.5rem] bg-[#0B4F43] relative overflow-hidden grid grid-cols-1 lg:grid-cols-12 items-center border-4 border-[#EAF4F1] shadow-lg">
+          <div className="lg:col-span-8 p-8 sm:p-10 relative z-10">
+            <span className="text-[#E6C260] font-black uppercase tracking-[0.25em] text-[11px] block mb-2">
+              {t("exportStrengthTitle")}
+            </span>
+            <h2 className="text-2xl sm:text-4xl font-black text-white uppercase tracking-tight mb-4 heading-font">
               {t("exportBuiltFor")}
             </h2>
-            <p className="text-emerald-100 text-xl md:text-2xl font-medium leading-relaxed mb-12 max-w-2xl">
+            <p className="text-emerald-100/90 text-sm sm:text-base font-medium leading-relaxed mb-6 max-w-xl">
               {t("exportStrengthDesc")}
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
               {[t("exportQualityAssurance"), t("exportCompliance"), t("exportSecureLogistics"), t("exportSupport247")].map((item, j) => (
-                <div key={j} className="flex items-center gap-4 group">
-                  <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-[#E6C260] transition-colors">
-                    <CheckCircle2 className="w-4 h-4 text-white group-hover:text-[#0B4F43]" />
+                <div key={j} className="flex items-center gap-3">
+                  <div className="w-7 h-7 rounded-full bg-white/15 flex items-center justify-center shrink-0">
+                    <CheckCircle2 className="w-4 h-4 text-[#E6C260]" />
                   </div>
-                  <span className="text-white font-bold uppercase tracking-widest text-[13px]">{item}</span>
+                  <span className="text-white font-bold uppercase tracking-wider text-xs">{item}</span>
                 </div>
               ))}
             </div>
           </div>
-          <div className="flex-1 bg-gradient-to-br from-[#0B4F43] to-[#06332B] relative min-h-[400px]">
-             <div className="absolute inset-0 opacity-40">
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150%] h-[150%] bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:40px_40px]"></div>
-             </div>
-             <div className="absolute inset-0 flex items-center justify-center">
-                <Globe2 className="w-64 h-64 text-white/10 animate-[spin_20s_linear_infinite]" strokeWidth={1} />
-             </div>
-             {/* Badge Overlay */}
-             <div className="absolute bottom-12 right-12 bg-white p-8 rounded-[2rem] shadow-2xl rotate-3 flex flex-col items-center">
-                <Award className="w-12 h-12 text-[#C59238] mb-4" />
-                <span className="text-[#0B4F43] font-black text-[11px] uppercase tracking-[0.2em] mb-1">{t("exportCertified")}</span>
-                <span className="text-[#0B4F43] font-black text-xl uppercase tracking-tighter heading-font">{t("exportGlobalExporter")}</span>
-             </div>
+
+          <div className="lg:col-span-4 p-8 flex flex-col items-center justify-center bg-[#07382F]/60 h-full">
+            <div className="bg-white p-6 rounded-3xl shadow-md text-center">
+              <Award className="w-10 h-10 text-[#C59238] mx-auto mb-2" />
+              <span className="text-[#0B4F43] font-black text-[10px] uppercase tracking-[0.2em] block mb-1">
+                {t("exportCertified")}
+              </span>
+              <span className="text-[#1A2B27] font-black text-base uppercase tracking-tight heading-font">
+                {t("exportGlobalExporter")}
+              </span>
+            </div>
           </div>
-        </motion.div>
+        </div>
       </section>
 
-      {/* Advantage & Why section with Vertical flow */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-40">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-start">
-          <div>
-            <span className="text-[#C59238] font-black tracking-[0.3em] text-[11px] uppercase mb-6 block">{t("exportAdvantageSub")}</span>
-            <h2 className="text-5xl md:text-7xl font-black text-[#0B4F43] uppercase tracking-tighter mb-12 heading-font leading-none">
+      {/* =========================================================================
+          SECTION 5: WHY WORK WITH US + DUBAI SKETCH & MASCOT
+      ========================================================================= */}
+      <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          <div className="lg:col-span-6">
+            <span className="text-[#C59238] font-black tracking-[0.25em] text-[11px] uppercase mb-2 block">
+              {t("exportAdvantageSub")}
+            </span>
+            <h2 className="text-2xl sm:text-4xl font-black text-[#1A2B27] uppercase tracking-tight mb-6 heading-font">
               {t("exportWhyWorkTitle")}
             </h2>
-            <div className="space-y-6">
+            <div className="space-y-4">
               {whyWorkWithUs.map((item, i) => {
                 const Icon = item.icon;
                 return (
-                  <motion.div 
-                    key={i} 
-                    initial={{ opacity: 0, x: -30 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: i * 0.1 }}
-                    className="flex gap-8 group"
-                  >
-                    <div className="shrink-0 w-20 h-20 bg-slate-50 rounded-3xl flex items-center justify-center text-[#C59238] group-hover:bg-[#C59238] group-hover:text-white transition-all shadow-sm group-hover:shadow-xl group-hover:-rotate-3">
-                       <Icon className="w-10 h-10" strokeWidth={2} />
+                  <div key={i} className="flex gap-4 p-4 rounded-2xl bg-[#FAF8F2] border border-[#0B4F43]/10">
+                    <div className="shrink-0 w-12 h-12 bg-white rounded-xl flex items-center justify-center text-[#0B4F43] shadow-xs">
+                      <Icon className="w-6 h-6" strokeWidth={2} />
                     </div>
-                    <div className="pt-2">
-                       <h4 className="text-2xl font-black text-[#0B4F43] uppercase tracking-tighter mb-3 heading-font">{item.title}</h4>
-                       <p className="text-slate-500 font-medium leading-relaxed max-w-md">{item.desc}</p>
+                    <div>
+                      <h4 className="text-base font-black text-[#1A2B27] uppercase tracking-tight mb-1 heading-font">
+                        {item.title}
+                      </h4>
+                      <p className="text-xs text-slate-600 font-medium leading-relaxed">{item.desc}</p>
                     </div>
-                  </motion.div>
+                  </div>
                 );
               })}
             </div>
           </div>
-          
-          <div className="relative pt-20 lg:pt-0">
-             <div className="aspect-square bg-slate-100 rounded-[4rem] relative overflow-hidden shadow-inner group">
-                <div className="absolute inset-0 bg-gradient-to-br from-[#EAF4F1] to-white"></div>
-                {/* Decorative dots grid */}
-                <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#0B4F43_2px,transparent_2px)] bg-[size:30px_30px]"></div>
-                
-                <div className="absolute inset-12 border-4 border-dashed border-slate-200 rounded-[3rem]"></div>
-                
-                <div className="absolute inset-0 flex items-center justify-center">
-                   <div className="relative">
-                      <motion.div 
-                        animate={{ rotate: 360 }}
-                        transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
-                        className="w-80 h-80 border-[1px] border-slate-200 rounded-full flex items-center justify-center"
-                      >
-                         <div className="absolute -top-4 w-8 h-8 bg-[#E6C260] rounded-full shadow-lg"></div>
-                         <div className="absolute -bottom-4 w-8 h-8 bg-[#C59238] rounded-full shadow-lg"></div>
-                      </motion.div>
-                      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center">
-                         <div className="w-32 h-32 bg-white rounded-full shadow-2xl border-8 border-slate-50 flex items-center justify-center mb-4">
-                            <Globe2 className="w-12 h-12 text-[#0B4F43] animate-pulse" />
-                         </div>
-                         <span className="font-black text-[#0B4F43] uppercase tracking-[0.2em] text-[10px]">Tree India</span>
-                      </div>
-                   </div>
-                </div>
-             </div>
-             
-             {/* Floating Info card */}
-             <motion.div 
-               initial={{ opacity: 0, x: 50 }}
-               whileInView={{ opacity: 1, x: 0 }}
-               viewport={{ once: true }}
-               className="absolute -right-8 bottom-8 bg-white p-8 rounded-3xl shadow-[0_30px_60px_rgba(0,0,0,0.15)] border border-slate-50 max-w-[240px]"
-             >
-                <div className="flex items-center gap-2 text-green-500 mb-2">
-                   <CheckCircle2 className="w-5 h-5" />
-                   <span className="font-black text-[11px] uppercase">{t("exportVerifiedAgent")}</span>
-                </div>
-                <p className="text-[#0B4F43] font-bold text-sm leading-tight">{t("exportInstantQuotes")}</p>
-             </motion.div>
+
+          <div className="lg:col-span-6">
+            <DubaiSkyline variant="card" className="mb-4" />
+            <div className="flex items-center justify-between p-4 rounded-2xl bg-[#EAF4F1] border border-[#0B4F43]/15">
+              <div className="flex items-center gap-2.5">
+                <Ship className="w-5 h-5 text-[#0B4F43]" />
+                <span className="font-black text-xs uppercase text-[#0B4F43]">{t("exportVerifiedAgent")}</span>
+              </div>
+              <span className="text-xs font-bold text-slate-600">{t("exportInstantQuotes")}</span>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* How We Work & Benefits - Side by Side Color Block */}
-      <section className="bg-slate-50 py-40">
-        <div className="max-w-7xl mx-auto px-4">
-           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-              <motion.div 
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                className="bg-white p-12 lg:p-20 rounded-[4rem] shadow-xl border border-slate-100 group relative overflow-hidden"
-              >
-                <div className="absolute top-0 left-0 w-2 h-full bg-[#C59238]"></div>
-                <h3 className="text-4xl font-black text-[#0B4F43] uppercase tracking-tighter mb-12 heading-font">{t("exportHowWorkTitle")}</h3>
-                <div className="space-y-4">
-                  {howWeWork.map((item, i) => (
-                    <div key={i} className="flex items-center gap-6 p-6 rounded-3xl hover:bg-slate-50 transition-colors border border-transparent hover:border-slate-100">
-                      <div className="w-14 h-14 bg-[#FBF3DC] text-[#C59238] rounded-2xl flex items-center justify-center shrink-0">
-                        <item.icon className="w-7 h-7" />
-                      </div>
-                      <span className="text-lg font-black text-[#0B4F43] uppercase tracking-tighter heading-font">{item.title}</span>
+      {/* =========================================================================
+          SECTION 6: HOW WE WORK & B2B BENEFITS
+      ========================================================================= */}
+      <section className="bg-[#FAF8F2] border-y border-[#0B4F43]/10 py-14">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <div className="bg-white p-7 sm:p-9 rounded-[2.2rem] border border-[#0B4F43]/10 shadow-xs">
+              <h3 className="text-2xl font-black text-[#1A2B27] uppercase tracking-tight mb-6 heading-font">
+                {t("exportHowWorkTitle")}
+              </h3>
+              <div className="space-y-3">
+                {howWeWork.map((item, i) => (
+                  <div key={i} className="flex items-center gap-4 p-3.5 rounded-2xl bg-[#FAF8F2]">
+                    <div className="w-10 h-10 bg-[#FBF3DC] text-[#C59238] rounded-xl flex items-center justify-center shrink-0">
+                      <item.icon className="w-5 h-5" />
                     </div>
-                  ))}
-                </div>
-              </motion.div>
-              
-              <motion.div 
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                className="bg-[#0B4F43] p-12 lg:p-20 rounded-[4rem] shadow-2xl text-white group relative overflow-hidden"
-              >
-                <div className="absolute top-0 right-0 w-2 h-full bg-[#E6C260]"></div>
-                <h3 className="text-4xl font-black text-white uppercase tracking-tighter mb-12 heading-font">{t("exportB2BBenefitsTitle")}</h3>
-                <div className="space-y-4">
-                  {b2bBenefits.map((item, i) => (
-                    <div key={i} className="flex items-center gap-6 p-6 rounded-3xl hover:bg-white/5 transition-colors border border-transparent hover:border-white/10">
-                      <div className="w-14 h-14 bg-[#E6C260] text-[#0B4F43] rounded-2xl flex items-center justify-center shrink-0 shadow-lg shadow-[#E6C260]/20">
-                        <item.icon className="w-7 h-7" />
-                      </div>
-                      <span className="text-lg font-black text-white uppercase tracking-tighter heading-font">{item.title}</span>
+                    <span className="text-sm font-black text-[#0B4F43] uppercase tracking-tight heading-font">
+                      {item.title}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="bg-[#EAF4F1] p-7 sm:p-9 rounded-[2.2rem] border border-[#0B4F43]/15 shadow-xs">
+              <h3 className="text-2xl font-black text-[#0B4F43] uppercase tracking-tight mb-6 heading-font">
+                {t("exportB2BBenefitsTitle")}
+              </h3>
+              <div className="space-y-3">
+                {b2bBenefits.map((item, i) => (
+                  <div key={i} className="flex items-center gap-4 p-3.5 rounded-2xl bg-white">
+                    <div className="w-10 h-10 bg-[#0B4F43] text-[#E6C260] rounded-xl flex items-center justify-center shrink-0">
+                      <item.icon className="w-5 h-5" />
                     </div>
-                  ))}
-                </div>
-              </motion.div>
-           </div>
+                    <span className="text-sm font-black text-[#1A2B27] uppercase tracking-tight heading-font">
+                      {item.title}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* Global Presence Map Section */}
-      <section className="relative py-40 bg-white overflow-hidden">
-         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-px bg-gradient-to-r from-transparent via-slate-200 to-transparent"></div>
-         
-         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-            <motion.div 
-              initial={{ scale: 0 }}
-              whileInView={{ scale: 1 }}
-              viewport={{ once: true }}
-              className="w-24 h-24 bg-[#EAF4F1] rounded-full flex items-center justify-center mx-auto mb-10 shadow-inner"
-            >
-               <Map className="w-10 h-10 text-[#0B4F43]" strokeWidth={2} />
-            </motion.div>
-            
-            <motion.h2 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-6xl md:text-8xl font-black text-[#0B4F43] heading-font uppercase tracking-tighter leading-[0.85] mb-12"
-            >
-              {t("exportReachTitle")}
-            </motion.h2>
-            
-            <motion.p 
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              className="text-xl md:text-2xl text-slate-500 max-w-3xl mx-auto font-medium leading-relaxed mb-24"
-            >
-              {t("exportReachDesc")}
-            </motion.p>
-
-            <motion.div 
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="relative rounded-[5rem] bg-gradient-to-br from-[#0B4F43] to-[#06332B] p-12 lg:p-24 shadow-[0_80px_150px_rgba(1,73,149,0.3)] border-[16px] border-[#f8fafc]"
-            >
-               <div className="absolute inset-0 opacity-10 mix-blend-overlay">
-                  <div className="absolute inset-0 bg-white/5"></div>
-               </div>
-               
-               <div className="grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
-                  <div className="text-left">
-                     <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 text-[#E6C260] border border-white/20 font-black text-[11px] uppercase tracking-[0.2em] mb-8">
-                        <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
-                        {t("exportStrategicHQ")}
-                     </div>
-                     <h3 className="text-4xl md:text-6xl font-black text-white mb-8 uppercase tracking-tighter heading-font leading-none">{t("exportHubTitle")}</h3>
-                     <p className="text-xl text-emerald-100 font-medium leading-relaxed mb-12">
-                       {t("exportHubDesc")}
-                     </p>
-                     <div className="flex flex-wrap gap-4">
-                        {["Port Jebel Ali (Dubai HQ)", "Port Rashid, Dubai", "Port of Mundra", "Port of Mumbai"].map((port, i) => (
-                           <span key={i} className="px-6 py-3 rounded-2xl bg-white/5 border border-white/10 text-white font-bold text-sm uppercase tracking-widest hover:bg-white/10 transition-colors cursor-default">
-                              {port}
-                           </span>
-                        ))}
-                     </div>
-                  </div>
-                  
-                  <div className="relative aspect-square md:aspect-auto h-[400px] flex items-center justify-center">
-                     <div className="relative">
-                        <motion.div 
-                          animate={{ scale: [1, 1.1, 1] }} 
-                          transition={{ duration: 4, repeat: Infinity }}
-                          className="w-64 h-64 bg-[#E6C260]/20 rounded-full flex items-center justify-center"
-                        >
-                           <motion.div 
-                             animate={{ scale: [1, 1.2, 1] }} 
-                             transition={{ duration: 3, repeat: Infinity, delay: 0.5 }}
-                             className="w-40 h-40 bg-[#E6C260]/40 rounded-full flex items-center justify-center"
-                           >
-                              <div className="w-20 h-20 bg-[#E6C260] rounded-full shadow-[0_0_50px_rgba(255,217,61,0.5)] flex items-center justify-center">
-                                 <Globe2 className="w-10 h-10 text-[#0B4F43]" />
-                              </div>
-                           </motion.div>
-                        </motion.div>
-                        {/* Decorative floating points */}
-                        {[...Array(5)].map((_, i) => (
-                           <motion.div
-                              key={i}
-                              animate={{ 
-                                x: [0, Math.cos(i) * 100, 0],
-                                y: [0, Math.sin(i) * 100, 0],
-                                opacity: [0, 1, 0]
-                              }}
-                              transition={{ duration: 6 + i, repeat: Infinity, delay: i }}
-                              className="absolute top-1/2 left-1/2 w-3 h-3 bg-white rounded-full"
-                           />
-                        ))}
-                     </div>
-                  </div>
-               </div>
-            </motion.div>
-         </div>
-      </section>
-
-      {/* Call to Action - Final Impact */}
-      <section className="py-40 px-4">
-         <motion.div 
-           initial={{ opacity: 0 }}
-           whileInView={{ opacity: 1 }}
-           viewport={{ once: true }}
-           className="max-w-4xl mx-auto bg-gradient-to-br from-[#C59238] to-[#A87927] rounded-[5rem] p-12 md:p-24 text-center shadow-[0_40px_100px_rgba(255,92,138,0.3)] relative overflow-hidden"
-         >
-            <div className="absolute inset-0 bg-white/10 opacity-20 bg-white/5"></div>
-            <h2 className="text-4xl md:text-7xl font-black text-white uppercase tracking-tighter mb-10 heading-font leading-none relative z-10">
-              {t("exportReadyToExpand")}
-            </h2>
-            <p className="text-white text-xl md:text-2xl font-bold uppercase tracking-widest mb-16 opacity-90 relative z-10">
-              {t("exportJoinNetwork")}
-            </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-8 relative z-10">
-               <Link 
-                 href="/contact"
-                 className="bg-[#0B4F43] text-white px-16 py-8 rounded-[2rem] font-black text-[18px] uppercase tracking-widest hover:bg-[#0B4F43]/80 transition-all hover:scale-105 shadow-2xl"
-               >
-                 {t("exportGetStarted")}
-               </Link>
-               <Link 
-                 href="/products"
-                 className="bg-white/20 backdrop-blur-md text-white border-4 border-white/30 px-16 py-8 rounded-[2rem] font-black text-[18px] uppercase tracking-widest hover:bg-white/30 transition-all hover:scale-105"
-               >
-                 {t("heroViewProducts")}
-               </Link>
+      {/* =========================================================================
+          SECTION 7: STEPPED CREAM "DUBAI JEBEL ALI HQ" PROMISE CTA
+      ========================================================================= */}
+      <section className="py-14 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+        <div className="rounded-[2.5rem] bg-[#FAF3E8] border border-[#C59238]/25 p-6 sm:p-10 relative overflow-hidden">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+            <div className="md:col-span-4 flex justify-center">
+              <div className="relative w-48 h-48 sm:w-56 sm:h-56">
+                <Image
+                  src="/transparent/boy-tangy.png"
+                  alt="AAIZA Dubai Export Hub"
+                  fill
+                  className="object-contain object-bottom [mask-image:linear-gradient(to_bottom,black_82%,transparent_100%)]"
+                  sizes="240px"
+                />
+              </div>
             </div>
-         </motion.div>
+
+            <div className="md:col-span-8 text-center md:text-left">
+              <span className="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-white text-[#0B4F43] border border-[#0B4F43]/15 font-black text-[10px] uppercase tracking-widest mb-3">
+                <span className="w-2 h-2 bg-[#2E6F2D] rounded-full animate-pulse" />
+                {t("exportStrategicHQ")} • Dubai, UAE
+              </span>
+
+              <h2 className="text-2xl sm:text-4xl font-black text-[#1A2B27] uppercase tracking-tight mb-3 heading-font">
+                {t("exportReadyToExpand")}
+              </h2>
+              <p className="text-xs sm:text-sm text-slate-600 font-medium max-w-xl mb-5">
+                {t("exportHubDesc")}
+              </p>
+
+              <div className="flex flex-wrap justify-center md:justify-start gap-2 mb-6">
+                {["Port Jebel Ali (Dubai HQ)", "Port Rashid, Dubai", "Port of Mundra", "Port of Mumbai"].map((port, i) => (
+                  <span key={i} className="px-3.5 py-1.5 rounded-full bg-white border border-[#0B4F43]/15 text-[#0B4F43] font-bold text-[11px] uppercase tracking-wider">
+                    {port}
+                  </span>
+                ))}
+              </div>
+
+              <div className="flex flex-wrap items-center justify-center md:justify-start gap-3">
+                <Link
+                  href="/contact"
+                  className="bg-[#0B4F43] text-white px-7 py-3.5 rounded-full font-bold text-xs uppercase tracking-wider hover:bg-[#06332B] transition-all shadow-[0_4px_0_#06332B]"
+                >
+                  {t("exportGetStarted")}
+                </Link>
+                <Link
+                  href="/products"
+                  className="bg-white text-[#0B4F43] border-2 border-[#C59238]/40 px-7 py-3.5 rounded-full font-bold text-xs uppercase tracking-wider hover:bg-[#FBF3DC] transition-all"
+                >
+                  {t("heroViewProducts")}
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
     </div>

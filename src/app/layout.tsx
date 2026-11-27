@@ -15,20 +15,20 @@ const baseUrl = 'https://www.treeindiaexports.com';
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
-  title: "Tree India | Premium Confectionery & Beverage Export",
-  description: "Global leader in confectionery export. Tree India delivers high-quality candies, biscuits, chocolates, and beverages to international markets with consistency and competitive pricing.",
+  title: "AAIZA FOOD TRADING FZCO | Premium Confectionery & Beverage Export",
+  description: "Global leader in confectionery export. AAIZA FOOD TRADING FZCO delivers high-quality candies, biscuits, chocolates, and beverages to international markets with consistency and competitive pricing.",
   alternates: {
     canonical: baseUrl,
   },
-  keywords: ["confectionery export", "india candy exporter", "biscuit manufacturers india", "lollipop export", "bulk candy wholesale", "beverage export", "Tree India products"],
-  authors: [{ name: "Tree India" }],
-  creator: "Tree India",
-  publisher: "Tree India",
+  keywords: ["confectionery export", "india candy exporter", "biscuit manufacturers india", "lollipop export", "bulk candy wholesale", "beverage export", "AAIZA FOOD TRADING FZCO products"],
+  authors: [{ name: "AAIZA FOOD TRADING FZCO" }],
+  creator: "AAIZA FOOD TRADING FZCO",
+  publisher: "AAIZA FOOD TRADING FZCO",
   openGraph: {
-    title: "Tree India | Premium Confectionery & Beverage Export",
+    title: "AAIZA FOOD TRADING FZCO | Premium Confectionery & Beverage Export",
     description: "Delivering joy globally with high-quality snacks and confectionery.",
     url: baseUrl,
-    siteName: "Tree India",
+    siteName: "AAIZA FOOD TRADING FZCO",
     images: [
       {
         url: `${baseUrl}/aaiza-logo.jpg`,
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Tree India | Premium Confectionery & Beverage Export",
+    title: "AAIZA FOOD TRADING FZCO | Premium Confectionery & Beverage Export",
     description: "Delivering joy globally with high-quality snacks and confectionery.",
     images: ["/aaiza-logo.jpg"],
   },
@@ -69,12 +69,12 @@ export default function RootLayout({
               __html: JSON.stringify({
                 "@context": "https://schema.org",
                 "@type": "Organization",
-                "name": "Tree India",
+                "name": "AAIZA FOOD TRADING FZCO",
                 "url": "https://www.treeindiaexports.com",
                 "logo": "https://www.treeindiaexports.com/tree.png",
                 "contactPoint": {
                   "@type": "ContactPoint",
-                  "telephone": "+91-9408436732",
+                  "telephone": "+971545897386",
                   "contactType": "sales",
                   "areaServed": "Worldwide",
                   "availableLanguage": ["en", "pt", "es", "fr"]
@@ -94,14 +94,14 @@ export default function RootLayout({
               __html: JSON.stringify({
                 "@context": "https://schema.org",
                 "@type": "LocalBusiness",
-                "name": "Tree India",
+                "name": "AAIZA FOOD TRADING FZCO",
                 "image": "https://www.treeindiaexports.com/tree.png",
                 "@id": "https://www.treeindiaexports.com",
                 "url": "https://www.treeindiaexports.com",
-                "telephone": "+919408436732",
+                "telephone": "+971545897386",
                 "address": {
                   "@type": "PostalAddress",
-                  "streetAddress": "Jebel Ali Free Zone (JAFZA)",
+                  "streetAddress": "Building A1, Dubai Digital Park, Dubai Silicon Oasis",
                   "addressLocality": "Dubai",
                   "addressRegion": "Dubai",
                   "postalCode": "00000",

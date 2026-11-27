@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Check, ChevronRight, PackageSearch, X, ShoppingCart, Info, Globe, Layers, ArrowRight, Download, Loader2 } from "lucide-react";
+import { Check, ChevronRight, PackageSearch, X, ShoppingCart, ShoppingBag, Info, Globe, Layers, ArrowRight, ArrowUpRight, Star, Download, Loader2 } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
@@ -139,43 +139,181 @@ export default function Products() {
   };
 
   return (
-    <div className="pt-40 pb-40 min-h-screen relative overflow-hidden bg-gradient-to-br from-[#FAF8F2] to-[#F4EFE2]" dir={isRTL ? "rtl" : "ltr"}>
+    <div className="min-h-screen relative overflow-hidden bg-white" dir={isRTL ? "rtl" : "ltr"}>
 
-      {/* Candy Aesthetic Background Blobs - Optimized for performance */}
-      <div className="absolute top-[-5%] right-[-5%] w-[40vw] h-[40vw] bg-[#C59238]/5 rounded-full blur-[80px] pointer-events-none"></div>
-      <div className="absolute bottom-[-5%] left-[-5%] w-[50vw] h-[50vw] bg-amber-300/5 rounded-full blur-[100px] pointer-events-none"></div>
+      {/* =========================================================================
+          SECTION 1: STYLISH EDITORIAL HERO + OVERLAPPING PRODUCT SHOWCASE
+      ========================================================================= */}
+      <section className="relative pt-24 sm:pt-28 pb-16 sm:pb-24 bg-gradient-to-br from-[#FAF3E8] via-[#FFFDF9] to-[#EAF4F1] overflow-hidden">
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        {/* Subtle Decorative Looping Ribbon + Splash Curves */}
+        <svg
+          viewBox="0 0 1200 400"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          className="absolute inset-0 w-full h-full pointer-events-none opacity-65"
+        >
+          <path
+            d="M80 280 C 260 120, 480 340, 620 180 C 760 20, 960 260, 1140 140"
+            stroke="#E6C260"
+            strokeWidth="8"
+            strokeLinecap="round"
+            strokeOpacity="0.45"
+          />
+          <path
+            d="M140 130 C 320 260, 520 60, 740 220 C 900 320, 1050 180, 1160 230"
+            stroke="#BCE6DC"
+            strokeWidth="6"
+            strokeLinecap="round"
+            strokeOpacity="0.55"
+          />
+        </svg>
 
-        {/* Header */}
-        <div className="text-center max-w-4xl mx-auto mb-20 relative">
-          <div className="inline-flex items-center space-x-2 px-6 py-2.5 rounded-full border border-[#C59238]/30 bg-[#FBF3DC] shadow-sm mb-8 group">
-            <span className="relative flex h-3 w-3">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#C59238] opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-3 w-3 bg-[#C59238]"></span>
-            </span>
-            <span className="text-[#C59238] font-black text-[11px] tracking-[0.3em] uppercase">{t("productCategoryLabel")}</span>
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+
+          {/* Clean Editorial Headline (100% Unobstructed) */}
+          <div className="relative flex flex-col items-center justify-center pt-4 pb-2 text-center">
+            <div className="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-white/90 border border-[#C59238]/30 shadow-xs mb-3">
+              <span className="w-2 h-2 rounded-full bg-[#C59238] animate-pulse" />
+              <span className="text-[10px] font-black uppercase tracking-[0.2em] text-[#0B4F43]">
+                AAIZA Dubai Export Catalog
+              </span>
+            </div>
+
+            <h1 className="text-4xl sm:text-6xl md:text-7xl font-black text-[#1A2B27] tracking-tight leading-[0.95] heading-font select-none">
+              {t("productsTitle1") || "Our"}{" "}
+              <span className="text-[#C59238]">{t("productsTitle2") || "Products"}</span>
+            </h1>
           </div>
 
-          <h1 className="text-5xl sm:text-6xl md:text-8xl font-black text-[#0B4F43] uppercase tracking-tighter leading-[0.9] md:leading-[0.85] mb-8 heading-font drop-shadow-sm">
-            {t("productsTitle1")} <br className="md:hidden" /><span className="text-[#C59238]">{t("productsTitle2")}</span>
-          </h1>
-          <p className="text-xl md:text-2xl text-slate-500 font-bold max-w-2xl mx-auto mb-10 leading-relaxed uppercase tracking-wider">
-            {t("productsHeaderDesc")}
-          </p>
+          {/* 3-Column Hero Showcase: Left Info | Center Tilted Jar | Right Treats */}
+          <div className="grid grid-cols-1 md:grid-cols-12 items-center gap-6 mt-2">
 
-          <Link
-            href="/Tree%20India%20Catalogue%20Compressed.pdf"
-            target="_blank"
-            className="inline-flex items-center gap-3 bg-[#0B4F43] text-white hover:bg-[#083B32] hover:scale-105 active:scale-95 px-10 py-5 rounded-full font-black text-[13px] uppercase tracking-widest transition-all shadow-[0_20px_40px_rgba(1,73,149,0.3)]"
-          >
-            <Download className="w-5 h-5" />
-            {t("navDownload")}
-          </Link>
+            {/* Left: Description + Cute Mascot + Action Pills */}
+            <div className="md:col-span-4 flex flex-col items-center md:items-start text-center md:text-left order-2 md:order-1">
+              <p className="text-xs sm:text-sm text-slate-600 font-semibold leading-relaxed max-w-sm mb-4">
+                {t("productsHeaderDesc")}
+              </p>
+              <div className="flex items-center gap-2.5">
+                <div className="relative w-14 h-14 rounded-full bg-[#EAF4F1] border-2 border-[#C59238]/40 overflow-hidden shadow-xs">
+                  <Image
+                    src="/transparent/girl-conico.png"
+                    alt="Sweet Moments"
+                    fill
+                    className="object-contain object-bottom scale-x-[-1]"
+                    sizes="60px"
+                  />
+                </div>
+                <a
+                  href="#catalog-grid"
+                  className="w-11 h-11 rounded-full bg-white border border-[#0B4F43]/20 flex items-center justify-center text-[#0B4F43] hover:bg-[#0B4F43] hover:text-white transition-all shadow-xs"
+                  aria-label="Scroll to catalog"
+                >
+                  <ArrowUpRight className="w-4 h-4" />
+                </a>
+                <Link
+                  href="/Tree%20India%20Catalogue%20Compressed.pdf"
+                  target="_blank"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#0B4F43] text-white text-[11px] font-bold uppercase tracking-wider hover:bg-[#06332B] transition-all shadow-[0_3px_0_#06332B]"
+                >
+                  <Download className="w-3.5 h-3.5" />
+                  <span>Download PDF</span>
+                </Link>
+              </div>
+            </div>
+
+            {/* Center: Tilted Hero Jar Centerpiece */}
+            <div className="md:col-span-4 flex justify-center order-1 md:order-2">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9, rotate: -10 }}
+                animate={{ opacity: 1, scale: 1, rotate: -6 }}
+                transition={{ duration: 0.6 }}
+                className="relative w-44 h-44 sm:w-52 sm:h-52 md:w-56 md:h-56 filter drop-shadow-[0_24px_34px_rgba(11,79,67,0.22)]"
+              >
+                <div className="absolute inset-4 rounded-full bg-[#E6C260]/35 blur-2xl -z-10" />
+                <Image
+                  src="/transparent/DJ Choco Eclairs Jar Markup.png"
+                  alt="AAIZA Signature Confectionery"
+                  fill
+                  className="object-contain"
+                  sizes="240px"
+                  priority
+                />
+              </motion.div>
+            </div>
+
+            {/* Right: Tasty Tagline + Stylish Floating Treats & Mascot */}
+            <div className="md:col-span-4 flex flex-col items-center md:items-end text-center md:text-right order-3">
+              <div className="flex items-center gap-2.5 mb-3">
+                <span className="text-xs font-black text-[#1A2B27] tracking-tight">Tasty in Every Bite</span>
+                <span className="w-8 h-0.5 bg-[#C59238] rounded-full" />
+                <span className="px-2.5 py-0.5 rounded-full bg-[#EAF4F1] text-[10px] font-black text-[#0B4F43] uppercase tracking-wider">
+                  100% Halal
+                </span>
+              </div>
+              <div className="flex items-center gap-3">
+                <div className="relative w-16 h-16 rounded-2xl bg-white/90 border border-[#C59238]/25 p-1.5 shadow-xs -rotate-6">
+                  <Image
+                    src="/transparent/DJ BUTTER COOKIES.png"
+                    alt="Butter Cookies"
+                    fill
+                    className="object-contain p-1"
+                    sizes="70px"
+                  />
+                </div>
+                <div className="relative w-16 h-16 rounded-2xl bg-white/90 border border-[#0B4F43]/15 p-1.5 shadow-xs rotate-6">
+                  <Image
+                    src="/transparent/BABA LOVELY POP STRAWBERRY MARKUP.png"
+                    alt="Lovely Pop"
+                    fill
+                    className="object-contain p-1"
+                    sizes="70px"
+                  />
+                </div>
+                <div className="relative w-20 h-20 rounded-[1.5rem] bg-[#EAF4F1] border-2 border-[#C59238]/35 overflow-hidden shadow-xs">
+                  <Image
+                    src="/transparent/boy-tangy.png"
+                    alt="Tang-y Tamarind"
+                    fill
+                    className="object-contain object-bottom"
+                    sizes="90px"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
-        {/* Visual Categories Grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-8 mb-20">
+        {/* Smooth Organic White Wave Transition */}
+        <div className="absolute bottom-0 left-0 right-0 w-full overflow-hidden leading-none pointer-events-none">
+          <svg viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-12 sm:h-16 block" preserveAspectRatio="none">
+            <path d="M0,40 C240,85 480,0 720,40 C960,80 1200,10 1440,45 L1440,80 L0,80 Z" fill="#FFFFFF" />
+          </svg>
+        </div>
+      </section>
+
+      {/* =========================================================================
+          SECTION 2: POPULAR PRODUCTS + CATEGORY PILLS + CLEAN CARDS
+      ========================================================================= */}
+      <div id="catalog-grid" className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-20 relative z-10">
+
+        {/* Centered "Popular Products" Heading with Playful Burst Lines (Reference Style) */}
+        <div className="text-center mb-8">
+          <div className="inline-flex items-center gap-3">
+            <svg viewBox="0 0 28 24" fill="none" className="w-6 h-5 text-[#C59238]">
+              <path d="M24 20 L10 14 M22 10 L6 6 M18 22 L14 2" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" />
+            </svg>
+            <h2 className="text-2xl sm:text-4xl font-black text-[#1A2B27] tracking-tight heading-font">
+              Popular products
+            </h2>
+            <svg viewBox="0 0 28 24" fill="none" className="w-6 h-5 text-[#C59238] scale-x-[-1]">
+              <path d="M24 20 L10 14 M22 10 L6 6 M18 22 L14 2" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" />
+            </svg>
+          </div>
+        </div>
+
+        {/* Clean Category Filter Strip */}
+        <div className="flex flex-wrap items-center justify-center gap-2.5 sm:gap-3 mb-8">
           {categories.map((cat) => {
             const isActive = activeCategory === cat.id;
             const catCount = cat.id === "All" ? products.length : products.filter((p: ProductGroup) => {
@@ -189,65 +327,38 @@ export default function Products() {
             }).length;
 
             return (
-              <motion.button
+              <button
                 key={cat.id}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
                 onClick={() => setActiveCategory(cat.id)}
                 className={cn(
-                  "relative group flex flex-col items-center p-6 md:p-8 rounded-[3rem] transition-all border-4 overflow-hidden",
+                  "flex items-center gap-2 px-4 py-2 rounded-full text-xs font-bold transition-all border cursor-pointer",
                   isActive
-                    ? "bg-white border-[#C59238] shadow-[0_20px_40px_rgba(255,92,138,0.15)]"
-                    : "bg-white/60 border-transparent hover:border-[#C59238]/30 hover:bg-white shadow-sm"
+                    ? "bg-[#0B4F43] text-white border-[#0B4F43] shadow-sm"
+                    : "bg-[#FAF8F2] text-slate-700 border-[#0B4F43]/15 hover:border-[#C59238]"
                 )}
               >
-                <div className={cn(
-                  "w-24 h-24 md:w-32 md:h-32 mb-6 rounded-[2rem] flex items-center justify-center p-1 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-3 relative",
-                  isActive ? "bg-[#FBF3DC]" : "bg-slate-50"
-                )}>
-                  <Image 
-                    src={cat.image} 
-                    alt={cat.label} 
-                    fill 
-                    className="object-contain p-4 filter drop-shadow-sm" 
-                    sizes="(max-width: 768px) 100px, 150px"
-                  />
+                <div className="relative w-5 h-5 shrink-0">
+                  <Image src={cat.image} alt={cat.label} fill className="object-contain" sizes="24px" />
                 </div>
-
-                <span className={cn(
-                  "text-[11px] font-black uppercase tracking-widest text-center leading-tight mb-1",
-                  isActive ? "text-[#C59238]" : "text-slate-600 group-hover:text-[#C59238]"
-                )}>
-                  {cat.label}
+                <span>{cat.label}</span>
+                <span className={cn("text-[10px] px-1.5 py-0.5 rounded-full", isActive ? "bg-white/20 text-white" : "bg-white text-slate-500")}>
+                  {catCount}
                 </span>
-
-                <span className="text-[10px] font-bold text-slate-400">
-                  {catCount} {t("navProducts") || "Products"}
-                </span>
-
-                {isActive && (
-                  <motion.div
-                    layoutId="activeCatIndicator"
-                    className="absolute bottom-0 left-0 right-0 h-2 bg-[#C59238]"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                  />
-                )}
-              </motion.button>
-            )
+              </button>
+            );
           })}
         </div>
 
-        {/* Bulk Actions */}
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-6 mb-12">
-          <div className="flex items-center gap-4">
-            <Layers className="w-5 h-5 text-[#C59238]" />
-            <span className="text-sm font-black text-[#0B4F43] uppercase tracking-widest">
+        {/* Bulk Actions Bar */}
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 mb-8 pb-4 border-b border-slate-100">
+          <div className="flex items-center gap-2.5">
+            <Layers className="w-4 h-4 text-[#C59238]" />
+            <span className="text-xs font-black text-[#0B4F43] uppercase tracking-wider">
               {filteredProducts.length} {t("navProducts") || "Products"} in {getTranslatedCategory(activeCategory)}
             </span>
           </div>
 
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-3">
             <button
               onClick={() => {
                 const allIds = filteredProducts.map((p: any) => p.id);
@@ -259,68 +370,56 @@ export default function Products() {
                   return newIds;
                 });
               }}
-              className="flex items-center gap-2 px-6 py-3 rounded-2xl bg-white border-2 border-slate-100 text-[#0B4F43] font-black text-[11px] uppercase tracking-widest hover:border-[#C59238] transition-all hover:scale-105 active:scale-95 shadow-sm"
+              className="flex items-center gap-1.5 px-4 py-2 rounded-full bg-[#FAF8F2] border border-[#0B4F43]/15 text-[#0B4F43] font-bold text-[11px] uppercase tracking-wider hover:border-[#C59238] transition-all cursor-pointer"
             >
-              <Check className="w-4 h-4" />
+              <Check className="w-3.5 h-3.5" />
               {t("productSelectAll") || "Select All"}
             </button>
 
             {selectedProductIds.length > 0 && (
               <button
                 onClick={() => setSelectedProductIds([])}
-                className="flex items-center gap-2 px-6 py-3 rounded-2xl bg-white border-2 border-red-100 text-red-500 font-black text-[11px] uppercase tracking-widest hover:border-red-400 transition-all hover:scale-105 active:scale-95 shadow-sm"
+                className="flex items-center gap-1.5 px-4 py-2 rounded-full bg-red-50 border border-red-200 text-red-600 font-bold text-[11px] uppercase tracking-wider hover:bg-red-100 transition-all cursor-pointer"
               >
-                <X className="w-4 h-4" />
+                <X className="w-3.5 h-3.5" />
                 {t("productClearAll") || "Clear All"}
               </button>
             )}
           </div>
         </div>
 
-        {/* Products Grid */}
+        {/* Products Grid (Juiceella Clean Editorial Cards) */}
         <div className="min-h-[400px]">
           {isLoading ? (
-            <div className="flex flex-col items-center justify-center py-32 space-y-4">
-              <Loader2 className="w-12 h-12 text-[#C59238] animate-spin" />
+            <div className="flex flex-col items-center justify-center py-24 space-y-4">
+              <Loader2 className="w-10 h-10 text-[#C59238] animate-spin" />
               <p className="text-[#C59238] font-bold uppercase tracking-widest text-xs">{t("loadingProducts") || "Fetching Product Catalog..."}</p>
             </div>
           ) : filteredProducts.length > 0 ? (
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
               {filteredProducts.map((product: ProductGroup) => {
                 const isSelected = product.variants.some((v: ProductVariant) => selectedProductIds.includes(v.id));
                 return (
                   <motion.div
                     key={product.id}
                     layout
+                    whileHover={{ y: -5 }}
                     className={cn(
-                      "group relative bg-white border-4 rounded-[3rem] overflow-hidden cursor-pointer transition-all duration-500 hover:-translate-y-2 shadow-[0_10px_30px_rgba(0,0,0,0.04)]",
+                      "group relative bg-white border rounded-3xl p-4 cursor-pointer transition-all duration-300 flex flex-col justify-between",
                       isSelected
-                        ? "border-[#C59238] shadow-[0_30px_60px_rgba(255,92,138,0.15)] ring-4 ring-[#C59238]/10"
-                        : "border-transparent hover:shadow-[0_40px_60px_rgba(0,0,0,0.08)]"
+                        ? "border-[#C59238] ring-2 ring-[#C59238]/25 shadow-md"
+                        : "border-slate-200/80 hover:border-[#0B4F43]/30 shadow-xs hover:shadow-md"
                     )}
                     onClick={() => setDetailProduct(product)}
                   >
-                    {/* Selection Badge */}
-                    <div
-                      onClick={(e) => toggleProductSelection(e, product.id)}
-                      className={cn(
-                        "absolute top-6 right-6 z-20 w-12 h-12 rounded-2xl flex items-center justify-center transition-all duration-300 shadow-lg",
-                        isSelected
-                          ? "bg-[#C59238] text-white scale-110 rotate-0"
-                          : "bg-white/80 backdrop-blur-md text-slate-300 hover:text-[#C59238] hover:scale-110 -rotate-12 group-hover:rotate-0 group-hover:text-slate-400"
+                    {/* Top Soft Cream Product Frame */}
+                    <div className="relative aspect-square w-full rounded-2xl bg-[#FAF6F0] flex items-center justify-center p-4 mb-3.5 overflow-hidden">
+                      {product.variants && product.variants.length > 1 && (
+                        <span className="absolute top-2.5 right-2.5 z-10 text-[9px] font-black px-2 py-0.5 bg-white text-[#0B4F43] rounded-full border border-[#0B4F43]/15 uppercase tracking-wider">
+                          {product.variants.length} {t("navFlavors") || "Flavors"}
+                        </span>
                       )}
-                    >
-                      {isSelected ? <Check className="w-7 h-7" strokeWidth={4} /> : <div className="w-6 h-6 border-4 border-current rounded-lg" />}
-                    </div>
-
-                    <div className="aspect-square w-full bg-white flex items-center justify-center p-3 relative overflow-hidden">
-                      <div className="absolute inset-0 bg-gradient-to-br from-pink-50/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
-                      <motion.div
-                        className={cn(
-                          "w-full h-full relative transition-transform duration-700",
-                          isSelected ? "scale-95" : "scale-105 group-hover:scale-115"
-                        )}
-                      >
+                      <div className="relative w-full h-full transition-transform duration-300 -rotate-3 group-hover:rotate-0 group-hover:scale-105">
                         <Image
                           src={product.image || "/aaiza-logo.jpg"}
                           alt={product.name}
@@ -329,46 +428,98 @@ export default function Products() {
                           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
                           priority={filteredProducts.indexOf(product) < 4}
                         />
-                      </motion.div>
+                      </div>
                     </div>
 
-                    <div className={cn(
-                      "p-6 text-center transition-colors duration-500",
-                      isSelected ? "bg-[#FBF3DC]/50" : "bg-gradient-to-b from-white to-slate-50 border-t border-slate-50 group-hover:bg-white"
-                    )}>
-                      <h3 className={cn(
-                        "text-xl font-black uppercase tracking-tighter transition-colors heading-font leading-tight",
-                        isSelected ? "text-[#C59238]" : "text-[#0B4F43] group-hover:text-[#C59238]"
-                      )}>{product.name}</h3>
-                      <div className="mt-2 flex items-center justify-center gap-2">
-                        <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">
+                    {/* Card Footer (Title + Stars + Circular Bag/Check Button) */}
+                    <div className="flex items-end justify-between gap-2">
+                      <div className="min-w-0">
+                        <h3 className={cn(
+                          "text-xs sm:text-sm font-black uppercase tracking-tight truncate heading-font",
+                          isSelected ? "text-[#C59238]" : "text-[#1A2B27] group-hover:text-[#0B4F43]"
+                        )}>
+                          {product.name}
+                        </h3>
+                        <p className="text-[10px] font-bold text-slate-400 uppercase tracking-wider truncate mt-0.5">
                           {getTranslatedCategory(product.category)}
                         </p>
-                        {product.variants && product.variants.length > 1 && (
-                          <span className="text-[9px] font-black px-2 py-0.5 bg-[#FBF3DC] text-[#C59238] rounded-full border border-pink-100 uppercase tracking-tighter">
-                            {product.variants.length} {t("navFlavors") || "Flavors"}
-                          </span>
-                        )}
+                        <div className="flex items-center gap-0.5 mt-1.5 text-[#C59238]">
+                          {[...Array(5)].map((_, sIdx) => (
+                            <Star key={sIdx} className="w-3 h-3 fill-current" />
+                          ))}
+                        </div>
                       </div>
-                    </div>
 
-                    {/* Info Icon for Detail */}
-                    <div className="absolute bottom-6 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-4 group-hover:translate-y-0">
-                      <div className="flex items-center gap-2 px-4 py-2 bg-[#0B4F43] rounded-full text-white font-black text-[10px] uppercase tracking-widest shadow-xl">
-                        <Info className="w-4 h-4" />
-                        {t("productSpecs") || "View Details"}
-                      </div>
+                      <button
+                        type="button"
+                        onClick={(e) => toggleProductSelection(e, product.id)}
+                        className={cn(
+                          "w-9 h-9 rounded-full flex items-center justify-center shrink-0 transition-all border cursor-pointer",
+                          isSelected
+                            ? "bg-[#0B4F43] text-white border-[#0B4F43] shadow-sm"
+                            : "bg-white text-[#1A2B27] border-slate-200 hover:border-[#0B4F43] hover:text-[#0B4F43]"
+                        )}
+                        aria-label="Select product for inquiry"
+                      >
+                        {isSelected ? <Check className="w-4 h-4" strokeWidth={3} /> : <ShoppingBag className="w-4 h-4" />}
+                      </button>
                     </div>
                   </motion.div>
                 );
               })}
             </div>
           ) : (
-            <div className="text-center py-32">
-              <PackageSearch className="w-16 h-16 text-slate-200 mx-auto mb-6" />
+            <div className="text-center py-24">
+              <PackageSearch className="w-14 h-14 text-slate-200 mx-auto mb-4" />
               <p className="text-slate-500 font-bold uppercase tracking-widest text-xs">No products found in this category.</p>
             </div>
           )}
+        </div>
+
+        {/* =========================================================================
+            SECTION 3: "THE AAIZA PROMISE." (Reference Stepped Cream Promise Card)
+        ========================================================================= */}
+        <div className="mt-16 rounded-[2.5rem] bg-[#FAF3E8] border border-[#C59238]/25 p-6 sm:p-10 relative overflow-hidden">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+            <div className="md:col-span-4 flex justify-center">
+              <div className="relative w-48 h-48 sm:w-56 sm:h-56 filter drop-shadow-lg">
+                <Image
+                  src="/transparent/DJ CREMO COMBINE.png"
+                  alt="AAIZA Quality Promise"
+                  fill
+                  className="object-contain"
+                  sizes="240px"
+                />
+              </div>
+            </div>
+
+            <div className="md:col-span-8">
+              <h2 className="text-2xl sm:text-4xl font-black text-[#1A2B27] uppercase tracking-tight heading-font mb-4">
+                THE <span className="text-[#0B4F43]">AAIZA</span> PROMISE.
+              </h2>
+              <ul className="space-y-2 text-xs sm:text-sm text-slate-700 font-medium mb-6">
+                <li className="flex items-center gap-2.5">
+                  <span className="w-2 h-2 rounded-full bg-[#C59238] shrink-0" />
+                  100% Halal certified confectionery crafted for global retail &amp; wholesale markets.
+                </li>
+                <li className="flex items-center gap-2.5">
+                  <span className="w-2 h-2 rounded-full bg-[#0B4F43] shrink-0" />
+                  Direct FCL &amp; LCL container dispatch from Jebel Ali Port, Dubai to 25+ countries.
+                </li>
+                <li className="flex items-center gap-2.5">
+                  <span className="w-2 h-2 rounded-full bg-[#2E6F2D] shrink-0" />
+                  Climate-resilient packaging keeping biscuits crisp and candies fresh worldwide.
+                </li>
+              </ul>
+              <Link
+                href="/contact"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#0B4F43] text-white font-bold text-xs uppercase tracking-wider hover:bg-[#06332B] transition-all shadow-[0_3px_0_#06332B]"
+              >
+                <span>Request Bulk Quote</span>
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -446,7 +597,7 @@ export default function Products() {
 
                     <div className="flex flex-col gap-5">
                       <Link
-                        href={`https://wa.me/919408436732?text=${encodeURIComponent(`Hello, I am interested in ${detailProduct.name} ${detailProduct.variants.find(v => v.id === detailProduct.id)?.name || ""}. Can you provide more details?`)}`}
+                        href={`https://wa.me/971545897386?text=${encodeURIComponent(`Hello, I am interested in ${detailProduct.name} ${detailProduct.variants.find(v => v.id === detailProduct.id)?.name || ""}. Can you provide more details?`)}`}
                         target="_blank"
                         className="h-16 lg:h-18 rounded-[2rem] font-black uppercase tracking-widest text-[13px] transition-all flex items-center justify-center gap-4 transform active:scale-95 bg-[#25D366] text-white hover:bg-[#128C7E] hover:scale-[1.02] shadow-[0_20px_40px_rgba(37,211,102,0.15)]"
                       >

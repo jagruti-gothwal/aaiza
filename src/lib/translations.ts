@@ -20,7 +20,7 @@ export const translations: Translations = {
     heroTitle1: "Best Quality",
     heroTitle2: "Sweets & Treats",
     heroSubtitle: "Your Top Partner for Biscuits and Candies",
-    heroDesc: "Tree India is your trusted partner for high-quality biscuits, candies, and lollipops. We export the best sweets to Africa, Middle East and beyond.",
+    heroDesc: "AAIZA FOOD TRADING FZCO is your trusted partner for high-quality biscuits, candies, and lollipops. We export the best sweets to Africa, Middle East and beyond.",
     heroViewProducts: "View Products",
     heroBulkInquiry: "Contact for Bulk",
     
@@ -91,7 +91,7 @@ export const translations: Translations = {
     // About Page
     aboutTitle1: "Delivering Excellence",
     aboutTitle2: "Worldwide",
-    aboutHeaderDesc: "Tree India is a top export company. We provide high-quality biscuits and sweets to the whole world.",
+    aboutHeaderDesc: "AAIZA FOOD TRADING FZCO is a top export company. We provide high-quality biscuits and sweets to the whole world.",
     aboutMissionTitle: "Our Goal",
     aboutMissionDesc: "To provide the best and most affordable food products globally. we want to build strong partnerships based on trust.",
     aboutVisionTitle: "Our Vision",
@@ -132,7 +132,7 @@ export const translations: Translations = {
 
     // Export Page
     exportDeskTitle: "Global Export Solutions",
-    exportDeskDesc: "Tree India makes exporting easy. From the factory to your port, we handle everything.",
+    exportDeskDesc: "AAIZA FOOD TRADING FZCO makes exporting easy. From the factory to your port, we handle everything.",
     exportCapabilities: "Export Power",
     exportOfferingsTitle: "How We Work",
     exportCoreCompetencies: "Main Strengths",
@@ -141,7 +141,7 @@ export const translations: Translations = {
     exportWhyWorkTitle: "B2B Benefit",
     exportAdvantageSub: "More Value",
     exportReachTitle: "Global Reach",
-    exportReachDesc: "Tree India sends products to many countries, especially across Africa.",
+    exportReachDesc: "AAIZA FOOD TRADING FZCO sends products to many countries, especially across Africa.",
     exportFootprint: "Where We Are",
     exportHubTitle: "Fast Shipping",
     exportHubDesc: "Headquartered in Dubai, United Arab Emirates, we ship by sea from Jebel Ali Port to over 25 countries.",
@@ -216,7 +216,7 @@ export const translations: Translations = {
     contactMailTitle: "Primary Inquiry",
     contactWhatsAppTitle: "Instant Liaison",
     contactNoticeTitle: "Notice",
-    contactNoticeDesc: "Tree India requires comprehensive operational details for accurate logistical quoting and volume pricing structures globally.",
+    contactNoticeDesc: "AAIZA FOOD TRADING FZCO requires comprehensive operational details for accurate logistical quoting and volume pricing structures globally.",
   },
   PT: {
     navHome: "Início",
@@ -233,7 +233,7 @@ export const translations: Translations = {
     heroTitle1: "Qualidade",
     heroTitle2: "Superior",
     heroSubtitle: "Exportador Líder de Biscoitos e Doces Premium",
-    heroDesc: "A Tree India é seu parceiro de confiança para biscoitos, doces e pirulitos de alta qualidade. Reconhecida globalmente pela excelência na exportação para África e Oriente Médio.",
+    heroDesc: "A AAIZA FOOD TRADING FZCO é seu parceiro de confiança para biscoitos, doces e pirulitos de alta qualidade. Reconhecida globalmente pela excelência na exportação para África e Oriente Médio.",
     heroViewProducts: "Ver Produtos",
     heroBulkInquiry: "Consulta de Lote",
     
@@ -304,11 +304,11 @@ export const translations: Translations = {
 
     aboutTitle1: "Entregando Excelência",
     aboutTitle2: "Mundialmente",
-    aboutHeaderDesc: "A Tree India é uma empresa líder voltada para a exportação, dedicada ao fornecimento de produtos alimentícios comerciais de alta qualidade, especializada em biscoitos e confeitaria para mercados internacionais.",
+    aboutHeaderDesc: "A AAIZA FOOD TRADING FZCO é uma empresa líder voltada para a exportação, dedicada ao fornecimento de produtos alimentícios comerciais de alta qualidade, especializada em biscoitos e confeitaria para mercados internacionais.",
     aboutMissionTitle: "Nossa Missão",
     aboutMissionDesc: "Projetar uma infraestrutura de exportação perfeita que forneça produtos alimentícios de alta qualidade e acessíveis globalmente, consolidando alianças B2B de longo prazo baseadas em confiança e desempenho.",
     aboutVisionTitle: "Nossa Visão",
-    aboutVisionDesc: "Solidificar a posição da Tree India como um nome mundialmente renomado no setor de exportação comercial, entregando consistentemente valor inigualável na cadeia de suprimentos, garantia de qualidade e inovação de mercado.",
+    aboutVisionDesc: "Solidificar a posição da AAIZA FOOD TRADING FZCO como um nome mundialmente renomado no setor de exportação comercial, entregando consistentemente valor inigualável na cadeia de suprimentos, garantia de qualidade e inovação de mercado.",
     aboutValuesTitle: "Valores Centrais",
     aboutValuesSub: "Princípios Corporativos",
     aboutCorporateIdentity: "Identidade Corporativa",
@@ -342,7 +342,7 @@ export const translations: Translations = {
     categoryChocolates: "Chocolates",
 
     exportDeskTitle: "Soluções de Comércio Global",
-    exportDeskDesc: "Aproveitando alianças de fabricação robustas e expertise em logística multi-modal, a Tree India orquestra operações de exportação ponta a ponta impecáveis.",
+    exportDeskDesc: "Aproveitando alianças de fabricação robustas e expertise em logística multi-modal, a AAIZA FOOD TRADING FZCO orquestra operações de exportação ponta a ponta impecáveis.",
     exportCapabilities: "Capacidades de Exportação",
     exportOfferingsTitle: "Arsenal Operacional",
     exportCoreCompetencies: "Competências Centrais",
@@ -351,7 +351,7 @@ export const translations: Translations = {
     exportWhyWorkTitle: "Vantagem B2B",
     exportAdvantageSub: "Valor Agregado",
     exportReachTitle: "Alcance Internacional",
-    exportReachDesc: "A Tree India executa distribuições de alto volume em várias rotas comerciais primárias.",
+    exportReachDesc: "A AAIZA FOOD TRADING FZCO executa distribuições de alto volume em várias rotas comerciais primárias.",
     exportFootprint: "Pegada Geográfica",
     exportHubTitle: "Centro de Despacho Global",
     exportHubDesc: "Com sede em Dubai, Emirados Árabes Unidos, enviamos por mar pelo Porto de Jebel Ali para mais de 25 países.",
@@ -415,7 +415,7 @@ export const translations: Translations = {
     contactMailTitle: "Consulta Primária",
     contactWhatsAppTitle: "Conexão Instantânea",
     contactNoticeTitle: "Aviso",
-    contactNoticeDesc: "A Tree India requer detalhes operacionais abrangentes para cotações logísticas precisas.",
+    contactNoticeDesc: "A AAIZA FOOD TRADING FZCO requer detalhes operacionais abrangentes para cotações logísticas precisas.",
   },
   AR: {
     navHome: "الرئيسية",
@@ -627,7 +627,7 @@ export const translations: Translations = {
     heroTitle1: "Qualité",
     heroTitle2: "Supérieure",
     heroSubtitle: "Premier Exportateur de Biscuits et Confiseries Premium",
-    heroDesc: "Tree India est votre partenaire de confiance pour les biscuits, bonbons et sucettes de haute qualité. Reconnu mondialement pour son excellence en exportation à travers l'Afrique et le Moyen-Orient.",
+    heroDesc: "AAIZA FOOD TRADING FZCO est votre partenaire de confiance pour les biscuits, bonbons et sucettes de haute qualité. Reconnu mondialement pour son excellence en exportation à travers l'Afrique et le Moyen-Orient.",
     heroViewProducts: "Voir les Produits",
     heroBulkInquiry: "Demande en Gros",
     
@@ -698,11 +698,11 @@ export const translations: Translations = {
 
     aboutTitle1: "Délivrer l'Excellence",
     aboutTitle2: "Mondialement",
-    aboutHeaderDesc: "Tree India est une entreprise de premier plan orientée vers l'exportation, dédiée à la fourniture de produits alimentaires commerciaux de haute qualité, spécialisée dans les biscuits et la confiserie.",
+    aboutHeaderDesc: "AAIZA FOOD TRADING FZCO est une entreprise de premier plan orientée vers l'exportation, dédiée à la fourniture de produits alimentaires commerciaux de haute qualité, spécialisée dans les biscuits et la confiserie.",
     aboutMissionTitle: "Notre Mission",
     aboutMissionDesc: "Concevoir une infrastructure d'exportation transparente qui fournit des produits alimentaires de première qualité à des prix abordables, tout en cimentant des alliances B2B à long terme.",
     aboutVisionTitle: "Notre Vision",
-    aboutVisionDesc: "Solidifier la position de Tree India comme un nom de renommée mondiale dans le secteur de l'exportation commerciale en offrant une valeur de chaîne d'approvisionnement inégalée.",
+    aboutVisionDesc: "Solidifier la position de AAIZA FOOD TRADING FZCO comme un nom de renommée mondiale dans le secteur de l'exportation commerciale en offrant une valeur de chaîne d'approvisionnement inégalée.",
     aboutValuesTitle: "Valeurs Fondamentales",
     aboutValuesSub: "Principes de l'Entreprise",
     aboutCorporateIdentity: "Identité de l'Entreprise",
@@ -734,7 +734,7 @@ export const translations: Translations = {
     categoryChocolates: "Chocolats",
 
     exportDeskTitle: "Solutions Commerciales Mondiales",
-    exportDeskDesc: "En s'appuyant sur des alliances de fabrication robustes et une expertise logistique, Tree India orchestre des opérations d'exportation de bout en bout impeccables.",
+    exportDeskDesc: "En s'appuyant sur des alliances de fabrication robustes et une expertise logistique, AAIZA FOOD TRADING FZCO orchestre des opérations d'exportation de bout en bout impeccables.",
     exportCapabilities: "Capacités d'Exportation",
     exportOfferingsTitle: "Arsenal Opérationnel",
     exportCoreCompetencies: "Compétences de Base",
@@ -743,7 +743,7 @@ export const translations: Translations = {
     exportWhyWorkTitle: "Avantage B2B",
     exportAdvantageSub: "Valeur Ajoutée",
     exportReachTitle: "Portée Internationale",
-    exportReachDesc: "Tree India exécute des distributions à haut volume sur plusieurs routes commerciales primaires.",
+    exportReachDesc: "AAIZA FOOD TRADING FZCO exécute des distributions à haut volume sur plusieurs routes commerciales primaires.",
     exportFootprint: "Empreinte Géographique",
     exportHubTitle: "Centre d'Expédition Mondial",
     exportHubDesc: "Basés à Dubaï, Émirats arabes unis, nous expédions par voie maritime depuis le port de Jebel Ali vers plus de 25 pays.",
@@ -805,7 +805,7 @@ export const translations: Translations = {
     contactMailTitle: "Demande Primaire",
     contactWhatsAppTitle: "Liaison Instantanée",
     contactNoticeTitle: "Avis",
-    contactNoticeDesc: "Tree India nécessite des détails opérationnels complets pour des cotations logistiques précises.",
+    contactNoticeDesc: "AAIZA FOOD TRADING FZCO nécessite des détails opérationnels complets pour des cotations logistiques précises.",
   },
   ES: {
     navHome: "Inicio",
@@ -822,7 +822,7 @@ export const translations: Translations = {
     heroTitle1: "Calidad",
     heroTitle2: "Superior",
     heroSubtitle: "Exportador Líder de Galletas y Dulces Premium",
-    heroDesc: "Tree India es su socio de confianza para galletas, dulces y caramelos de alta calidad. Reconocido globalmente por su excelencia en la exportación a través de África y el Medio Oriente.",
+    heroDesc: "AAIZA FOOD TRADING FZCO es su socio de confianza para galletas, dulces y caramelos de alta calidad. Reconocido globalmente por su excelencia en la exportación a través de África y el Medio Oriente.",
     heroViewProducts: "Ver Productos",
     heroBulkInquiry: "Consulta Mayorista",
     
@@ -893,11 +893,11 @@ export const translations: Translations = {
 
     aboutTitle1: "Entregando Excelencia",
     aboutTitle2: "Mundialmente",
-    aboutHeaderDesc: "Tree India es una empresa líder orientada a la exportación, dedicada al suministro de productos alimenticios comerciales de alta calidad, especializada en galletas y confitería.",
+    aboutHeaderDesc: "AAIZA FOOD TRADING FZCO es una empresa líder orientada a la exportación, dedicada al suministro de productos alimenticios comerciales de alta calidad, especializada en galletas y confitería.",
     aboutMissionTitle: "Nuestra Misión",
     aboutMissionDesc: "Diseñar una infraestructura de exportación fluida que proporcione productos alimenticios de primera calidad a precios asequibles a nivel mundial.",
     aboutVisionTitle: "Nuestra Visión",
-    aboutVisionDesc: "Solidificar la posición de Tree India como un nombre reconocido mundialmente en el sector de la exportación comercial ofreciendo un valor inigualable.",
+    aboutVisionDesc: "Solidificar la posición de AAIZA FOOD TRADING FZCO como un nombre reconocido mundialmente en el sector de la exportación comercial ofreciendo un valor inigualable.",
     aboutValuesTitle: "Valores Fundamentales",
     aboutValuesSub: "Principios Corporativos",
     aboutCorporateIdentity: "Identidad Corporativa",
@@ -929,7 +929,7 @@ export const translations: Translations = {
     categoryChocolates: "Chocolates",
 
     exportDeskTitle: "Soluciones Comerciales Globales",
-    exportDeskDesc: "Aprovechando las sólidas alianzas de fabricación y la experiencia en logística multimodal, Tree India organiza operaciones de exportación impecables.",
+    exportDeskDesc: "Aprovechando las sólidas alianzas de fabricación y la experiencia en logística multimodal, AAIZA FOOD TRADING FZCO organiza operaciones de exportación impecables.",
     exportCapabilities: "Capacidades de Exportación",
     exportOfferingsTitle: "Arsenal Operativo",
     exportCoreCompetencies: "Competencias Principales",
@@ -938,7 +938,7 @@ export const translations: Translations = {
     exportWhyWorkTitle: "Ventaja B2B",
     exportAdvantageSub: "Valor Añadido",
     exportReachTitle: "Alcance Internacional",
-    exportReachDesc: "Tree India ejecuta distribuciones de alto volumen a través de múltiples rutas comerciales primarias.",
+    exportReachDesc: "AAIZA FOOD TRADING FZCO ejecuta distribuciones de alto volumen a través de múltiples rutas comerciales primarias.",
     exportFootprint: "Huella Geográfica",
     exportHubTitle: "Centro de Despacho Global",
     exportHubDesc: "Con sede en Dubái, Emiratos Árabes Unidos, realizamos envíos marítimos desde el puerto de Jebel Ali a más de 25 países.",
@@ -1000,6 +1000,6 @@ export const translations: Translations = {
     contactMailTitle: "Consulta Primaria",
     contactWhatsAppTitle: "Enlace Instantáneo",
     contactNoticeTitle: "Aviso",
-    contactNoticeDesc: "Tree India requiere detalles operativos exhaustivos para cotizaciones logísticas precisas.",
+    contactNoticeDesc: "AAIZA FOOD TRADING FZCO requiere detalles operativos exhaustivos para cotizaciones logísticas precisas.",
   }
 };

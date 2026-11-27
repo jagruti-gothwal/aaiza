@@ -9,8 +9,8 @@ export default function WhatsAppButton() {
     return null;
   }
 
-  const message = encodeURIComponent("Hello Tree India. I'm interested in your products.");
-  const phone = "919408436732"; // Official Tree India Commercial Number
+  const message = encodeURIComponent("Hello AAIZA FOOD TRADING FZCO. I'm interested in your products.");
+  const phone = "971545897386"; // Official AAIZA FOOD TRADING FZCO Commercial Number
 
   return (
     <div className="fixed bottom-6 right-6 z-50">
