@@ -184,7 +184,7 @@ export default function InquiriesAdmin() {
         );
       default: 
         return (
-          <span className="px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-[9px] font-black uppercase tracking-widest border border-blue-200 flex items-center gap-1.5 shadow-xs">
+          <span className="px-3 py-1 bg-[#EAF4F1] text-blue-600 rounded-full text-[9px] font-black uppercase tracking-widest border border-blue-200 flex items-center gap-1.5 shadow-xs">
             <AlertCircle className="w-2.5 h-2.5" /> New Lead
           </span>
         );
@@ -200,7 +200,7 @@ export default function InquiriesAdmin() {
           animate={{ opacity: 1, scale: 1, y: 0 }}
           className="relative z-10 bg-white p-10 rounded-[3rem] shadow-xl w-full max-w-md border border-slate-100"
         >
-          <div className="w-20 h-20 bg-blue-50 rounded-3xl flex items-center justify-center mb-8 mx-auto text-[#003366]">
+          <div className="w-20 h-20 bg-[#EAF4F1] rounded-3xl flex items-center justify-center mb-8 mx-auto text-[#0B4F43]">
             <ShieldCheck size={32} strokeWidth={2.5} />
           </div>
           <h2 className="text-2xl font-black text-center text-slate-900 mb-2 uppercase tracking-widest">Inquiry CRM</h2>
@@ -212,13 +212,13 @@ export default function InquiriesAdmin() {
                 placeholder="Admin Password" 
                 value={password} 
                 onChange={e => setPassword(e.target.value)}
-                className="w-full pl-5 pr-14 py-5 bg-slate-50 border border-slate-200 text-slate-900 font-bold rounded-3xl outline-none focus:bg-white focus:ring-4 focus:ring-[#003366]/5 transition-all text-center tracking-widest"
+                className="w-full pl-5 pr-14 py-5 bg-slate-50 border border-slate-200 text-slate-900 font-bold rounded-3xl outline-none focus:bg-white focus:ring-4 focus:ring-[#0B4F43]/5 transition-all text-center tracking-widest"
               />
               <button type="button" onClick={() => setShowPassword(!showPassword)} className="absolute right-5 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600 transition-colors">
                 {showPassword ? <EyeOff size={20} /> : <Eye size={20} />}
               </button>
             </div>
-            <button type="submit" disabled={loading} className="w-full bg-[#003366] text-white py-5 font-black rounded-3xl hover:bg-slate-900 transition-all uppercase tracking-widest text-xs shadow-xl shadow-blue-900/10 active:scale-[0.98]">
+            <button type="submit" disabled={loading} className="w-full bg-[#0B4F43] text-white py-5 font-black rounded-3xl hover:bg-slate-900 transition-all uppercase tracking-widest text-xs shadow-xl shadow-blue-900/10 active:scale-[0.98]">
               {loading ? "Verifying..." : "Enter Workspace"}
             </button>
           </form>
@@ -237,12 +237,12 @@ export default function InquiriesAdmin() {
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-6">
           <div>
             <div className="flex items-center gap-3 mb-2">
-              <span className="text-[10px] font-black text-[#003366] uppercase tracking-[0.3em] bg-blue-50 px-3 py-1 rounded-full border border-blue-100">
+              <span className="text-[10px] font-black text-[#0B4F43] uppercase tracking-[0.3em] bg-[#EAF4F1] px-3 py-1 rounded-full border border-[#0B4F43]/20">
                 Pipeline CRM
               </span>
             </div>
             <h1 className="text-4xl md:text-5xl font-black text-slate-900 uppercase tracking-tighter leading-none">
-              Inquiry <span className="text-[#003366]">Leads</span>
+              Inquiry <span className="text-[#0B4F43]">Leads</span>
             </h1>
           </div>
           
@@ -255,7 +255,7 @@ export default function InquiriesAdmin() {
                 className={cn(
                   "flex items-center gap-2 px-4 py-2 text-[11px] font-black uppercase tracking-wider rounded-xl transition-all",
                   viewMode === "cards" 
-                    ? "bg-[#003366] text-white shadow-md" 
+                    ? "bg-[#0B4F43] text-white shadow-md" 
                     : "text-slate-500 hover:text-slate-800 hover:bg-slate-50"
                 )}
                 title="Split Cards View"
@@ -269,7 +269,7 @@ export default function InquiriesAdmin() {
                 className={cn(
                   "flex items-center gap-2 px-4 py-2 text-[11px] font-black uppercase tracking-wider rounded-xl transition-all",
                   viewMode === "table" 
-                    ? "bg-[#003366] text-white shadow-md" 
+                    ? "bg-[#0B4F43] text-white shadow-md" 
                     : "text-slate-500 hover:text-slate-800 hover:bg-slate-50"
                 )}
                 title="Table Spreadsheet View"
@@ -283,7 +283,7 @@ export default function InquiriesAdmin() {
                 className={cn(
                   "flex items-center gap-2 px-4 py-2 text-[11px] font-black uppercase tracking-wider rounded-xl transition-all",
                   viewMode === "kanban" 
-                    ? "bg-[#003366] text-white shadow-md" 
+                    ? "bg-[#0B4F43] text-white shadow-md" 
                     : "text-slate-500 hover:text-slate-800 hover:bg-slate-50"
                 )}
                 title="Kanban Board View"
@@ -295,7 +295,7 @@ export default function InquiriesAdmin() {
 
             <button 
               onClick={exportToCSV}
-              className="p-3 bg-white border border-slate-200 rounded-2xl text-slate-600 hover:text-[#003366] hover:border-blue-200 transition-all shadow-sm active:scale-95 flex items-center gap-2 text-xs font-bold"
+              className="p-3 bg-white border border-slate-200 rounded-2xl text-slate-600 hover:text-[#0B4F43] hover:border-blue-200 transition-all shadow-sm active:scale-95 flex items-center gap-2 text-xs font-bold"
               title="Export to CSV"
             >
               <Download className="w-4 h-4" />
@@ -304,7 +304,7 @@ export default function InquiriesAdmin() {
 
             <button 
               onClick={loadInquiries} 
-              className="p-3 bg-white border border-slate-200 rounded-2xl text-slate-600 hover:text-[#003366] hover:border-blue-200 transition-all shadow-sm active:scale-95"
+              className="p-3 bg-white border border-slate-200 rounded-2xl text-slate-600 hover:text-[#0B4F43] hover:border-blue-200 transition-all shadow-sm active:scale-95"
               title="Refresh Data"
             >
               <RefreshCw className={cn("w-4 h-4", loading && "animate-spin")} />
@@ -318,9 +318,9 @@ export default function InquiriesAdmin() {
             <span className="text-[10px] font-black uppercase tracking-widest text-slate-400 block mb-1">Total Inquiries</span>
             <p className="text-3xl font-black text-slate-900 leading-none">{counts.total}</p>
           </div>
-          <div className="bg-blue-50/50 p-5 rounded-3xl border border-blue-100 shadow-xs">
+          <div className="bg-[#EAF4F1]/50 p-5 rounded-3xl border border-[#0B4F43]/20 shadow-xs">
             <span className="text-[10px] font-black uppercase tracking-widest text-blue-500 block mb-1">New Leads</span>
-            <p className="text-3xl font-black text-[#003366] leading-none">{counts.new}</p>
+            <p className="text-3xl font-black text-[#0B4F43] leading-none">{counts.new}</p>
           </div>
           <div className="bg-emerald-50/50 p-5 rounded-3xl border border-emerald-100 shadow-xs">
             <span className="text-[10px] font-black uppercase tracking-widest text-emerald-600 block mb-1">Contacted</span>
@@ -342,7 +342,7 @@ export default function InquiriesAdmin() {
               value={searchQuery}
               onChange={e => setSearchQuery(e.target.value)}
               placeholder="Search company, name, email, phone..."
-              className="w-full pl-11 pr-4 py-3 bg-white border border-slate-200 rounded-2xl text-xs font-bold text-slate-800 placeholder-slate-400 outline-none focus:border-[#003366] focus:ring-2 focus:ring-[#003366]/5 transition-all shadow-xs"
+              className="w-full pl-11 pr-4 py-3 bg-white border border-slate-200 rounded-2xl text-xs font-bold text-slate-800 placeholder-slate-400 outline-none focus:border-[#0B4F43] focus:ring-2 focus:ring-[#0B4F43]/5 transition-all shadow-xs"
             />
             {searchQuery && (
               <button 
@@ -372,7 +372,7 @@ export default function InquiriesAdmin() {
                     className={cn(
                       "px-4 py-2 text-[10px] font-black uppercase tracking-widest rounded-xl transition-all whitespace-nowrap",
                       activeTab === tab 
-                        ? "bg-[#003366] text-white shadow-md" 
+                        ? "bg-[#0B4F43] text-white shadow-md" 
                         : "text-slate-400 hover:bg-slate-50 hover:text-slate-700"
                     )}
                   >
@@ -419,7 +419,7 @@ export default function InquiriesAdmin() {
                       className={cn(
                         "p-6 rounded-[2rem] border cursor-pointer transition-all duration-300 relative group",
                         activeInquiry?.id === inq.id 
-                          ? 'bg-[#003366] border-[#003366] shadow-[0_20px_50px_rgba(0,51,102,0.15)] ring-4 ring-blue-900/5 text-white' 
+                          ? 'bg-[#0B4F43] border-[#0B4F43] shadow-[0_20px_50px_rgba(0,51,102,0.15)] ring-4 ring-blue-900/5 text-white' 
                           : 'bg-white border-slate-100 hover:border-blue-200 hover:shadow-lg shadow-xs'
                       )}
                     >
@@ -434,7 +434,7 @@ export default function InquiriesAdmin() {
                         </div>
                         <div className={cn(
                           "w-2.5 h-2.5 rounded-full shrink-0",
-                          normalizeStatus(inq.status) === "New" ? "bg-blue-500 animate-pulse" : normalizeStatus(inq.status) === "Contacted" ? "bg-emerald-400" : "bg-slate-300"
+                          normalizeStatus(inq.status) === "New" ? "bg-[#EAF4F1]0 animate-pulse" : normalizeStatus(inq.status) === "Contacted" ? "bg-emerald-400" : "bg-slate-300"
                         )} />
                       </div>
 
@@ -481,7 +481,7 @@ export default function InquiriesAdmin() {
                     exit={{ opacity: 0, x: -20, scale: 0.98 }}
                     className="bg-white rounded-[3rem] border border-slate-100 shadow-xl overflow-hidden min-h-[550px] flex flex-col sticky top-28"
                   >
-                    <div className="bg-[#003366] p-8 md:p-10 text-white relative">
+                    <div className="bg-[#0B4F43] p-8 md:p-10 text-white relative">
                       <div className="absolute top-0 right-0 p-8 opacity-10">
                         <MessageSquare className="w-28 h-28" />
                       </div>
@@ -535,8 +535,8 @@ export default function InquiriesAdmin() {
                     
                     <div className="p-8 md:p-10 flex-1">
                       <div className="mb-8">
-                        <h4 className="text-[10px] font-black text-[#003366] uppercase tracking-[0.3em] mb-4 flex items-center gap-3">
-                          <div className="w-4 h-0.5 bg-[#003366]/30" /> Requirements Narrative
+                        <h4 className="text-[10px] font-black text-[#0B4F43] uppercase tracking-[0.3em] mb-4 flex items-center gap-3">
+                          <div className="w-4 h-0.5 bg-[#0B4F43]/30" /> Requirements Narrative
                         </h4>
                         <div className="bg-slate-50 p-6 rounded-2xl text-slate-800 font-medium text-base leading-relaxed border border-slate-100 shadow-inner whitespace-pre-wrap">
                           "{activeInquiry.message || 'No additional details provided.'}"
@@ -545,12 +545,12 @@ export default function InquiriesAdmin() {
 
                       {activeInquiry.product_ids && (
                         <div>
-                          <h4 className="text-[10px] font-black text-[#003366] uppercase tracking-[0.3em] mb-4 flex items-center gap-3">
-                            <div className="w-4 h-0.5 bg-[#003366]/30" /> Inquired Products
+                          <h4 className="text-[10px] font-black text-[#0B4F43] uppercase tracking-[0.3em] mb-4 flex items-center gap-3">
+                            <div className="w-4 h-0.5 bg-[#0B4F43]/30" /> Inquired Products
                           </h4>
                           <div className="flex flex-wrap gap-2">
                             {activeInquiry.product_ids.split(',').map((pid: string) => (
-                              <div key={pid} className="px-4 py-2 bg-white text-[#003366] rounded-xl border border-slate-200 shadow-xs flex items-center gap-2">
+                              <div key={pid} className="px-4 py-2 bg-white text-[#0B4F43] rounded-xl border border-slate-200 shadow-xs flex items-center gap-2">
                                 <Package className="w-3.5 h-3.5 text-blue-500" />
                                 <span className="text-[10px] font-black tracking-widest uppercase">ID: {pid.trim()}</span>
                               </div>
@@ -592,7 +592,7 @@ export default function InquiriesAdmin() {
                         {normalizeStatus(activeInquiry.status) === "Archived" && (
                           <button
                             onClick={() => handleStatusUpdate(activeInquiry.id, "New")}
-                            className="px-4 py-2.5 bg-blue-50 text-blue-700 hover:bg-blue-100 rounded-xl border border-blue-200 text-[10px] font-black uppercase tracking-wider transition-colors shadow-xs"
+                            className="px-4 py-2.5 bg-[#EAF4F1] text-blue-700 hover:bg-blue-100 rounded-xl border border-blue-200 text-[10px] font-black uppercase tracking-wider transition-colors shadow-xs"
                           >
                             Restore to New
                           </button>
@@ -609,7 +609,7 @@ export default function InquiriesAdmin() {
                   </motion.div>
                 ) : (
                   <div className="h-full min-h-[550px] bg-white rounded-[3rem] border border-dashed border-slate-200 flex flex-col items-center justify-center text-center p-12">
-                    <div className="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mb-4 text-[#003366]">
+                    <div className="w-16 h-16 bg-[#EAF4F1] rounded-2xl flex items-center justify-center mb-4 text-[#0B4F43]">
                       <SearchLeadIcon className="w-8 h-8" />
                     </div>
                     <h3 className="text-xl font-black text-slate-900 uppercase tracking-widest mb-2">Lead Preview</h3>
@@ -651,15 +651,15 @@ export default function InquiriesAdmin() {
                       <tr 
                         key={inq.id}
                         onClick={() => setModalInquiry(inq)}
-                        className="hover:bg-blue-50/40 transition-colors cursor-pointer group"
+                        className="hover:bg-[#EAF4F1]/40 transition-colors cursor-pointer group"
                       >
                         <td className="py-4 px-6">
                           <div className="flex items-center gap-3">
-                            <div className="w-9 h-9 rounded-xl bg-blue-50 text-[#003366] font-black flex items-center justify-center shrink-0 border border-blue-100 text-xs">
+                            <div className="w-9 h-9 rounded-xl bg-[#EAF4F1] text-[#0B4F43] font-black flex items-center justify-center shrink-0 border border-[#0B4F43]/20 text-xs">
                               {inq.name.slice(0, 2).toUpperCase()}
                             </div>
                             <div>
-                              <p className="font-black text-slate-900 text-sm group-hover:text-[#003366] transition-colors">{inq.name}</p>
+                              <p className="font-black text-slate-900 text-sm group-hover:text-[#0B4F43] transition-colors">{inq.name}</p>
                               <span className="text-[10px] text-slate-400 font-medium">ID: {inq.id.slice(-6)}</span>
                             </div>
                           </div>
@@ -668,13 +668,13 @@ export default function InquiriesAdmin() {
                         <td className="py-4 px-6" onClick={e => e.stopPropagation()}>
                           <div className="space-y-1">
                             {inq.email && (
-                              <a href={`mailto:${inq.email}`} className="flex items-center gap-1.5 text-slate-600 hover:text-[#003366] font-medium truncate max-w-[200px]">
+                              <a href={`mailto:${inq.email}`} className="flex items-center gap-1.5 text-slate-600 hover:text-[#0B4F43] font-medium truncate max-w-[200px]">
                                 <Mail className="w-3.5 h-3.5 text-slate-400 shrink-0" />
                                 <span>{inq.email}</span>
                               </a>
                             )}
                             {inq.phone && (
-                              <a href={`tel:${inq.phone}`} className="flex items-center gap-1.5 text-slate-600 hover:text-[#003366] font-medium">
+                              <a href={`tel:${inq.phone}`} className="flex items-center gap-1.5 text-slate-600 hover:text-[#0B4F43] font-medium">
                                 <Phone className="w-3.5 h-3.5 text-slate-400 shrink-0" />
                                 <span>{inq.phone}</span>
                               </a>
@@ -710,7 +710,7 @@ export default function InquiriesAdmin() {
                           <div className="flex items-center justify-end gap-2">
                             <button
                               onClick={() => setModalInquiry(inq)}
-                              className="px-3 py-1.5 bg-slate-100 hover:bg-[#003366] hover:text-white rounded-lg text-[10px] font-bold uppercase transition-colors"
+                              className="px-3 py-1.5 bg-slate-100 hover:bg-[#0B4F43] hover:text-white rounded-lg text-[10px] font-bold uppercase transition-colors"
                             >
                               Inspect
                             </button>
@@ -741,8 +741,8 @@ export default function InquiriesAdmin() {
                 New: {
                   title: "New Leads",
                   border: "border-blue-200",
-                  headerBg: "bg-blue-50/80 text-[#003366]",
-                  badge: "bg-blue-500 text-white"
+                  headerBg: "bg-[#EAF4F1]/80 text-[#0B4F43]",
+                  badge: "bg-[#EAF4F1]0 text-white"
                 },
                 Contacted: {
                   title: "Contacted / In Discussion",
@@ -798,7 +798,7 @@ export default function InquiriesAdmin() {
                           className="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-xs hover:shadow-md hover:border-blue-300 transition-all cursor-grab active:cursor-grabbing group"
                         >
                           <div className="flex items-start justify-between mb-2">
-                            <h4 className="font-black text-sm text-slate-900 group-hover:text-[#003366] transition-colors uppercase tracking-tight">
+                            <h4 className="font-black text-sm text-slate-900 group-hover:text-[#0B4F43] transition-colors uppercase tracking-tight">
                               {inq.name}
                             </h4>
                             <span className="text-[9px] font-bold text-slate-400">
@@ -821,12 +821,12 @@ export default function InquiriesAdmin() {
                           <div className="pt-3 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500" onClick={e => e.stopPropagation()}>
                             <div className="flex items-center gap-2">
                               {inq.email && (
-                                <a href={`mailto:${inq.email}`} className="text-slate-400 hover:text-[#003366]" title={inq.email}>
+                                <a href={`mailto:${inq.email}`} className="text-slate-400 hover:text-[#0B4F43]" title={inq.email}>
                                   <Mail className="w-3.5 h-3.5" />
                                 </a>
                               )}
                               {inq.phone && (
-                                <a href={`tel:${inq.phone}`} className="text-slate-400 hover:text-[#003366]" title={inq.phone}>
+                                <a href={`tel:${inq.phone}`} className="text-slate-400 hover:text-[#0B4F43]" title={inq.phone}>
                                   <Phone className="w-3.5 h-3.5" />
                                 </a>
                               )}
@@ -853,7 +853,7 @@ export default function InquiriesAdmin() {
                               {columnStatus === "Archived" && (
                                 <button 
                                   onClick={() => handleStatusUpdate(inq.id, "New")}
-                                  className="px-2 py-1 bg-blue-50 hover:bg-blue-100 text-blue-700 text-[9px] font-black rounded-lg border border-blue-200"
+                                  className="px-2 py-1 bg-[#EAF4F1] hover:bg-blue-100 text-blue-700 text-[9px] font-black rounded-lg border border-blue-200"
                                 >
                                   ↺ Reopen
                                 </button>
@@ -883,7 +883,7 @@ export default function InquiriesAdmin() {
               className="bg-white rounded-[2.5rem] shadow-2xl max-w-2xl w-full overflow-hidden border border-slate-100 relative max-h-[90vh] flex flex-col"
             >
               {/* Modal Header */}
-              <div className="bg-[#003366] p-8 text-white relative">
+              <div className="bg-[#0B4F43] p-8 text-white relative">
                 <button 
                   onClick={() => setModalInquiry(null)}
                   className="absolute right-6 top-6 w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-colors"
@@ -916,7 +916,7 @@ export default function InquiriesAdmin() {
               {/* Modal Body */}
               <div className="p-8 overflow-y-auto space-y-6 flex-1">
                 <div>
-                  <h4 className="text-[10px] font-black uppercase tracking-widest text-[#003366] mb-3">Requirements Narrative</h4>
+                  <h4 className="text-[10px] font-black uppercase tracking-widest text-[#0B4F43] mb-3">Requirements Narrative</h4>
                   <div className="bg-slate-50 p-5 rounded-2xl text-slate-800 text-sm leading-relaxed border border-slate-100 whitespace-pre-wrap">
                     "{modalInquiry.message || "No message provided."}"
                   </div>
@@ -924,10 +924,10 @@ export default function InquiriesAdmin() {
 
                 {modalInquiry.product_ids && (
                   <div>
-                    <h4 className="text-[10px] font-black uppercase tracking-widest text-[#003366] mb-3">Interested Products</h4>
+                    <h4 className="text-[10px] font-black uppercase tracking-widest text-[#0B4F43] mb-3">Interested Products</h4>
                     <div className="flex flex-wrap gap-2">
                       {modalInquiry.product_ids.split(',').map((pid: string) => (
-                        <span key={pid} className="px-3 py-1.5 bg-blue-50 text-[#003366] rounded-xl text-xs font-bold border border-blue-100 flex items-center gap-1.5">
+                        <span key={pid} className="px-3 py-1.5 bg-[#EAF4F1] text-[#0B4F43] rounded-xl text-xs font-bold border border-[#0B4F43]/20 flex items-center gap-1.5">
                           <Package className="w-3.5 h-3.5" /> ID: {pid.trim()}
                         </span>
                       ))}

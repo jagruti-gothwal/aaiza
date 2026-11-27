@@ -26,7 +26,7 @@ export default function NotFound() {
               repeat: Infinity,
               ease: "easeInOut"
             }}
-            className="absolute text-blue-900"
+            className="absolute text-[#0B4F43]"
             style={{ left: (i * 7) % 100 + "%", top: (i * 11) % 100 + "%" }}
           >
             <Candy size={30 + (i % 20)} />
@@ -47,17 +47,17 @@ export default function NotFound() {
                  rotate: [0, 5, -5, 0]
                }}
                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-               className="text-[12rem] md:text-[18rem] font-black text-[#003366] leading-none tracking-tighter select-none"
+               className="text-[12rem] md:text-[18rem] font-black text-[#0B4F43] leading-none tracking-tighter select-none"
              >
                404
              </motion.div>
              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 scale-150 opacity-20 blur-xl">
-               <Ghost className="w-48 h-48 text-blue-400" />
+               <Ghost className="w-48 h-48 text-[#C59238]" />
              </div>
           </div>
 
           <h1 className="text-3xl md:text-5xl font-black text-slate-900 uppercase tracking-tight mb-6">
-            Sweetness <span className="text-blue-600 underline decoration-wavy decoration-blue-200">Missing</span>!
+            Sweetness <span className="text-[#C59238] underline decoration-wavy decoration-[#E6C260]">Missing</span>!
           </h1>
           
           <p className="text-slate-500 font-medium text-lg md:text-xl max-w-lg mx-auto mb-12 leading-relaxed">
@@ -67,14 +67,14 @@ export default function NotFound() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link 
               href="/"
-              className="flex items-center gap-3 bg-[#003366] text-white px-10 py-5 rounded-full font-black uppercase text-xs tracking-widest hover:bg-slate-900 transition-all shadow-xl shadow-blue-900/10 hover:scale-105 active:scale-95"
+              className="flex items-center gap-3 bg-[#0B4F43] text-white px-10 py-5 rounded-full font-black uppercase text-xs tracking-widest hover:bg-slate-900 transition-all shadow-xl shadow-[#0B4F43]/15 hover:scale-105 active:scale-95"
             >
               <Home className="w-4 h-4" /> Go Home
             </Link>
             
             <button 
               onClick={() => window.history.back()}
-              className="flex items-center gap-3 bg-white border border-slate-200 text-slate-600 px-10 py-5 rounded-full font-black uppercase text-xs tracking-widest hover:border-[#003366] hover:text-[#003366] transition-all shadow-sm hover:scale-105 active:scale-95"
+              className="flex items-center gap-3 bg-white border border-slate-200 text-slate-600 px-10 py-5 rounded-full font-black uppercase text-xs tracking-widest hover:border-[#0B4F43] hover:text-[#0B4F43] transition-all shadow-sm hover:scale-105 active:scale-95"
             >
               <ArrowLeft className="w-4 h-4" /> Go Back
             </button>

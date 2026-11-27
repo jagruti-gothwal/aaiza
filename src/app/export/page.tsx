@@ -15,9 +15,9 @@ export default function Export() {
   const containerRef = useRef(null);
 
   const offerings = [
-    { name: t("exportOffering1Title"), desc: t("exportOffering1Desc"), icon: PackageCheck, color: "from-blue-500 to-indigo-600" },
+    { name: t("exportOffering1Title"), desc: t("exportOffering1Desc"), icon: PackageCheck, color: "from-[#0B4F43] to-[#157A6E]" },
     { name: t("exportOffering2Title"), desc: t("exportOffering2Desc"), icon: FileText, color: "from-emerald-400 to-teal-600" },
-    { name: t("exportOffering3Title"), desc: t("exportOffering3Desc"), icon: Truck, color: "from-orange-400 to-rose-500" },
+    { name: t("exportOffering3Title"), desc: t("exportOffering3Desc"), icon: Truck, color: "from-[#C59238] to-[#A87927]" },
   ];
 
   const whyWorkWithUs = [
@@ -42,7 +42,7 @@ export default function Export() {
 
   return (
     <div 
-      className="bg-white min-h-screen pt-20 pb-0 font-sans overflow-x-hidden selection:bg-[#ffd93d] selection:text-[#014995]" 
+      className="bg-white min-h-screen pt-20 pb-0 font-sans overflow-x-hidden selection:bg-[#E6C260] selection:text-[#0B4F43]" 
       dir={isRTL ? "rtl" : "ltr"}
       ref={containerRef}
     >
@@ -51,9 +51,9 @@ export default function Export() {
       <section className="relative min-h-[90vh] flex items-center justify-center py-20 overflow-hidden">
         {/* Animated Background Elements */}
         <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-[#014995] via-[#3b0764] to-[#ff5c8a] opacity-95"></div>
-          <div className="absolute top-[-10%] right-[-5%] w-[60vw] h-[60vw] bg-pink-500/30 rounded-full blur-[120px] animate-pulse"></div>
-          <div className="absolute bottom-[-10%] left-[-5%] w-[50vw] h-[50vw] bg-blue-400/20 rounded-full blur-[150px]"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-[#0B4F43] via-[#083B32] to-[#C59238] opacity-95"></div>
+          <div className="absolute top-[-10%] right-[-5%] w-[60vw] h-[60vw] bg-[#FBF3DC]0/30 rounded-full blur-[120px] animate-pulse"></div>
+          <div className="absolute bottom-[-10%] left-[-5%] w-[50vw] h-[50vw] bg-[#2E6F2D]/20 rounded-full blur-[150px]"></div>
           <div className="absolute inset-0 bg-white/5 opacity-10 mix-blend-overlay"></div>
           
           {/* Animated SVG Lines */}
@@ -77,8 +77,8 @@ export default function Export() {
             className="inline-flex items-center space-x-2 px-6 py-2 rounded-full border border-white/30 bg-white/10 backdrop-blur-xl shadow-2xl mb-12 group"
           >
              <span className="relative flex h-3 w-3">
-               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#ffd93d] opacity-75"></span>
-               <span className="relative inline-flex rounded-full h-3 w-3 bg-[#ffd93d]"></span>
+               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#E6C260] opacity-75"></span>
+               <span className="relative inline-flex rounded-full h-3 w-3 bg-[#E6C260]"></span>
              </span>
              <span className="text-white font-black text-[12px] tracking-[0.4em] uppercase">{t("exportCapabilities")}</span>
           </motion.div>
@@ -90,7 +90,7 @@ export default function Export() {
             className="text-6xl sm:text-7xl md:text-9xl font-black text-white heading-font tracking-tighter uppercase leading-[0.85] mb-10"
           >
             {t("exportDeskTitle").split(" ").map((word, i) => (
-              <span key={i} className="block last:text-[#ffd93d]">{word}</span>
+              <span key={i} className="block last:text-[#E6C260]">{word}</span>
             ))}
           </motion.h1>
 
@@ -112,7 +112,7 @@ export default function Export() {
             <Link 
               href="/Tree%20India%20Catalogue%20Compressed.pdf"
               target="_blank"
-              className="group relative flex items-center gap-4 bg-[#ffd93d] text-[#014995] px-12 py-6 rounded-2xl font-black text-[15px] uppercase tracking-widest hover:bg-white transition-all shadow-[0_20px_50px_rgba(255,217,61,0.4)] hover:-translate-y-1 active:scale-95 overflow-hidden"
+              className="group relative flex items-center gap-4 bg-[#E6C260] text-[#0B4F43] px-12 py-6 rounded-2xl font-black text-[15px] uppercase tracking-widest hover:bg-white transition-all shadow-[0_20px_50px_rgba(255,217,61,0.4)] hover:-translate-y-1 active:scale-95 overflow-hidden"
             >
               <div className="absolute inset-0 bg-white/20 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700 skew-x-12"></div>
               <Download className="w-6 h-6" strokeWidth={3} />
@@ -135,8 +135,8 @@ export default function Export() {
           transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
           className="absolute right-[10%] top-[40%] hidden lg:block"
         >
-          <div className="w-24 h-24 bg-gradient-to-br from-[#ffd93d] to-orange-400 rounded-3xl rotate-12 blur-[1px] shadow-2xl flex items-center justify-center">
-            <Globe2 className="w-12 h-12 text-[#014995]" />
+          <div className="w-24 h-24 bg-gradient-to-br from-[#E6C260] to-orange-400 rounded-3xl rotate-12 blur-[1px] shadow-2xl flex items-center justify-center">
+            <Globe2 className="w-12 h-12 text-[#0B4F43]" />
           </div>
         </motion.div>
         
@@ -145,7 +145,7 @@ export default function Export() {
           transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
           className="absolute left-[8%] bottom-[30%] hidden lg:block"
         >
-          <div className="w-20 h-20 bg-gradient-to-br from-pink-400 to-[#ff5c8a] rounded-full -rotate-12 blur-[1px] shadow-2xl flex items-center justify-center">
+          <div className="w-20 h-20 bg-gradient-to-br from-[#E6C260] to-[#C59238] rounded-full -rotate-12 blur-[1px] shadow-2xl flex items-center justify-center">
             <ShieldCheck className="w-10 h-10 text-white" />
           </div>
         </motion.div>
@@ -168,8 +168,8 @@ export default function Export() {
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
             >
-              <div className="text-4xl md:text-5xl font-black text-[#014995] mb-2 heading-font">{stat.val}</div>
-              <div className="text-[12px] font-black uppercase tracking-[0.2em] text-[#ff5c8a]">{stat.label}</div>
+              <div className="text-4xl md:text-5xl font-black text-[#0B4F43] mb-2 heading-font">{stat.val}</div>
+              <div className="text-[12px] font-black uppercase tracking-[0.2em] text-[#C59238]">{stat.label}</div>
               <div className="text-[11px] font-bold text-slate-400 uppercase tracking-widest mt-1">{stat.sub}</div>
             </motion.div>
           ))}
@@ -183,7 +183,7 @@ export default function Export() {
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="inline-flex items-center gap-3 bg-blue-50 text-[#014995] px-6 py-2 rounded-full font-black tracking-[0.3em] text-[11px] uppercase border border-blue-100 mb-6"
+            className="inline-flex items-center gap-3 bg-[#EAF4F1] text-[#0B4F43] px-6 py-2 rounded-full font-black tracking-[0.3em] text-[11px] uppercase border border-[#0B4F43]/20 mb-6"
           >
             <Zap className="w-4 h-4 fill-current" />
             {t("exportCoreCompetencies")}
@@ -192,7 +192,7 @@ export default function Export() {
              initial={{ opacity: 0, y: 20 }}
              whileInView={{ opacity: 1, y: 0 }}
              viewport={{ once: true }}
-             className="text-5xl md:text-7xl font-black text-[#014995] uppercase tracking-tighter heading-font leading-none"
+             className="text-5xl md:text-7xl font-black text-[#0B4F43] uppercase tracking-tighter heading-font leading-none"
           >
             {t("exportOfferingsTitle")}
           </motion.h2>
@@ -215,9 +215,9 @@ export default function Export() {
                 <div className={cn("inline-flex w-20 h-20 items-center justify-center rounded-3xl mb-10 text-white shadow-xl transition-all group-hover:rotate-6 bg-gradient-to-br", offer.color)}>
                   <Icon className="w-10 h-10" strokeWidth={2} />
                 </div>
-                <h3 className="text-2xl font-black text-[#014995] uppercase tracking-tighter mb-6 heading-font leading-tight">{offer.name}</h3>
+                <h3 className="text-2xl font-black text-[#0B4F43] uppercase tracking-tighter mb-6 heading-font leading-tight">{offer.name}</h3>
                 <p className="text-slate-500 font-medium text-lg leading-relaxed mb-8">{offer.desc}</p>
-                <div className="flex items-center gap-2 text-[#ff5c8a] font-black text-[12px] uppercase tracking-widest">
+                <div className="flex items-center gap-2 text-[#C59238] font-black text-[12px] uppercase tracking-widest">
                   {t("exportLearnMore")} <ArrowRight className="w-4 h-4" />
                 </div>
               </motion.div>
@@ -232,31 +232,31 @@ export default function Export() {
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="max-w-7xl mx-auto rounded-[4rem] bg-[#014995] relative overflow-hidden flex flex-col lg:flex-row items-stretch border-[12px] border-white shadow-[0_60px_100px_rgba(1,73,149,0.3)]"
+          className="max-w-7xl mx-auto rounded-[4rem] bg-[#0B4F43] relative overflow-hidden flex flex-col lg:flex-row items-stretch border-[12px] border-white shadow-[0_60px_100px_rgba(1,73,149,0.3)]"
         >
           <div className="flex-1 p-12 lg:p-24 relative z-10">
             <div className="flex items-center gap-4 mb-8">
-              <div className="w-16 h-1 bg-[#ffd93d]"></div>
-              <span className="text-[#ffd93d] font-black uppercase tracking-[0.4em] text-[12px]">{t("exportStrengthTitle")}</span>
+              <div className="w-16 h-1 bg-[#E6C260]"></div>
+              <span className="text-[#E6C260] font-black uppercase tracking-[0.4em] text-[12px]">{t("exportStrengthTitle")}</span>
             </div>
             <h2 className="text-4xl md:text-6xl font-black text-white uppercase tracking-tighter mb-10 heading-font leading-[0.9]">
               {t("exportBuiltFor")}
             </h2>
-            <p className="text-blue-100 text-xl md:text-2xl font-medium leading-relaxed mb-12 max-w-2xl">
+            <p className="text-emerald-100 text-xl md:text-2xl font-medium leading-relaxed mb-12 max-w-2xl">
               {t("exportStrengthDesc")}
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
               {[t("exportQualityAssurance"), t("exportCompliance"), t("exportSecureLogistics"), t("exportSupport247")].map((item, j) => (
                 <div key={j} className="flex items-center gap-4 group">
-                  <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-[#ffd93d] transition-colors">
-                    <CheckCircle2 className="w-4 h-4 text-white group-hover:text-[#014995]" />
+                  <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-[#E6C260] transition-colors">
+                    <CheckCircle2 className="w-4 h-4 text-white group-hover:text-[#0B4F43]" />
                   </div>
                   <span className="text-white font-bold uppercase tracking-widest text-[13px]">{item}</span>
                 </div>
               ))}
             </div>
           </div>
-          <div className="flex-1 bg-gradient-to-br from-indigo-900 to-[#3b0764] relative min-h-[400px]">
+          <div className="flex-1 bg-gradient-to-br from-[#0B4F43] to-[#06332B] relative min-h-[400px]">
              <div className="absolute inset-0 opacity-40">
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150%] h-[150%] bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:40px_40px]"></div>
              </div>
@@ -265,9 +265,9 @@ export default function Export() {
              </div>
              {/* Badge Overlay */}
              <div className="absolute bottom-12 right-12 bg-white p-8 rounded-[2rem] shadow-2xl rotate-3 flex flex-col items-center">
-                <Award className="w-12 h-12 text-[#ff5c8a] mb-4" />
-                <span className="text-[#014995] font-black text-[11px] uppercase tracking-[0.2em] mb-1">{t("exportCertified")}</span>
-                <span className="text-[#014995] font-black text-xl uppercase tracking-tighter heading-font">{t("exportGlobalExporter")}</span>
+                <Award className="w-12 h-12 text-[#C59238] mb-4" />
+                <span className="text-[#0B4F43] font-black text-[11px] uppercase tracking-[0.2em] mb-1">{t("exportCertified")}</span>
+                <span className="text-[#0B4F43] font-black text-xl uppercase tracking-tighter heading-font">{t("exportGlobalExporter")}</span>
              </div>
           </div>
         </motion.div>
@@ -277,8 +277,8 @@ export default function Export() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-40">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-start">
           <div>
-            <span className="text-[#ff5c8a] font-black tracking-[0.3em] text-[11px] uppercase mb-6 block">{t("exportAdvantageSub")}</span>
-            <h2 className="text-5xl md:text-7xl font-black text-[#014995] uppercase tracking-tighter mb-12 heading-font leading-none">
+            <span className="text-[#C59238] font-black tracking-[0.3em] text-[11px] uppercase mb-6 block">{t("exportAdvantageSub")}</span>
+            <h2 className="text-5xl md:text-7xl font-black text-[#0B4F43] uppercase tracking-tighter mb-12 heading-font leading-none">
               {t("exportWhyWorkTitle")}
             </h2>
             <div className="space-y-6">
@@ -293,11 +293,11 @@ export default function Export() {
                     transition={{ delay: i * 0.1 }}
                     className="flex gap-8 group"
                   >
-                    <div className="shrink-0 w-20 h-20 bg-slate-50 rounded-3xl flex items-center justify-center text-[#ff5c8a] group-hover:bg-[#ff5c8a] group-hover:text-white transition-all shadow-sm group-hover:shadow-xl group-hover:-rotate-3">
+                    <div className="shrink-0 w-20 h-20 bg-slate-50 rounded-3xl flex items-center justify-center text-[#C59238] group-hover:bg-[#C59238] group-hover:text-white transition-all shadow-sm group-hover:shadow-xl group-hover:-rotate-3">
                        <Icon className="w-10 h-10" strokeWidth={2} />
                     </div>
                     <div className="pt-2">
-                       <h4 className="text-2xl font-black text-[#014995] uppercase tracking-tighter mb-3 heading-font">{item.title}</h4>
+                       <h4 className="text-2xl font-black text-[#0B4F43] uppercase tracking-tighter mb-3 heading-font">{item.title}</h4>
                        <p className="text-slate-500 font-medium leading-relaxed max-w-md">{item.desc}</p>
                     </div>
                   </motion.div>
@@ -308,9 +308,9 @@ export default function Export() {
           
           <div className="relative pt-20 lg:pt-0">
              <div className="aspect-square bg-slate-100 rounded-[4rem] relative overflow-hidden shadow-inner group">
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-white"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-[#EAF4F1] to-white"></div>
                 {/* Decorative dots grid */}
-                <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#014995_2px,transparent_2px)] bg-[size:30px_30px]"></div>
+                <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#0B4F43_2px,transparent_2px)] bg-[size:30px_30px]"></div>
                 
                 <div className="absolute inset-12 border-4 border-dashed border-slate-200 rounded-[3rem]"></div>
                 
@@ -321,14 +321,14 @@ export default function Export() {
                         transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
                         className="w-80 h-80 border-[1px] border-slate-200 rounded-full flex items-center justify-center"
                       >
-                         <div className="absolute -top-4 w-8 h-8 bg-[#ffd93d] rounded-full shadow-lg"></div>
-                         <div className="absolute -bottom-4 w-8 h-8 bg-[#ff5c8a] rounded-full shadow-lg"></div>
+                         <div className="absolute -top-4 w-8 h-8 bg-[#E6C260] rounded-full shadow-lg"></div>
+                         <div className="absolute -bottom-4 w-8 h-8 bg-[#C59238] rounded-full shadow-lg"></div>
                       </motion.div>
                       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center">
                          <div className="w-32 h-32 bg-white rounded-full shadow-2xl border-8 border-slate-50 flex items-center justify-center mb-4">
-                            <Globe2 className="w-12 h-12 text-[#014995] animate-pulse" />
+                            <Globe2 className="w-12 h-12 text-[#0B4F43] animate-pulse" />
                          </div>
-                         <span className="font-black text-[#014995] uppercase tracking-[0.2em] text-[10px]">Tree India</span>
+                         <span className="font-black text-[#0B4F43] uppercase tracking-[0.2em] text-[10px]">Tree India</span>
                       </div>
                    </div>
                 </div>
@@ -345,7 +345,7 @@ export default function Export() {
                    <CheckCircle2 className="w-5 h-5" />
                    <span className="font-black text-[11px] uppercase">{t("exportVerifiedAgent")}</span>
                 </div>
-                <p className="text-[#014995] font-bold text-sm leading-tight">{t("exportInstantQuotes")}</p>
+                <p className="text-[#0B4F43] font-bold text-sm leading-tight">{t("exportInstantQuotes")}</p>
              </motion.div>
           </div>
         </div>
@@ -361,15 +361,15 @@ export default function Export() {
                 viewport={{ once: true }}
                 className="bg-white p-12 lg:p-20 rounded-[4rem] shadow-xl border border-slate-100 group relative overflow-hidden"
               >
-                <div className="absolute top-0 left-0 w-2 h-full bg-[#ff5c8a]"></div>
-                <h3 className="text-4xl font-black text-[#014995] uppercase tracking-tighter mb-12 heading-font">{t("exportHowWorkTitle")}</h3>
+                <div className="absolute top-0 left-0 w-2 h-full bg-[#C59238]"></div>
+                <h3 className="text-4xl font-black text-[#0B4F43] uppercase tracking-tighter mb-12 heading-font">{t("exportHowWorkTitle")}</h3>
                 <div className="space-y-4">
                   {howWeWork.map((item, i) => (
                     <div key={i} className="flex items-center gap-6 p-6 rounded-3xl hover:bg-slate-50 transition-colors border border-transparent hover:border-slate-100">
-                      <div className="w-14 h-14 bg-pink-50 text-[#ff5c8a] rounded-2xl flex items-center justify-center shrink-0">
+                      <div className="w-14 h-14 bg-[#FBF3DC] text-[#C59238] rounded-2xl flex items-center justify-center shrink-0">
                         <item.icon className="w-7 h-7" />
                       </div>
-                      <span className="text-lg font-black text-[#014995] uppercase tracking-tighter heading-font">{item.title}</span>
+                      <span className="text-lg font-black text-[#0B4F43] uppercase tracking-tighter heading-font">{item.title}</span>
                     </div>
                   ))}
                 </div>
@@ -379,14 +379,14 @@ export default function Export() {
                 initial={{ opacity: 0, x: 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                className="bg-[#014995] p-12 lg:p-20 rounded-[4rem] shadow-2xl text-white group relative overflow-hidden"
+                className="bg-[#0B4F43] p-12 lg:p-20 rounded-[4rem] shadow-2xl text-white group relative overflow-hidden"
               >
-                <div className="absolute top-0 right-0 w-2 h-full bg-[#ffd93d]"></div>
+                <div className="absolute top-0 right-0 w-2 h-full bg-[#E6C260]"></div>
                 <h3 className="text-4xl font-black text-white uppercase tracking-tighter mb-12 heading-font">{t("exportB2BBenefitsTitle")}</h3>
                 <div className="space-y-4">
                   {b2bBenefits.map((item, i) => (
                     <div key={i} className="flex items-center gap-6 p-6 rounded-3xl hover:bg-white/5 transition-colors border border-transparent hover:border-white/10">
-                      <div className="w-14 h-14 bg-[#ffd93d] text-[#014995] rounded-2xl flex items-center justify-center shrink-0 shadow-lg shadow-[#ffd93d]/20">
+                      <div className="w-14 h-14 bg-[#E6C260] text-[#0B4F43] rounded-2xl flex items-center justify-center shrink-0 shadow-lg shadow-[#E6C260]/20">
                         <item.icon className="w-7 h-7" />
                       </div>
                       <span className="text-lg font-black text-white uppercase tracking-tighter heading-font">{item.title}</span>
@@ -407,16 +407,16 @@ export default function Export() {
               initial={{ scale: 0 }}
               whileInView={{ scale: 1 }}
               viewport={{ once: true }}
-              className="w-24 h-24 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-10 shadow-inner"
+              className="w-24 h-24 bg-[#EAF4F1] rounded-full flex items-center justify-center mx-auto mb-10 shadow-inner"
             >
-               <Map className="w-10 h-10 text-[#014995]" strokeWidth={2} />
+               <Map className="w-10 h-10 text-[#0B4F43]" strokeWidth={2} />
             </motion.div>
             
             <motion.h2 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-6xl md:text-8xl font-black text-[#014995] heading-font uppercase tracking-tighter leading-[0.85] mb-12"
+              className="text-6xl md:text-8xl font-black text-[#0B4F43] heading-font uppercase tracking-tighter leading-[0.85] mb-12"
             >
               {t("exportReachTitle")}
             </motion.h2>
@@ -434,7 +434,7 @@ export default function Export() {
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="relative rounded-[5rem] bg-gradient-to-br from-[#014995] to-[#2e1065] p-12 lg:p-24 shadow-[0_80px_150px_rgba(1,73,149,0.3)] border-[16px] border-[#f8fafc]"
+              className="relative rounded-[5rem] bg-gradient-to-br from-[#0B4F43] to-[#06332B] p-12 lg:p-24 shadow-[0_80px_150px_rgba(1,73,149,0.3)] border-[16px] border-[#f8fafc]"
             >
                <div className="absolute inset-0 opacity-10 mix-blend-overlay">
                   <div className="absolute inset-0 bg-white/5"></div>
@@ -442,16 +442,16 @@ export default function Export() {
                
                <div className="grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
                   <div className="text-left">
-                     <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 text-[#ffd93d] border border-white/20 font-black text-[11px] uppercase tracking-[0.2em] mb-8">
+                     <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 text-[#E6C260] border border-white/20 font-black text-[11px] uppercase tracking-[0.2em] mb-8">
                         <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
                         {t("exportStrategicHQ")}
                      </div>
                      <h3 className="text-4xl md:text-6xl font-black text-white mb-8 uppercase tracking-tighter heading-font leading-none">{t("exportHubTitle")}</h3>
-                     <p className="text-xl text-blue-100 font-medium leading-relaxed mb-12">
+                     <p className="text-xl text-emerald-100 font-medium leading-relaxed mb-12">
                        {t("exportHubDesc")}
                      </p>
                      <div className="flex flex-wrap gap-4">
-                        {["Port of Mundra", "Port of Mumbai", "Port of Chennai", "Delhi Logistics Hub"].map((port, i) => (
+                        {["Port Jebel Ali (Dubai HQ)", "Port Rashid, Dubai", "Port of Mundra", "Port of Mumbai"].map((port, i) => (
                            <span key={i} className="px-6 py-3 rounded-2xl bg-white/5 border border-white/10 text-white font-bold text-sm uppercase tracking-widest hover:bg-white/10 transition-colors cursor-default">
                               {port}
                            </span>
@@ -464,15 +464,15 @@ export default function Export() {
                         <motion.div 
                           animate={{ scale: [1, 1.1, 1] }} 
                           transition={{ duration: 4, repeat: Infinity }}
-                          className="w-64 h-64 bg-[#ffd93d]/20 rounded-full flex items-center justify-center"
+                          className="w-64 h-64 bg-[#E6C260]/20 rounded-full flex items-center justify-center"
                         >
                            <motion.div 
                              animate={{ scale: [1, 1.2, 1] }} 
                              transition={{ duration: 3, repeat: Infinity, delay: 0.5 }}
-                             className="w-40 h-40 bg-[#ffd93d]/40 rounded-full flex items-center justify-center"
+                             className="w-40 h-40 bg-[#E6C260]/40 rounded-full flex items-center justify-center"
                            >
-                              <div className="w-20 h-20 bg-[#ffd93d] rounded-full shadow-[0_0_50px_rgba(255,217,61,0.5)] flex items-center justify-center">
-                                 <Globe2 className="w-10 h-10 text-[#014995]" />
+                              <div className="w-20 h-20 bg-[#E6C260] rounded-full shadow-[0_0_50px_rgba(255,217,61,0.5)] flex items-center justify-center">
+                                 <Globe2 className="w-10 h-10 text-[#0B4F43]" />
                               </div>
                            </motion.div>
                         </motion.div>
@@ -502,7 +502,7 @@ export default function Export() {
            initial={{ opacity: 0 }}
            whileInView={{ opacity: 1 }}
            viewport={{ once: true }}
-           className="max-w-4xl mx-auto bg-gradient-to-br from-[#ff5c8a] to-[#ff9800] rounded-[5rem] p-12 md:p-24 text-center shadow-[0_40px_100px_rgba(255,92,138,0.3)] relative overflow-hidden"
+           className="max-w-4xl mx-auto bg-gradient-to-br from-[#C59238] to-[#A87927] rounded-[5rem] p-12 md:p-24 text-center shadow-[0_40px_100px_rgba(255,92,138,0.3)] relative overflow-hidden"
          >
             <div className="absolute inset-0 bg-white/10 opacity-20 bg-white/5"></div>
             <h2 className="text-4xl md:text-7xl font-black text-white uppercase tracking-tighter mb-10 heading-font leading-none relative z-10">
@@ -514,7 +514,7 @@ export default function Export() {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-8 relative z-10">
                <Link 
                  href="/contact"
-                 className="bg-[#014995] text-white px-16 py-8 rounded-[2rem] font-black text-[18px] uppercase tracking-widest hover:bg-[#014995]/80 transition-all hover:scale-105 shadow-2xl"
+                 className="bg-[#0B4F43] text-white px-16 py-8 rounded-[2rem] font-black text-[18px] uppercase tracking-widest hover:bg-[#0B4F43]/80 transition-all hover:scale-105 shadow-2xl"
                >
                  {t("exportGetStarted")}
                </Link>

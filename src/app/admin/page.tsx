@@ -35,9 +35,9 @@ export default function AdminHub() {
            className="mb-16"
         >
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-white border border-slate-200 rounded-full text-slate-500 font-black text-[10px] uppercase tracking-[0.3em] mb-6 shadow-sm">
-             <ShieldCheck className="w-3.5 h-3.5 text-[#003366]" /> Central Command
+             <ShieldCheck className="w-3.5 h-3.5 text-[#0B4F43]" /> Central Command
           </div>
-          <h1 className="text-5xl md:text-6xl font-black text-slate-900 uppercase tracking-tighter mb-4 leading-none">Admin <span className="text-[#003366]">Control</span></h1>
+          <h1 className="text-5xl md:text-6xl font-black text-slate-900 uppercase tracking-tighter mb-4 leading-none">Admin <span className="text-[#0B4F43]">Control</span></h1>
           <p className="text-slate-500 font-medium text-lg max-w-lg mx-auto">Welcome back. Select a workspace to manage your global export operations.</p>
         </motion.div>
 
@@ -54,19 +54,19 @@ export default function AdminHub() {
                             {/* Card Background Glow */}
                             <div className={`absolute -right-10 -top-10 w-40 h-40 bg-${card.color}-500/5 blur-3xl group-hover:scale-150 transition-transform duration-700`} />
                             
-                            <div className={`w-20 h-20 rounded-3xl bg-${card.color === 'blue' ? '[#003366]' : 'emerald-600'} flex items-center justify-center text-white mb-10 shadow-xl shadow-blue-900/10 group-hover:scale-110 transition-transform duration-500`}>
+                            <div className={`w-20 h-20 rounded-3xl bg-${card.color === 'blue' ? '[#0B4F43]' : 'emerald-600'} flex items-center justify-center text-white mb-10 shadow-xl shadow-blue-900/10 group-hover:scale-110 transition-transform duration-500`}>
                                 <card.icon size={36} strokeWidth={2.5} />
                             </div>
 
                             <div className="flex justify-between items-center mb-4">
-                               <span className={`text-[10px] font-black uppercase tracking-widest text-${card.color === 'blue' ? '[#003366]' : 'emerald-600'}`}>Workspace Module</span>
+                               <span className={`text-[10px] font-black uppercase tracking-widest text-${card.color === 'blue' ? '[#0B4F43]' : 'emerald-600'}`}>Workspace Module</span>
                                <span className="px-3 py-1 bg-slate-50 text-slate-400 rounded-full text-[9px] font-black uppercase tracking-widest border border-slate-100">{card.countLabel}</span>
                             </div>
 
-                            <h2 className="text-3xl font-black text-slate-900 uppercase tracking-tight mb-4 group-hover:text-[#003366] transition-colors">{card.title}</h2>
+                            <h2 className="text-3xl font-black text-slate-900 uppercase tracking-tight mb-4 group-hover:text-[#0B4F43] transition-colors">{card.title}</h2>
                             <p className="text-slate-500 font-medium leading-relaxed mb-10">{card.description}</p>
                             
-                            <div className="flex items-center gap-3 text-[#003366] font-black text-xs uppercase tracking-widest">
+                            <div className="flex items-center gap-3 text-[#0B4F43] font-black text-xs uppercase tracking-widest">
                                 Enter Workspace <ArrowRight className="w-4 h-4 group-hover:translate-x-2 transition-transform" />
                             </div>
                         </div>
@@ -82,10 +82,10 @@ export default function AdminHub() {
             transition={{ delay: 0.5 }}
             className="mt-20 flex flex-wrap justify-center gap-8 text-slate-400 font-black text-[10px] uppercase tracking-widest py-10 border-t border-slate-100"
         >
-            <div className="flex items-center gap-2 hover:text-[#003366] transition-colors cursor-pointer">
+            <div className="flex items-center gap-2 hover:text-[#0B4F43] transition-colors cursor-pointer">
                 <Settings className="w-4 h-4" /> System Stats
             </div>
-            <div className="flex items-center gap-2 hover:text-[#003366] transition-colors cursor-pointer">
+            <div className="flex items-center gap-2 hover:text-[#0B4F43] transition-colors cursor-pointer">
                 <Users className="w-4 h-4" /> Team Access
             </div>
         </motion.div>

@@ -4,9 +4,9 @@
   --font-sans: var(--font-inter);
   --font-heading: var(--font-outfit);
   
-  --color-brand-blue: #003366;
-  --color-brand-red: #e11d48;
-  --color-brand-amber: #f59e0b;
+  --color-brand-blue: #0B4F43;
+  --color-brand-red: #C59238;
+  --color-brand-amber: #D4A548;
   --color-slate-50: #f8fafc;
   --color-slate-100: #f1f5f9;
   
@@ -70,7 +70,7 @@
 }
 
 .text-gradient {
-  background: linear-gradient(135deg, #fb7185 0%, #f43f5e 100%);
+  background: linear-gradient(135deg, #0B4F43 0%, #C59238 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -97,15 +97,15 @@
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
-  background: #ff5c8a;
+  background: #C59238;
   border-radius: 10px;
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-  background: #e11d48;
+  background: #A87927;
 }
 
 .custom-scrollbar {
   scrollbar-width: thin;
-  scrollbar-color: #ff5c8a transparent;
+  scrollbar-color: #C59238 transparent;
 }

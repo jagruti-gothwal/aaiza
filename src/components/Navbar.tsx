@@ -59,12 +59,12 @@ export default function Navbar() {
         animate={{ y: visible ? 0 : -100, opacity: visible ? 1 : 0 }}
         transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
         className={cn(
-          "flex w-full max-w-7xl fixed top-4 md:top-6 inset-x-4 md:mx-auto border shadow-sm border-white/40 rounded-full bg-white/40 backdrop-blur-2xl z-[5000] px-4 md:px-8 py-3.5 items-center justify-between transition-all"
+          "flex w-full max-w-7xl fixed top-4 md:top-6 inset-x-4 md:mx-auto border shadow-sm border-[#C59238]/20 rounded-full bg-white/90 backdrop-blur-2xl z-[5000] px-4 md:px-8 py-3.5 items-center justify-between transition-all"
         )}
       >
         <Link href="/" className="flex items-center gap-3 group flex-shrink-0">
-          <div className="relative overflow-hidden rounded-2xl p-1 bg-white group-hover:scale-110 transition-transform">
-             <Image src="/transparent/TREE-INDIA-LOGO-CDR.png" alt="Tree India" width={160} height={40} priority className="h-10 w-auto object-contain" />
+          <div className="relative overflow-hidden px-1 py-0.5 group-hover:scale-105 transition-transform">
+             <Image src="/aaiza-logo.jpg" alt="AAIZA Food Trading FZCO" width={140} height={44} priority className="h-10 w-auto object-contain mix-blend-multiply" />
           </div>
         </Link>
         
@@ -79,7 +79,7 @@ export default function Navbar() {
                 onMouseLeave={() => setHoveredIndex(null)}
                 className={cn(
                   "relative items-center flex text-[13px] font-black px-6 py-2.5 rounded-full transition-all duration-300 uppercase tracking-widest",
-                  isActive ? "text-white bg-[#014995]" : "text-[#014995] hover:text-[#01356d]"
+                  isActive ? "text-white bg-[#0B4F43]" : "text-[#0B4F43] hover:text-[#06332B]"
                 )}
               >
                 <span className="relative z-10 hidden sm:block">{navItem.name}</span>
@@ -93,7 +93,7 @@ export default function Navbar() {
           <div className="relative">
             <button 
               onClick={() => setLangOpen(!langOpen)}
-              className="flex items-center gap-2 px-4 py-2.5 rounded-full bg-white/40 hover:bg-white/60 transition-colors text-[#014995] font-black text-[12px] uppercase tracking-wider"
+              className="flex items-center gap-2 px-4 py-2.5 rounded-full bg-white/40 hover:bg-white/60 transition-colors text-[#0B4F43] font-black text-[12px] uppercase tracking-wider"
             >
               <Globe className="w-4 h-4" />
               <span>{language}</span>
@@ -114,7 +114,7 @@ export default function Navbar() {
                       onClick={() => { setLanguage(l.code); setLangOpen(false); }}
                       className={cn(
                         "w-full text-left px-5 py-3 text-[12px] font-black uppercase tracking-widest rounded-2xl transition-all",
-                        language === l.code ? "bg-[#014995] text-white" : "text-slate-600 hover:bg-slate-50"
+                        language === l.code ? "bg-[#0B4F43] text-white" : "text-slate-600 hover:bg-slate-50"
                       )}
                     >
                       {l.name}
@@ -125,12 +125,12 @@ export default function Navbar() {
             </AnimatePresence>
           </div>
           
-          <Link href="/contact" className="hidden sm:flex items-center gap-2 bg-[#014995] text-white text-[12px] font-black px-8 py-3 rounded-full hover:bg-[#01356d] transition-all hover:scale-105 active:scale-95 shadow-lg uppercase tracking-widest">
+          <Link href="/contact" className="hidden sm:flex items-center gap-2 bg-[#0B4F43] text-white text-[12px] font-black px-8 py-3 rounded-full hover:bg-[#06332B] transition-all hover:scale-105 active:scale-95 shadow-lg uppercase tracking-widest border border-[#C59238]/30">
             {t("navQuote")}
           </Link>
           
           <button 
-            className="lg:hidden p-2.5 text-[#014995] ml-1 rounded-full bg-white/40 border border-white/40 hover:bg-white/60 transition-colors"
+            className="lg:hidden p-2.5 text-[#0B4F43] ml-1 rounded-full bg-white/40 border border-white/40 hover:bg-white/60 transition-colors"
             onClick={() => setIsOpen(!isOpen)}
           >
             {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
@@ -165,7 +165,7 @@ export default function Navbar() {
                       onClick={() => setIsOpen(false)}
                       className={cn(
                         "px-5 py-4 text-sm font-black uppercase tracking-widest rounded-2xl flex items-center justify-between group transition-colors",
-                        isActive ? "bg-[#014995] text-white" : "text-slate-600 hover:bg-slate-50 hover:text-slate-900"
+                        isActive ? "bg-[#0B4F43] text-white" : "text-slate-600 hover:bg-slate-50 hover:text-slate-900"
                       )}
                     >
                       {link.name}
@@ -182,7 +182,7 @@ export default function Navbar() {
                 href="/Tree%20India%20Catalogue%20Compressed.pdf"
                 target="_blank"
                 onClick={() => setIsOpen(false)}
-                className="px-5 py-4 text-sm font-black uppercase tracking-widest text-[#003366] flex items-center justify-center gap-3 bg-blue-50/50 hover:bg-blue-100 rounded-2xl transition-colors border border-blue-100"
+                className="px-5 py-4 text-sm font-black uppercase tracking-widest text-[#0B4F43] flex items-center justify-center gap-3 bg-[#EAF4F1]/60 hover:bg-[#EAF4F1] rounded-2xl transition-colors border border-[#0B4F43]/15"
               >
                 <Download className="w-4 h-4" />
                 {t("navDownload")}

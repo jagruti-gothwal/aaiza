@@ -14,53 +14,53 @@ export default function Footer() {
   }
 
   return (
-    <footer className="bg-[#014995] border-none font-sans text-white relative overflow-visible">
+    <footer className="bg-[#0B4F43] border-none font-sans text-white relative overflow-visible">
       <div className="absolute top-0 left-0 w-full h-[150px] -translate-y-[149px] pointer-events-none">
         <svg viewBox="0 0 1440 100" preserveAspectRatio="none" className="w-full h-full">
-           <path fill="#014995" d="M0,64L80,74.7C160,85,320,107,480,101.3C640,96,800,64,960,53.3C1120,43,1280,53,1360,58.7L1440,64L1440,100L1360,100C1280,100,1120,100,960,100C800,100,640,100,480,100C320,100,160,100,80,100L0,100Z"></path>
+           <path fill="#0B4F43" d="M0,64L80,74.7C160,85,320,107,480,101.3C640,96,800,64,960,53.3C1120,43,1280,53,1360,58.7L1440,64L1440,100L1360,100C1280,100,1120,100,960,100C800,100,640,100,480,100C320,100,160,100,80,100L0,100Z"></path>
         </svg>
       </div>
       
       {/* Top Footer Banner */}
-      <div className="bg-white/10 backdrop-blur-md py-14 px-4 sm:px-6 lg:px-8">
+      <div className="bg-white/10 backdrop-blur-md py-10 px-4 sm:px-6 lg:px-8 border-b border-[#C59238]/20">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 text-center md:text-left">
           <div className="flex flex-col md:flex-row items-center gap-5 group">
              <div className="w-16 h-16 rounded-[1.5rem] bg-white flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
-               <ShieldCheck className="w-8 h-8 text-[#014995]" strokeWidth={2.5} />
+               <ShieldCheck className="w-8 h-8 text-[#0B4F43]" strokeWidth={2.5} />
              </div>
              <div>
-               <h3 className="text-[12px] font-black uppercase tracking-[0.2em] text-white mb-1">{t("footerISO")}</h3>
+               <h3 className="text-[12px] font-black uppercase tracking-[0.2em] text-[#E6C260] mb-1">{t("footerISO")}</h3>
                <p className="text-sm font-bold text-white/80">{t("footerISOList")}</p>
              </div>
           </div>
           <div className="flex flex-col md:flex-row items-center gap-5 group">
              <div className="w-16 h-16 rounded-[1.5rem] bg-white flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
-               <Factory className="w-8 h-8 text-[#014995]" strokeWidth={2.5} />
+               <Factory className="w-8 h-8 text-[#0B4F43]" strokeWidth={2.5} />
              </div>
              <div>
-               <h3 className="text-[12px] font-black uppercase tracking-[0.2em] text-white mb-1">{t("footerBulk")}</h3>
+               <h3 className="text-[12px] font-black uppercase tracking-[0.2em] text-[#E6C260] mb-1">{t("footerBulk")}</h3>
                <p className="text-sm font-bold text-white/80">{t("footerBulkList")}</p>
              </div>
           </div>
           <div className="flex flex-col md:flex-row items-center gap-5 group">
              <div className="w-16 h-16 rounded-[1.5rem] bg-white flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
-               <Globe className="w-8 h-8 text-[#014995]" strokeWidth={2.5} />
+               <Globe className="w-8 h-8 text-[#0B4F43]" strokeWidth={2.5} />
              </div>
              <div>
-               <h3 className="text-[12px] font-black uppercase tracking-[0.2em] text-white mb-1">{t("footerChain")}</h3>
+               <h3 className="text-[12px] font-black uppercase tracking-[0.2em] text-[#E6C260] mb-1">{t("footerChain")}</h3>
                <p className="text-sm font-bold text-white/80">{t("footerChainList")}</p>
              </div>
           </div>
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-16 lg:gap-8 text-center md:text-left">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 lg:gap-8 text-center md:text-left">
           
           {/* Brand */}
           <div className="col-span-1 md:col-span-4">
-            <div className="bg-white p-6 inline-block mb-10 rounded-[2.5rem] shadow-2xl">
-              <Image src="/transparent/TREE-INDIA-LOGO-CDR.png" alt="Tree India Logo" width={240} height={128} className="h-32 w-auto object-contain" />
+            <div className="bg-white/95 px-5 py-3 inline-block mb-6 rounded-2xl">
+              <Image src="/aaiza-logo.jpg" alt="AAIZA Food Trading FZCO" width={200} height={100} className="h-24 w-auto object-contain mix-blend-multiply" />
             </div>
             <p className="text-[14px] text-white font-black leading-relaxed max-w-sm uppercase tracking-widest mb-6 px-4">
               {t("footerBrand")}
@@ -95,7 +95,7 @@ export default function Footer() {
             <ul className="space-y-6">
               <li className="flex flex-col md:flex-row items-center md:items-start gap-4">
                 <MapPin className="w-5 h-5 text-white shrink-0" />
-                <span className="text-[11px] font-black text-white uppercase tracking-widest leading-loose">B-1102 Sun west bank, Ahmedabad, Gujarat, India</span>
+                <span className="text-[11px] font-black text-white uppercase tracking-widest leading-loose">AAIZA Food Trading FZCO • Dubai, United Arab Emirates (Main Office)</span>
               </li>
               <li className="flex flex-col md:flex-row items-center gap-4">
                 <Phone className="w-5 h-5 text-white shrink-0" />
@@ -114,9 +114,9 @@ export default function Footer() {
 
             {/* Social Links */}
              <div className="flex items-center justify-center md:justify-start gap-6 mt-12">
-               <a href="https://www.linkedin.com/company/treeindiaexports" target="_blank" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white hover:text-[#014995] transition-all"><Globe className="w-5 h-5" /></a>
-               <a href="https://www.facebook.com/treeindiaexports" target="_blank" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white hover:text-[#ff5c8a] transition-all"><ShieldCheck className="w-5 h-5" /></a>
-               <a href="https://twitter.com/treeindiaexports" target="_blank" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white hover:text-blue-400 transition-all"><Globe className="w-5 h-5" /></a>
+               <a href="https://www.linkedin.com/company/treeindiaexports" target="_blank" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white hover:text-[#0B4F43] transition-all"><Globe className="w-5 h-5" /></a>
+               <a href="https://www.facebook.com/treeindiaexports" target="_blank" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white hover:text-[#C59238] transition-all"><ShieldCheck className="w-5 h-5" /></a>
+               <a href="https://twitter.com/treeindiaexports" target="_blank" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white hover:text-[#0B4F43] transition-all"><Globe className="w-5 h-5" /></a>
              </div>
           </div>
         </div>

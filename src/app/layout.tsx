@@ -31,10 +31,10 @@ export const metadata: Metadata = {
     siteName: "Tree India",
     images: [
       {
-        url: `${baseUrl}/tree.png`,
+        url: `${baseUrl}/aaiza-logo.jpg`,
         width: 800,
         height: 600,
-        alt: "Tree India Logo",
+        alt: "AAIZA Food Trading FZCO Logo",
       },
     ],
     locale: "en_US",
@@ -44,12 +44,12 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Tree India | Premium Confectionery & Beverage Export",
     description: "Delivering joy globally with high-quality snacks and confectionery.",
-    images: ["/tree.png"],
+    images: ["/aaiza-logo.jpg"],
   },
   icons: {
-    icon: "/tree.png",
-    shortcut: "/tree.png",
-    apple: "/tree.png",
+    icon: "/aaiza-logo.jpg",
+    shortcut: "/aaiza-logo.jpg",
+    apple: "/aaiza-logo.jpg",
   },
 };
 
@@ -101,11 +101,11 @@ export default function RootLayout({
                 "telephone": "+919408436732",
                 "address": {
                   "@type": "PostalAddress",
-                  "streetAddress": "Plot No 45, GIDC Estate",
-                  "addressLocality": "Ahmedabad",
-                  "addressRegion": "Gujarat",
-                  "postalCode": "380001",
-                  "addressCountry": "IN"
+                  "streetAddress": "Jebel Ali Free Zone (JAFZA)",
+                  "addressLocality": "Dubai",
+                  "addressRegion": "Dubai",
+                  "postalCode": "00000",
+                  "addressCountry": "AE"
                 },
                 "openingHoursSpecification": {
                   "@type": "OpeningHoursSpecification",
@@ -123,7 +123,7 @@ export default function RootLayout({
               })
             }}
           />
-          <main className="flex-grow pt-20">
+          <main className="flex-grow">
             {children}
           </main>
           <Footer />

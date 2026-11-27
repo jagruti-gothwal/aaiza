@@ -23,10 +23,10 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
       <nav className="fixed top-0 inset-x-0 h-20 bg-white border-b border-slate-200 z-[6000] flex items-center justify-between px-8 md:px-12 shadow-xs">
         <div className="flex items-center gap-6">
            <Link href="/" className="flex items-center gap-3 group">
-              <div className="w-10 h-10 bg-[#003366] rounded-xl flex items-center justify-center p-1.5 shadow-lg shadow-blue-900/10 group-hover:scale-105 transition-transform">
-                <img src="/TREE-INDIA-LOGO-CDR.jpg" alt="Logo" className="w-full h-full object-contain filter brightness-0 invert" />
+              <div className="w-10 h-10 bg-[#0B4F43] rounded-xl flex items-center justify-center p-1.5 shadow-lg shadow-blue-900/10 group-hover:scale-105 transition-transform">
+                <img src="/aaiza-logo.jpg" alt="Logo" className="w-full h-full object-contain filter brightness-0 invert" />
               </div>
-              <span className="font-black text-[12px] uppercase tracking-[0.3em] text-slate-900 hidden md:block group-hover:text-[#003366]">Admin Workspace</span>
+              <span className="font-black text-[12px] uppercase tracking-[0.3em] text-slate-900 hidden md:block group-hover:text-[#0B4F43]">Admin Workspace</span>
            </Link>
 
            <div className="w-px h-8 bg-slate-200 hidden md:block" />
@@ -40,7 +40,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
                       href={item.href}
                       className={cn(
                         "relative px-6 py-2.5 rounded-full text-[10px] font-black uppercase tracking-widest transition-all overflow-hidden items-center flex gap-2.5",
-                        isActive ? "text-white" : "text-slate-400 hover:text-[#003366] hover:bg-slate-50"
+                        isActive ? "text-white" : "text-slate-400 hover:text-[#0B4F43] hover:bg-slate-50"
                       )}
                     >
                       <item.icon className="w-4 h-4" />
@@ -48,7 +48,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
                       {isActive && (
                          <motion.div 
                            layoutId="admin-nav-active"
-                           className="absolute inset-0 bg-[#003366] -z-10 shadow-lg shadow-blue-900/10"
+                           className="absolute inset-0 bg-[#0B4F43] -z-10 shadow-lg shadow-blue-900/10"
                          />
                       )}
                     </Link>
@@ -61,7 +61,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
            <Link href="/admin" className="flex items-center gap-2 px-4 py-2 text-[10px] font-black text-slate-400 hover:text-rose-500 transition-colors uppercase tracking-widest hidden sm:flex">
              <LogOut className="w-3.5 h-3.5" /> Log Out
            </Link>
-           <div className="px-5 py-2.5 bg-blue-50 text-[#003366] rounded-2xl flex items-center gap-2 border border-blue-100">
+           <div className="px-5 py-2.5 bg-[#EAF4F1] text-[#0B4F43] rounded-2xl flex items-center gap-2 border border-[#0B4F43]/20">
              <ShieldCheck className="w-4 h-4" strokeWidth={2.5} />
              <span className="text-[10px] font-black uppercase tracking-widest">Authorized Access</span>
            </div>

@@ -139,26 +139,26 @@ export default function Products() {
   };
 
   return (
-    <div className="pt-40 pb-40 min-h-screen relative overflow-hidden bg-gradient-to-br from-[#fff5f0] to-[#fffdec]" dir={isRTL ? "rtl" : "ltr"}>
+    <div className="pt-40 pb-40 min-h-screen relative overflow-hidden bg-gradient-to-br from-[#FAF8F2] to-[#F4EFE2]" dir={isRTL ? "rtl" : "ltr"}>
 
       {/* Candy Aesthetic Background Blobs - Optimized for performance */}
-      <div className="absolute top-[-5%] right-[-5%] w-[40vw] h-[40vw] bg-pink-400/5 rounded-full blur-[80px] pointer-events-none"></div>
+      <div className="absolute top-[-5%] right-[-5%] w-[40vw] h-[40vw] bg-[#C59238]/5 rounded-full blur-[80px] pointer-events-none"></div>
       <div className="absolute bottom-[-5%] left-[-5%] w-[50vw] h-[50vw] bg-amber-300/5 rounded-full blur-[100px] pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
         {/* Header */}
         <div className="text-center max-w-4xl mx-auto mb-20 relative">
-          <div className="inline-flex items-center space-x-2 px-6 py-2.5 rounded-full border border-pink-200 bg-pink-50 shadow-sm mb-8 group">
+          <div className="inline-flex items-center space-x-2 px-6 py-2.5 rounded-full border border-[#C59238]/30 bg-[#FBF3DC] shadow-sm mb-8 group">
             <span className="relative flex h-3 w-3">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-pink-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-3 w-3 bg-[#ff5c8a]"></span>
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#C59238] opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-3 w-3 bg-[#C59238]"></span>
             </span>
-            <span className="text-[#ff5c8a] font-black text-[11px] tracking-[0.3em] uppercase">{t("productCategoryLabel")}</span>
+            <span className="text-[#C59238] font-black text-[11px] tracking-[0.3em] uppercase">{t("productCategoryLabel")}</span>
           </div>
 
-          <h1 className="text-5xl sm:text-6xl md:text-8xl font-black text-[#014995] uppercase tracking-tighter leading-[0.9] md:leading-[0.85] mb-8 heading-font drop-shadow-sm">
-            {t("productsTitle1")} <br className="md:hidden" /><span className="text-[#ff5c8a]">{t("productsTitle2")}</span>
+          <h1 className="text-5xl sm:text-6xl md:text-8xl font-black text-[#0B4F43] uppercase tracking-tighter leading-[0.9] md:leading-[0.85] mb-8 heading-font drop-shadow-sm">
+            {t("productsTitle1")} <br className="md:hidden" /><span className="text-[#C59238]">{t("productsTitle2")}</span>
           </h1>
           <p className="text-xl md:text-2xl text-slate-500 font-bold max-w-2xl mx-auto mb-10 leading-relaxed uppercase tracking-wider">
             {t("productsHeaderDesc")}
@@ -167,7 +167,7 @@ export default function Products() {
           <Link
             href="/Tree%20India%20Catalogue%20Compressed.pdf"
             target="_blank"
-            className="inline-flex items-center gap-3 bg-[#014995] text-white hover:bg-[#3b0764] hover:scale-105 active:scale-95 px-10 py-5 rounded-full font-black text-[13px] uppercase tracking-widest transition-all shadow-[0_20px_40px_rgba(1,73,149,0.3)]"
+            className="inline-flex items-center gap-3 bg-[#0B4F43] text-white hover:bg-[#083B32] hover:scale-105 active:scale-95 px-10 py-5 rounded-full font-black text-[13px] uppercase tracking-widest transition-all shadow-[0_20px_40px_rgba(1,73,149,0.3)]"
           >
             <Download className="w-5 h-5" />
             {t("navDownload")}
@@ -197,13 +197,13 @@ export default function Products() {
                 className={cn(
                   "relative group flex flex-col items-center p-6 md:p-8 rounded-[3rem] transition-all border-4 overflow-hidden",
                   isActive
-                    ? "bg-white border-[#ff5c8a] shadow-[0_20px_40px_rgba(255,92,138,0.15)]"
-                    : "bg-white/60 border-transparent hover:border-pink-200 hover:bg-white shadow-sm"
+                    ? "bg-white border-[#C59238] shadow-[0_20px_40px_rgba(255,92,138,0.15)]"
+                    : "bg-white/60 border-transparent hover:border-[#C59238]/30 hover:bg-white shadow-sm"
                 )}
               >
                 <div className={cn(
                   "w-24 h-24 md:w-32 md:h-32 mb-6 rounded-[2rem] flex items-center justify-center p-1 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-3 relative",
-                  isActive ? "bg-pink-50" : "bg-slate-50"
+                  isActive ? "bg-[#FBF3DC]" : "bg-slate-50"
                 )}>
                   <Image 
                     src={cat.image} 
@@ -216,7 +216,7 @@ export default function Products() {
 
                 <span className={cn(
                   "text-[11px] font-black uppercase tracking-widest text-center leading-tight mb-1",
-                  isActive ? "text-[#ff5c8a]" : "text-slate-600 group-hover:text-[#ff5c8a]"
+                  isActive ? "text-[#C59238]" : "text-slate-600 group-hover:text-[#C59238]"
                 )}>
                   {cat.label}
                 </span>
@@ -228,7 +228,7 @@ export default function Products() {
                 {isActive && (
                   <motion.div
                     layoutId="activeCatIndicator"
-                    className="absolute bottom-0 left-0 right-0 h-2 bg-[#ff5c8a]"
+                    className="absolute bottom-0 left-0 right-0 h-2 bg-[#C59238]"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                   />
@@ -241,8 +241,8 @@ export default function Products() {
         {/* Bulk Actions */}
         <div className="flex flex-col sm:flex-row items-center justify-between gap-6 mb-12">
           <div className="flex items-center gap-4">
-            <Layers className="w-5 h-5 text-[#ff5c8a]" />
-            <span className="text-sm font-black text-[#014995] uppercase tracking-widest">
+            <Layers className="w-5 h-5 text-[#C59238]" />
+            <span className="text-sm font-black text-[#0B4F43] uppercase tracking-widest">
               {filteredProducts.length} {t("navProducts") || "Products"} in {getTranslatedCategory(activeCategory)}
             </span>
           </div>
@@ -259,7 +259,7 @@ export default function Products() {
                   return newIds;
                 });
               }}
-              className="flex items-center gap-2 px-6 py-3 rounded-2xl bg-white border-2 border-slate-100 text-[#014995] font-black text-[11px] uppercase tracking-widest hover:border-[#ff5c8a] transition-all hover:scale-105 active:scale-95 shadow-sm"
+              className="flex items-center gap-2 px-6 py-3 rounded-2xl bg-white border-2 border-slate-100 text-[#0B4F43] font-black text-[11px] uppercase tracking-widest hover:border-[#C59238] transition-all hover:scale-105 active:scale-95 shadow-sm"
             >
               <Check className="w-4 h-4" />
               {t("productSelectAll") || "Select All"}
@@ -281,8 +281,8 @@ export default function Products() {
         <div className="min-h-[400px]">
           {isLoading ? (
             <div className="flex flex-col items-center justify-center py-32 space-y-4">
-              <Loader2 className="w-12 h-12 text-[#ff5c8a] animate-spin" />
-              <p className="text-pink-500 font-bold uppercase tracking-widest text-xs">{t("loadingProducts") || "Fetching Product Catalog..."}</p>
+              <Loader2 className="w-12 h-12 text-[#C59238] animate-spin" />
+              <p className="text-[#C59238] font-bold uppercase tracking-widest text-xs">{t("loadingProducts") || "Fetching Product Catalog..."}</p>
             </div>
           ) : filteredProducts.length > 0 ? (
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -295,7 +295,7 @@ export default function Products() {
                     className={cn(
                       "group relative bg-white border-4 rounded-[3rem] overflow-hidden cursor-pointer transition-all duration-500 hover:-translate-y-2 shadow-[0_10px_30px_rgba(0,0,0,0.04)]",
                       isSelected
-                        ? "border-[#ff5c8a] shadow-[0_30px_60px_rgba(255,92,138,0.15)] ring-4 ring-[#ff5c8a]/10"
+                        ? "border-[#C59238] shadow-[0_30px_60px_rgba(255,92,138,0.15)] ring-4 ring-[#C59238]/10"
                         : "border-transparent hover:shadow-[0_40px_60px_rgba(0,0,0,0.08)]"
                     )}
                     onClick={() => setDetailProduct(product)}
@@ -306,8 +306,8 @@ export default function Products() {
                       className={cn(
                         "absolute top-6 right-6 z-20 w-12 h-12 rounded-2xl flex items-center justify-center transition-all duration-300 shadow-lg",
                         isSelected
-                          ? "bg-[#ff5c8a] text-white scale-110 rotate-0"
-                          : "bg-white/80 backdrop-blur-md text-slate-300 hover:text-[#ff5c8a] hover:scale-110 -rotate-12 group-hover:rotate-0 group-hover:text-slate-400"
+                          ? "bg-[#C59238] text-white scale-110 rotate-0"
+                          : "bg-white/80 backdrop-blur-md text-slate-300 hover:text-[#C59238] hover:scale-110 -rotate-12 group-hover:rotate-0 group-hover:text-slate-400"
                       )}
                     >
                       {isSelected ? <Check className="w-7 h-7" strokeWidth={4} /> : <div className="w-6 h-6 border-4 border-current rounded-lg" />}
@@ -322,7 +322,7 @@ export default function Products() {
                         )}
                       >
                         <Image
-                          src={product.image || "/TREE-INDIA-LOGO-CDR.jpg"}
+                          src={product.image || "/aaiza-logo.jpg"}
                           alt={product.name}
                           fill
                           className="object-contain"
@@ -334,18 +334,18 @@ export default function Products() {
 
                     <div className={cn(
                       "p-6 text-center transition-colors duration-500",
-                      isSelected ? "bg-pink-50/50" : "bg-gradient-to-b from-white to-slate-50 border-t border-slate-50 group-hover:bg-white"
+                      isSelected ? "bg-[#FBF3DC]/50" : "bg-gradient-to-b from-white to-slate-50 border-t border-slate-50 group-hover:bg-white"
                     )}>
                       <h3 className={cn(
                         "text-xl font-black uppercase tracking-tighter transition-colors heading-font leading-tight",
-                        isSelected ? "text-[#ff5c8a]" : "text-[#014995] group-hover:text-[#ff5c8a]"
+                        isSelected ? "text-[#C59238]" : "text-[#0B4F43] group-hover:text-[#C59238]"
                       )}>{product.name}</h3>
                       <div className="mt-2 flex items-center justify-center gap-2">
                         <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">
                           {getTranslatedCategory(product.category)}
                         </p>
                         {product.variants && product.variants.length > 1 && (
-                          <span className="text-[9px] font-black px-2 py-0.5 bg-pink-50 text-[#ff5c8a] rounded-full border border-pink-100 uppercase tracking-tighter">
+                          <span className="text-[9px] font-black px-2 py-0.5 bg-[#FBF3DC] text-[#C59238] rounded-full border border-pink-100 uppercase tracking-tighter">
                             {product.variants.length} {t("navFlavors") || "Flavors"}
                           </span>
                         )}
@@ -354,7 +354,7 @@ export default function Products() {
 
                     {/* Info Icon for Detail */}
                     <div className="absolute bottom-6 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-4 group-hover:translate-y-0">
-                      <div className="flex items-center gap-2 px-4 py-2 bg-[#014995] rounded-full text-white font-black text-[10px] uppercase tracking-widest shadow-xl">
+                      <div className="flex items-center gap-2 px-4 py-2 bg-[#0B4F43] rounded-full text-white font-black text-[10px] uppercase tracking-widest shadow-xl">
                         <Info className="w-4 h-4" />
                         {t("productSpecs") || "View Details"}
                       </div>
@@ -394,7 +394,7 @@ export default function Products() {
               <button
                 onClick={() => setDetailProduct(null)}
                 className={cn(
-                  "absolute top-8 z-[70] w-12 h-12 bg-white/90 shadow-xl shadow-slate-200/50 backdrop-blur-md rounded-full flex items-center justify-center text-slate-400 hover:text-[#ff5c8a] hover:scale-110 active:scale-95 transition-all text-lg",
+                  "absolute top-8 z-[70] w-12 h-12 bg-white/90 shadow-xl shadow-slate-200/50 backdrop-blur-md rounded-full flex items-center justify-center text-slate-400 hover:text-[#C59238] hover:scale-110 active:scale-95 transition-all text-lg",
                   isRTL ? "left-8" : "right-8"
                 )}
               >
@@ -416,7 +416,7 @@ export default function Products() {
                       className="w-full h-full relative z-10"
                     >
                       <Image
-                        src={activeImage || "/TREE-INDIA-LOGO-CDR.jpg"}
+                        src={activeImage || "/aaiza-logo.jpg"}
                         alt={detailProduct.name}
                         fill
                         priority
@@ -435,13 +435,13 @@ export default function Products() {
                     isRTL ? "text-right" : "text-left"
                   )}>
                     <div className="mb-12">
-                      <span className="inline-flex items-center px-5 py-2 rounded-full bg-white text-[#014995] font-black tracking-[0.2em] text-[10px] uppercase mb-6 shadow-sm border border-slate-100">
+                      <span className="inline-flex items-center px-5 py-2 rounded-full bg-white text-[#0B4F43] font-black tracking-[0.2em] text-[10px] uppercase mb-6 shadow-sm border border-slate-100">
                         {getTranslatedCategory(detailProduct.category)}
                       </span>
-                      <h2 className="text-4xl sm:text-5xl md:text-6xl font-black text-[#014995] uppercase tracking-tighter leading-[0.85] heading-font mb-6 drop-shadow-sm">
+                      <h2 className="text-4xl sm:text-5xl md:text-6xl font-black text-[#0B4F43] uppercase tracking-tighter leading-[0.85] heading-font mb-6 drop-shadow-sm">
                         {detailProduct.name}
                       </h2>
-                      <div className="h-2 w-20 bg-[#ff5c8a] rounded-full"></div>
+                      <div className="h-2 w-20 bg-[#C59238] rounded-full"></div>
                     </div>
 
                     <div className="flex flex-col gap-5">
@@ -459,8 +459,8 @@ export default function Products() {
                         className={cn(
                           "h-16 lg:h-18 rounded-[2rem] font-black uppercase tracking-widest text-[13px] transition-all flex items-center justify-center gap-4 transform active:scale-95",
                           selectedProductIds.includes(detailProduct.id) 
-                            ? "bg-[#014995] text-white shadow-[0_20px_40px_rgba(1,73,149,0.15)]" 
-                            : "bg-[#ff5c8a] text-white hover:bg-[#e11d48] hover:scale-[1.02] shadow-[0_20px_40px_rgba(255,92,138,0.15)]"
+                            ? "bg-[#0B4F43] text-white shadow-[0_20px_40px_rgba(1,73,149,0.15)]" 
+                            : "bg-[#C59238] text-white hover:bg-[#A87927] hover:scale-[1.02] shadow-[0_20px_40px_rgba(255,92,138,0.15)]"
                         )}
                       >
                         {selectedProductIds.includes(detailProduct.id) ? t("productDeselect") : t("productAddInquiry")}
@@ -477,7 +477,7 @@ export default function Products() {
                     <div className="flex flex-col h-full">
                       <div className="flex items-center justify-between mb-6">
                         <p className="text-[11px] font-black text-slate-400 uppercase tracking-[0.2em] font-sans">Flavors</p>
-                        <span className="text-[10px] font-bold text-[#ff5c8a] bg-pink-50 px-2.5 py-1 rounded-lg">{detailProduct.variants.length}</span>
+                        <span className="text-[10px] font-bold text-[#C59238] bg-[#FBF3DC] px-2.5 py-1 rounded-lg">{detailProduct.variants.length}</span>
                       </div>
                       
                       <div className="grid grid-cols-2 gap-3 pb-8">
@@ -492,13 +492,13 @@ export default function Products() {
                               }}
                               className={cn(
                                 "group relative aspect-square w-full bg-white p-2 rounded-2xl border-2 transition-all hover:scale-105 active:scale-95 overflow-hidden flex items-center justify-center shadow-sm",
-                                isSelected ? "border-[#ff5c8a] ring-4 ring-pink-50/50" : "border-slate-100 hover:border-pink-100"
+                                isSelected ? "border-[#C59238] ring-4 ring-[#C59238]/20" : "border-slate-100 hover:border-[#C59238]/40"
                               )}
                               title={v.name}
                             >
-                              <Image src={v.image || "/TREE-INDIA-LOGO-CDR.jpg"} fill className="object-contain p-2" alt={v.name} sizes="100px" />
+                              <Image src={v.image || "/aaiza-logo.jpg"} fill className="object-contain p-2" alt={v.name} sizes="100px" />
                               {isSelected && (
-                                <div className="absolute top-1.5 right-1.5 w-4 h-4 bg-[#ff5c8a] rounded-full flex items-center justify-center border-2 border-white z-20">
+                                <div className="absolute top-1.5 right-1.5 w-4 h-4 bg-[#C59238] rounded-full flex items-center justify-center border-2 border-white z-20">
                                   <Check className="w-1.5 h-1.5 text-white" strokeWidth={6} />
                                 </div>
                               )}
@@ -509,7 +509,7 @@ export default function Products() {
 
                       <div className="mt-auto pt-6 border-t border-slate-100">
                         <p className="text-[9px] font-bold text-slate-400 uppercase tracking-widest mb-1">Selected Flavor</p>
-                        <p className="text-[11px] font-black text-[#ff5c8a] uppercase tracking-normal truncate">
+                        <p className="text-[11px] font-black text-[#C59238] uppercase tracking-normal truncate">
                           {detailProduct.variants.find(v => v.id === detailProduct.id)?.name || "Original"}
                         </p>
                       </div>
@@ -530,10 +530,10 @@ export default function Products() {
                         }}
                         className={cn(
                           "flex-shrink-0 w-20 h-20 bg-slate-50 p-2 rounded-xl border-2 transition-all shadow-sm relative",
-                          (activeImage === v.image || detailProduct.id === v.id) ? "border-[#ff5c8a] bg-white" : "border-slate-100"
+                          (activeImage === v.image || detailProduct.id === v.id) ? "border-[#C59238] bg-white" : "border-slate-100"
                         )}
                       >
-                        <Image src={v.image || "/TREE-INDIA-LOGO-CDR.jpg"} fill className="object-contain p-2" alt={v.name} sizes="80px" />
+                        <Image src={v.image || "/aaiza-logo.jpg"} fill className="object-contain p-2" alt={v.name} sizes="80px" />
                       </button>
                     ))}
                   </div>
@@ -552,10 +552,10 @@ export default function Products() {
                         }}
                         className={cn(
                           "flex-shrink-0 w-20 h-20 bg-slate-50 p-2 rounded-xl border-2 transition-all shadow-sm relative",
-                          (activeImage === v.image || detailProduct.id === v.id) ? "border-[#ff5c8a] bg-white" : "border-slate-100"
+                          (activeImage === v.image || detailProduct.id === v.id) ? "border-[#C59238] bg-white" : "border-slate-100"
                         )}
                       >
-                        <Image src={v.image || "/TREE-INDIA-LOGO-CDR.jpg"} fill className="object-contain p-2" alt={v.name} sizes="80px" />
+                        <Image src={v.image || "/aaiza-logo.jpg"} fill className="object-contain p-2" alt={v.name} sizes="80px" />
                       </button>
                     ))}
                   </div>
@@ -576,9 +576,9 @@ export default function Products() {
             exit={{ opacity: 0, y: 100 }}
             className="fixed bottom-10 left-0 right-0 z-[5000] flex justify-center px-4"
           >
-            <div className="bg-[#ff5c8a] rounded-full shadow-[0_20px_40px_rgba(255,92,138,0.4)] p-2.5 flex items-center gap-6 md:gap-10 px-8 border-4 border-white/20">
+            <div className="bg-[#C59238] rounded-full shadow-[0_20px_40px_rgba(255,92,138,0.4)] p-2.5 flex items-center gap-6 md:gap-10 px-8 border-4 border-white/20">
               <div className="flex items-center gap-4">
-                <span className="flex items-center justify-center w-12 h-12 rounded-full bg-white text-[#ff5c8a] font-black text-sm shadow-inner">
+                <span className="flex items-center justify-center w-12 h-12 rounded-full bg-white text-[#C59238] font-black text-sm shadow-inner">
                   {selectedProductIds.length}
                 </span>
                 <span className="text-white font-black text-[12px] tracking-[0.2em] uppercase hidden sm:block drop-shadow-sm">
@@ -588,7 +588,7 @@ export default function Products() {
 
               <Link
                 href={`/contact?items=${selectedProductIds.join(",")}`}
-                className="bg-white text-[#014995] hover:bg-slate-50 hover:scale-105 active:scale-95 px-8 sm:px-12 h-14 flex items-center gap-3 rounded-full font-black uppercase text-[12px] tracking-widest transition-all shadow-[0_10px_20px_rgba(0,0,0,0.1)]"
+                className="bg-white text-[#0B4F43] hover:bg-slate-50 hover:scale-105 active:scale-95 px-8 sm:px-12 h-14 flex items-center gap-3 rounded-full font-black uppercase text-[12px] tracking-widest transition-all shadow-[0_10px_20px_rgba(0,0,0,0.1)]"
               >
                 {t("productBulkInquiryBtn")} <ArrowRight className={cn("w-5 h-5 ml-2", isRTL && "rotate-180")} strokeWidth={3} />
               </Link>

@@ -309,7 +309,7 @@ export default function AdminPanel() {
           transition={{ type: "spring", bounce: 0.4 }}
           className="relative z-10 bg-white p-10 rounded-[2rem] shadow-[0_20px_60px_rgba(0,0,0,0.05)] w-full max-w-md border border-slate-100"
         >
-          <div className="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mb-8 mx-auto text-[#003366]">
+          <div className="w-16 h-16 bg-[#EAF4F1] rounded-2xl flex items-center justify-center mb-8 mx-auto text-[#0B4F43]">
             <LockKeyhole size={28} strokeWidth={2.5} />
           </div>
           <h2 className="text-2xl font-black text-center text-slate-900 mb-2 uppercase tracking-widest">Admin Portal</h2>
@@ -322,18 +322,18 @@ export default function AdminPanel() {
                 placeholder="Enter Admin Password" 
                 value={password} 
                 onChange={e => setPassword(e.target.value)}
-                className="w-full pl-5 pr-14 py-4 bg-slate-50 border border-slate-200 text-slate-900 font-bold rounded-2xl outline-none focus:bg-white focus:ring-2 focus:ring-[#003366] transition-all text-center tracking-widest"
+                className="w-full pl-5 pr-14 py-4 bg-slate-50 border border-slate-200 text-slate-900 font-bold rounded-2xl outline-none focus:bg-white focus:ring-2 focus:ring-[#0B4F43] transition-all text-center tracking-widest"
               />
               <button
                 type="button"
                 onClick={() => setShowPassword(!showPassword)}
-                className="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 hover:text-[#003366] transition-colors"
+                className="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 hover:text-[#0B4F43] transition-colors"
                 title={showPassword ? "Hide password" : "Show password"}
               >
                 {showPassword ? <EyeOff size={20} /> : <Eye size={20} />}
               </button>
             </div>
-            <button type="submit" disabled={loading} className="w-full bg-[#003366] text-white py-4 font-black rounded-2xl hover:bg-slate-900 transition-colors uppercase tracking-widest text-sm shadow-xl shadow-blue-900/10">
+            <button type="submit" disabled={loading} className="w-full bg-[#0B4F43] text-white py-4 font-black rounded-2xl hover:bg-slate-900 transition-colors uppercase tracking-widest text-sm shadow-xl shadow-blue-900/10">
               {loading ? "Verifying..." : "Authorize"}
             </button>
           </form>
@@ -391,7 +391,7 @@ export default function AdminPanel() {
             </div>
            
            <div className="flex items-center gap-3">
-             <button onClick={loadProducts} className="flex items-center gap-2 px-4 py-2.5 bg-white border border-slate-200 rounded-full text-slate-600 hover:text-[#003366] hover:border-[#003366] transition-all text-xs font-black uppercase tracking-widest shadow-sm">
+             <button onClick={loadProducts} className="flex items-center gap-2 px-4 py-2.5 bg-white border border-slate-200 rounded-full text-slate-600 hover:text-[#0B4F43] hover:border-[#0B4F43] transition-all text-xs font-black uppercase tracking-widest shadow-sm">
                <RefreshCw className="w-4 h-4" /> Refresh
              </button>
               <button onClick={handleSeed} className="flex items-center gap-2 px-4 py-2.5 bg-amber-500 rounded-full text-slate-900 transition-all text-xs font-black uppercase tracking-widest shadow-sm hover:bg-amber-600 hover:scale-105 active:scale-95">
@@ -400,7 +400,7 @@ export default function AdminPanel() {
               <button onClick={handleClearAll} className="flex items-center gap-2 px-4 py-2.5 bg-rose-50 border border-rose-200 rounded-full text-rose-600 hover:bg-rose-100 transition-all text-xs font-black uppercase tracking-widest shadow-sm">
                 <Trash className="w-4 h-4" /> Clear Data
               </button>
-             <button onClick={() => setShowAddForm(!showAddForm)} className="flex items-center gap-2 px-5 py-2.5 bg-[#003366] rounded-full text-white transition-all text-xs font-black uppercase tracking-widest shadow-[0_5px_15px_rgba(0,51,102,0.2)] hover:scale-105 active:scale-95">
+             <button onClick={() => setShowAddForm(!showAddForm)} className="flex items-center gap-2 px-5 py-2.5 bg-[#0B4F43] rounded-full text-white transition-all text-xs font-black uppercase tracking-widest shadow-[0_5px_15px_rgba(0,51,102,0.2)] hover:scale-105 active:scale-95">
                {showAddForm ? <X className="w-4 h-4" /> : <Plus className="w-4 h-4" />}
                {showAddForm ? "Close" : "New Item"}
              </button>
@@ -420,7 +420,7 @@ export default function AdminPanel() {
                placeholder="Search product names..." 
                value={searchQuery}
                onChange={e => setSearchQuery(e.target.value)}
-               className="w-full pl-12 pr-4 py-3 bg-slate-50 border border-slate-100 rounded-2xl font-bold text-slate-900 outline-none focus:bg-white focus:ring-2 focus:ring-[#003366]/20 transition-all"
+               className="w-full pl-12 pr-4 py-3 bg-slate-50 border border-slate-100 rounded-2xl font-bold text-slate-900 outline-none focus:bg-white focus:ring-2 focus:ring-[#0B4F43]/20 transition-all"
                disabled={products.length === 0}
              />
            </div>
@@ -429,7 +429,7 @@ export default function AdminPanel() {
              <select 
                value={filterCategory} 
                onChange={e => setFilterCategory(e.target.value)}
-               className="w-full pl-12 pr-4 py-3 bg-slate-50 border border-slate-100 rounded-2xl font-bold text-slate-900 outline-none focus:bg-white focus:ring-2 focus:ring-[#003366]/20 transition-all appearance-none"
+               className="w-full pl-12 pr-4 py-3 bg-slate-50 border border-slate-100 rounded-2xl font-bold text-slate-900 outline-none focus:bg-white focus:ring-2 focus:ring-[#0B4F43]/20 transition-all appearance-none"
                disabled={products.length === 0}
              >
                <option value="All">All Categories</option>
@@ -449,21 +449,21 @@ export default function AdminPanel() {
               exit={{ opacity: 0, height: 0, marginBottom: 0 }}
               className="overflow-hidden"
             >
-              <div className="bg-white p-8 rounded-3xl border-2 border-[#003366] shadow-[0_20px_50px_rgba(0,51,102,0.1)] relative">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-blue-50/50 rounded-full blur-2xl -translate-y-10 translate-x-10"></div>
+              <div className="bg-white p-8 rounded-3xl border-2 border-[#0B4F43] shadow-[0_20px_50px_rgba(0,51,102,0.1)] relative">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-[#EAF4F1]/50 rounded-full blur-2xl -translate-y-10 translate-x-10"></div>
                 
                 <h3 className="text-xl font-black text-slate-900 uppercase tracking-widest mb-6 flex items-center gap-2">
-                  <Box className="w-5 h-5 text-[#003366]" /> Publish New Item
+                  <Box className="w-5 h-5 text-[#0B4F43]" /> Publish New Item
                 </h3>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 relative z-10">
                   <div>
                     <label className="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] mb-2 block ml-1">Title</label>
-                    <input type="text" value={newForm.name} onChange={e=>setNewForm({...newForm, name: e.target.value})} className="w-full p-4 border border-slate-200 rounded-2xl bg-slate-50 font-bold outline-none focus:bg-white focus:ring-2 focus:ring-[#003366]" placeholder="e.g. Magic Pop" />
+                    <input type="text" value={newForm.name} onChange={e=>setNewForm({...newForm, name: e.target.value})} className="w-full p-4 border border-slate-200 rounded-2xl bg-slate-50 font-bold outline-none focus:bg-white focus:ring-2 focus:ring-[#0B4F43]" placeholder="e.g. Magic Pop" />
                   </div>
                   <div>
                     <label className="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] mb-2 block ml-1">Category</label>
-                    <select value={newForm.category} onChange={e=>setNewForm({...newForm, category: e.target.value})} className="w-full p-4 border border-slate-200 rounded-2xl bg-slate-50 font-bold outline-none focus:bg-white focus:ring-2 focus:ring-[#003366] appearance-none">
+                    <select value={newForm.category} onChange={e=>setNewForm({...newForm, category: e.target.value})} className="w-full p-4 border border-slate-200 rounded-2xl bg-slate-50 font-bold outline-none focus:bg-white focus:ring-2 focus:ring-[#0B4F43] appearance-none">
                         <option value="Cookies & Biscuits">Cookies & Biscuits</option>
                         <option value="Wafers">Wafers</option>
                         <option value="Candies & Toffees">Candies & Toffees</option>
@@ -475,11 +475,11 @@ export default function AdminPanel() {
                     <label className="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] mb-2 block ml-1">Image URL</label>
                     <div className="relative">
                       <ImageIcon className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 w-5 h-5 pointer-events-none" />
-                      <input type="text" value={newForm.image} onChange={e=>setNewForm({...newForm, image: e.target.value})} className="w-full pl-12 pr-12 p-4 border border-slate-200 rounded-2xl bg-slate-50 font-bold outline-none focus:bg-white focus:ring-2 focus:ring-[#003366]" placeholder="/image.png" />
+                      <input type="text" value={newForm.image} onChange={e=>setNewForm({...newForm, image: e.target.value})} className="w-full pl-12 pr-12 p-4 border border-slate-200 rounded-2xl bg-slate-50 font-bold outline-none focus:bg-white focus:ring-2 focus:ring-[#0B4F43]" placeholder="/image.png" />
                       <button 
                         type="button"
                         onClick={() => fileInputRef.current?.click()} 
-                        className="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 hover:text-[#003366] transition-colors"
+                        className="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 hover:text-[#0B4F43] transition-colors"
                         title="Upload Image File"
                       >
                         <Paperclip className="w-5 h-5" />
@@ -510,7 +510,7 @@ export default function AdminPanel() {
         {/* -------------------- */}
         {loading && products.length === 0 ? (
            <div className="flex flex-col items-center justify-center p-32 bg-white rounded-[2rem] border border-slate-100 shadow-sm">
-             <div className="w-12 h-12 rounded-full border-4 border-slate-100 border-t-[#003366] animate-spin mb-4"></div>
+             <div className="w-12 h-12 rounded-full border-4 border-slate-100 border-t-[#0B4F43] animate-spin mb-4"></div>
              <p className="text-slate-400 font-black uppercase tracking-widest text-xs">Syncing Database...</p>
            </div>
         ) : products.length === 0 ? (
@@ -520,7 +520,7 @@ export default function AdminPanel() {
              </div>
              <p className="text-slate-900 font-black uppercase text-xl tracking-widest mb-4">Database is Empty</p>
              <p className="text-slate-500 font-medium max-w-sm mx-auto mb-8">Click the Seed button in the navigation to instantly populate your dashboard with your existing static data.</p>
-             <button onClick={handleSeed} className="px-8 py-4 bg-[#003366] rounded-full font-black text-xs uppercase tracking-widest text-white hover:bg-slate-900 shadow-xl shadow-blue-900/10 transition-transform hover:-translate-y-1">
+             <button onClick={handleSeed} className="px-8 py-4 bg-[#0B4F43] rounded-full font-black text-xs uppercase tracking-widest text-white hover:bg-slate-900 shadow-xl shadow-blue-900/10 transition-transform hover:-translate-y-1">
                Push Static Data Now
              </button>
            </div>
@@ -568,7 +568,7 @@ export default function AdminPanel() {
                                     <button 
                                       type="button"
                                       onClick={() => editFileInputRef.current?.click()}
-                                      className="absolute right-2 top-1/2 -translate-y-1/2 text-slate-400 hover:text-[#003366]"
+                                      className="absolute right-2 top-1/2 -translate-y-1/2 text-slate-400 hover:text-[#0B4F43]"
                                     >
                                       <Paperclip className="w-4 h-4" />
                                     </button>
@@ -604,7 +604,7 @@ export default function AdminPanel() {
                               </td>
                               <td className="p-5">
                                 <div className="flex items-center justify-end gap-2 opacity-50 group-hover:opacity-100 transition-opacity">
-                                  <button onClick={() => startEdit(p)} className="p-2.5 bg-white border border-slate-200 text-slate-500 rounded-xl hover:border-[#003366] hover:text-[#003366] hover:shadow-sm transition-all">
+                                  <button onClick={() => startEdit(p)} className="p-2.5 bg-white border border-slate-200 text-slate-500 rounded-xl hover:border-[#0B4F43] hover:text-[#0B4F43] hover:shadow-sm transition-all">
                                     <Edit className="w-4 h-4" />
                                   </button>
                                   <button onClick={() => handleDelete(p.id)} className="p-2.5 bg-white border border-slate-200 text-slate-500 rounded-xl hover:border-rose-500 hover:text-rose-500 hover:bg-rose-50 hover:shadow-sm transition-all">

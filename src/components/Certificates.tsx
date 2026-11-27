@@ -16,15 +16,15 @@ import { useLanguage } from "@/context/LanguageContext";
 export default function Certificates() {
   const { t } = useLanguage();
   return (
-    <section className="py-24 bg-slate-50/50 backdrop-blur-sm overflow-hidden border-y border-slate-200/60 relative">
+    <section className="py-14 bg-slate-50/50 backdrop-blur-sm overflow-hidden border-y border-slate-200/60 relative">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-blue-50/10 to-transparent pointer-events-none"></div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center mb-20">
-          <span className="text-amber-500 font-black tracking-[0.4em] text-[10px] uppercase mb-5 block">{t("certTrust")}</span>
+        <div className="text-center mb-10">
+          <span className="text-[#C59238] font-black tracking-[0.4em] text-[10px] uppercase mb-5 block">{t("certTrust")}</span>
           <h3 className="text-4xl md:text-5xl font-black text-slate-900 uppercase tracking-tighter heading-font leading-tight">
             {t("certRecognized")} <br className="sm:hidden" />
-            <span className="bg-gradient-to-r from-[#003366] to-blue-600 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#0B4F43] to-[#C59238] bg-clip-text text-transparent">
                {t("certCertified")}
             </span>
           </h3>
@@ -39,10 +39,10 @@ export default function Certificates() {
               viewport={{ once: true }}
               transition={{ delay: idx * 0.1, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
               whileHover={{ y: -8, transition: { duration: 0.3 } }}
-              className="flex items-center justify-center p-8 bg-white border border-slate-100 rounded-[2rem] shadow-sm hover:shadow-xl hover:border-blue-100 transition-all group relative overflow-hidden"
+              className="flex items-center justify-center p-8 bg-white border border-slate-100 rounded-[2rem] shadow-sm hover:shadow-xl hover:border-[#C59238]/30 transition-all group relative overflow-hidden"
             >
-              <div className="absolute inset-0 bg-blue-50/0 group-hover:bg-blue-50/50 transition-colors"></div>
-              <div className="text-xl md:text-2xl font-black text-slate-400 select-none tracking-[0.1em] uppercase group-hover:text-[#003366] transition-colors cursor-default heading-font relative z-10 w-full text-center">
+              <div className="absolute inset-0 bg-[#EAF4F1]/0 group-hover:bg-[#EAF4F1]/60 transition-colors"></div>
+              <div className="text-xl md:text-2xl font-black text-slate-400 select-none tracking-[0.1em] uppercase group-hover:text-[#0B4F43] transition-colors cursor-default heading-font relative z-10 w-full text-center">
                 {cert.name}
               </div>
             </motion.div>
