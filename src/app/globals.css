@@ -1,14 +1,14 @@
 @import "tailwindcss";
 
 @theme inline {
-  --font-sans: var(--font-inter);
-  --font-heading: var(--font-outfit);
+  --font-sans: var(--font-jakarta);
+  --font-heading: var(--font-fraunces);
   
-  --color-brand-blue: #0B4F43;
-  --color-brand-red: #C59238;
-  --color-brand-amber: #D4A548;
-  --color-slate-50: #f8fafc;
-  --color-slate-100: #f1f5f9;
+  --color-brand-blue: #093A31;
+  --color-brand-red: #B8862D;
+  --color-brand-amber: #D4A94E;
+  --color-slate-50: #FBF9F4;
+  --color-slate-100: #F3EDE2;
   
   @keyframes spotlight {
     0% {
@@ -32,13 +32,14 @@
   }
   
   body {
-    background-color: #ffffff;
-    color: #1e293b;
+    background-color: #FBF9F4;
+    color: #11221E;
+    font-family: var(--font-jakarta), sans-serif;
   }
 }
 
 .heading-font {
-  font-family: var(--font-heading), sans-serif;
+  font-family: var(--font-fraunces), Georgia, serif;
   letter-spacing: -0.02em;
 }
 

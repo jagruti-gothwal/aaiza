@@ -55,20 +55,18 @@ export default function Navbar() {
   return (
     <>
       <motion.div
-        initial={{ y: -80, opacity: 0 }}
-        animate={{ y: visible ? 0 : -80, opacity: visible ? 1 : 0 }}
-        transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
+        initial={{ y: -60, opacity: 0 }}
+        animate={{ y: visible ? 0 : -60, opacity: visible ? 1 : 0 }}
+        transition={{ duration: 0.25, ease: "easeOut" }}
         className={cn(
-          "flex w-full max-w-6xl fixed top-3 md:top-4 inset-x-4 md:mx-auto rounded-full bg-[#FAF8F2]/90 backdrop-blur-xl border border-[#0B4F43]/10 z-[5000] px-4 md:px-6 py-2.5 items-center justify-between transition-all shadow-[0_4px_20px_rgba(11,79,67,0.06)]"
+          "w-full fixed top-0 inset-x-0 bg-[#FBF9F4]/95 backdrop-blur-md border-b border-[#093A31]/10 z-[5000] px-4 sm:px-8 lg:px-12 py-3 flex items-center justify-between transition-all"
         )}
       >
-        <Link href="/" className="flex items-center gap-2 group flex-shrink-0">
-          <div className="relative overflow-hidden px-1 py-0.5 group-hover:scale-105 transition-transform">
-             <Image src="/aaiza-logo.jpg" alt="AAIZA Food Trading FZCO" width={130} height={40} priority className="h-9 w-auto object-contain mix-blend-multiply" />
-          </div>
+        <Link href="/" className="flex items-center gap-3 group flex-shrink-0">
+          <Image src="/aaiza-logo.jpg" alt="AAIZA Food Trading FZCO" width={135} height={42} priority className="h-10 w-auto object-contain mix-blend-multiply" />
         </Link>
         
-        <div className="hidden lg:flex items-center gap-2 flex-grow justify-center px-4">
+        <div className="hidden lg:flex items-center gap-8 flex-grow justify-center px-4">
           {navLinks.map((navItem, idx: number) => {
             const isActive = pathname === navItem.href;
             return (
@@ -78,10 +76,10 @@ export default function Navbar() {
                 onMouseEnter={() => setHoveredIndex(idx)}
                 onMouseLeave={() => setHoveredIndex(null)}
                 className={cn(
-                  "relative items-center flex text-[11px] font-bold px-4 py-1.5 rounded-full transition-all duration-200 capitalize tracking-wide border",
+                  "relative items-center flex text-xs font-semibold py-1.5 transition-all duration-200 uppercase tracking-[0.14em]",
                   isActive
-                    ? "bg-[#EAF4F1] text-[#0B4F43] border-[#0B4F43]/25 shadow-xs"
-                    : "bg-white text-slate-600 border-slate-200/90 hover:border-[#C59238] hover:text-[#0B4F43]"
+                    ? "text-[#093A31] border-b-2 border-[#B8862D]"
+                    : "text-slate-600 hover:text-[#093A31]"
                 )}
               >
                 <span className="relative z-10 hidden sm:block">{navItem.name}</span>
@@ -90,14 +88,14 @@ export default function Navbar() {
           })}
         </div>
 
-        <div className="flex items-center gap-2.5 flex-shrink-0">
+        <div className="flex items-center gap-3 flex-shrink-0">
           {/* Language Selector */}
           <div className="relative">
             <button 
               onClick={() => setLangOpen(!langOpen)}
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white border border-slate-200 hover:border-[#C59238] transition-colors text-[#0B4F43] font-bold text-[11px] uppercase tracking-wider"
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white border border-[#093A31]/15 hover:border-[#B8862D] transition-colors text-[#093A31] font-bold text-[11px] uppercase tracking-wider"
             >
-              <Globe className="w-3.5 h-3.5 text-[#C59238]" />
+              <Globe className="w-3.5 h-3.5 text-[#B8862D]" />
               <span>{language}</span>
               <ChevronDown className={cn("w-3 h-3 transition-transform", langOpen && "rotate-180")} />
             </button>
@@ -108,15 +106,15 @@ export default function Navbar() {
                   initial={{ opacity: 0, y: 10, scale: 0.95 }}
                   animate={{ opacity: 1, y: 0, scale: 1 }}
                   exit={{ opacity: 0, y: 10, scale: 0.95 }}
-                  className="absolute top-full mt-3 right-0 bg-white border border-slate-100 rounded-2xl shadow-xl p-1.5 min-w-[160px] z-[6000]"
+                  className="absolute top-full mt-2 right-0 bg-white border border-[#093A31]/10 rounded-xl shadow-lg p-1.5 min-w-[155px] z-[6000]"
                 >
                   {languages.map((l) => (
                     <button
                       key={l.code}
                       onClick={() => { setLanguage(l.code); setLangOpen(false); }}
                       className={cn(
-                        "w-full text-left px-4 py-2 text-[11px] font-bold uppercase tracking-wider rounded-xl transition-all",
-                        language === l.code ? "bg-[#0B4F43] text-white" : "text-slate-600 hover:bg-[#FAF8F2]"
+                        "w-full text-left px-3.5 py-2 text-[11px] font-bold uppercase tracking-wider rounded-lg transition-all",
+                        language === l.code ? "bg-[#093A31] text-white" : "text-slate-600 hover:bg-[#FBF9F4]"
                       )}
                     >
                       {l.name}
@@ -127,7 +125,7 @@ export default function Navbar() {
             </AnimatePresence>
           </div>
           
-          <Link href="/contact" className="hidden sm:flex items-center gap-2 bg-[#0B4F43] text-white text-[11px] font-bold px-5 py-2 rounded-full hover:bg-[#06332B] transition-all hover:-translate-y-0.5 active:translate-y-0 shadow-[0_3px_0_#06332B] tracking-wide">
+          <Link href="/contact" className="hidden sm:flex items-center gap-2 bg-[#093A31] text-white text-[11px] font-bold px-5 py-2.5 rounded-lg hover:bg-[#062922] transition-all uppercase tracking-[0.14em] border border-[#B8862D]/40">
             {t("navQuote")}
           </Link>
           

@@ -11,6 +11,9 @@ import {
   Star,
   Send,
   ChevronDown,
+  ShieldCheck,
+  Ship,
+  Award,
 } from "lucide-react";
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -21,8 +24,8 @@ import DubaiSkyline from "@/components/DubaiSkyline";
 const WorldMap = dynamic(() => import("@/components/WorldMap"), {
   ssr: false,
   loading: () => (
-    <div className="py-20 bg-[#FAF8F2] h-[420px] flex items-center justify-center text-slate-400 font-bold">
-      Loading Global Map...
+    <div className="py-20 bg-[#FBF9F4] h-[420px] flex items-center justify-center text-slate-400 font-semibold">
+      Loading Global Network...
     </div>
   ),
 });
@@ -48,18 +51,18 @@ export default function Home() {
   };
 
   return (
-    <div className="flex flex-col min-h-screen bg-[#FFFDF9] font-sans text-[#1A2B27] overflow-x-hidden relative">
+    <div className="flex flex-col min-h-screen bg-[#FBF9F4] font-sans text-[#11221E] overflow-x-hidden relative">
 
       {/* =========================================================================
-          SECTION 1: EDITORIAL HERO (Britto-Inspired Clean Pastel Canvas + Giant Typography)
+          SECTION 1: DUBAI LUXURY-EDITORIAL SPLIT ARCH HERO (AAIZA ORIGINAL)
       ========================================================================= */}
-      <section className="relative pt-24 sm:pt-28 pb-12 sm:pb-16 overflow-hidden bg-gradient-to-br from-[#FAF8F2] via-[#FFFFFF] to-[#EAF4F1]">
+      <section className="relative pt-24 sm:pt-28 pb-14 sm:pb-20 border-b border-[#093A31]/10 bg-gradient-to-br from-[#FBF9F4] via-[#FFFFFF] to-[#F3EDE2] overflow-hidden">
 
-        {/* Subtle Architectural Dubai Burj Sketch Watermark in Background */}
-        <div className="absolute inset-0 pointer-events-none opacity-[0.07]">
+        {/* Subtle Architectural Dubai Burj Khalifa Watermark */}
+        <div className="absolute inset-0 pointer-events-none opacity-[0.06]">
           <Image
             src="/dubai/dubai-burj-sketch.jpg"
-            alt="Dubai Skyline Watermark"
+            alt="Dubai Skyline"
             fill
             className="object-cover object-bottom mix-blend-multiply"
             sizes="100vw"
@@ -67,310 +70,232 @@ export default function Home() {
           />
         </div>
 
-        {/* Playful Decorative Pastel Gear & Floating Treats */}
-        <div className="hidden md:block absolute bottom-12 right-[18%] w-16 h-16 pointer-events-none opacity-80">
-          <svg viewBox="0 0 100 100" fill="#BCE6DC">
-            <path d="M50 5 L58 18 L73 13 L73 28 L88 30 L81 44 L93 54 L80 63 L86 78 L71 78 L69 93 L55 86 L45 96 L36 83 L21 88 L22 73 L7 70 L14 56 L3 46 L16 37 L11 22 L26 22 L29 7 L43 15 Z" />
-          </svg>
-        </div>
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-4">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
 
-        <motion.div
-          animate={{ y: [0, -10, 0], rotate: [-8, 4, -8] }}
-          transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-          className="hidden lg:block absolute bottom-8 left-6 xl:left-14 w-28 h-28 pointer-events-none z-30 filter drop-shadow-[0_14px_20px_rgba(11,79,67,0.18)]"
-        >
-          <Image
-            src="/transparent/DJ BUTTER COOKIES.png"
-            alt="Crispy Butter Cookie"
-            fill
-            className="object-contain"
-            sizes="120px"
-          />
-        </motion.div>
+            {/* Left Column: Editorial Serif Headline & B2B Actions */}
+            <div className="lg:col-span-6 text-left">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-md bg-white border border-[#B8862D]/35 text-[#093A31] text-[10px] font-bold uppercase tracking-[0.2em] mb-5 shadow-2xs">
+                <span className="w-2 h-2 rounded-full bg-[#B8862D]" />
+                <span>Dubai Silicon Oasis • UAE Trade Hub</span>
+              </div>
 
-        <motion.div
-          animate={{ y: [0, 8, 0], rotate: [6, -4, 6] }}
-          transition={{ duration: 5.5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-          className="hidden lg:block absolute top-32 right-6 xl:right-14 w-28 h-28 pointer-events-none z-30 filter drop-shadow-[0_14px_20px_rgba(197,146,56,0.22)]"
-        >
-          <Image
-            src="/transparent/BABA LOVELY POP STRAWBERRY MARKUP.png"
-            alt="Lovely Pop Candy"
-            fill
-            className="object-contain"
-            sizes="120px"
-          />
-        </motion.div>
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#093A31] leading-[1.06] tracking-tight heading-font mb-5">
+                Global Confectionery,{" "}
+                <span className="italic text-[#B8862D] font-extrabold">Curated</span>{" "}
+                in Dubai.
+              </h1>
 
-        {/* Main Hero Canvas */}
-        <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-4">
+              <p className="text-sm sm:text-base text-slate-600 font-medium leading-relaxed max-w-lg mb-7">
+                <strong>AAIZA FOOD TRADING FZCO</strong> supplies certified Halal lollipops, cream biscuits, toffees, and chocolates to supermarket chains and bulk importers across 25+ nations.
+              </p>
 
-          {/* Floating Designer/Hub Badge (Like the @Hamida_jannat glass pill in reference) */}
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.3 }}
-            className="hidden sm:flex items-center gap-3 bg-white/80 backdrop-blur-md border border-[#C59238]/30 px-4 py-2 rounded-2xl shadow-sm absolute top-6 right-6 lg:right-12 z-30"
-          >
-            <div className="w-9 h-9 rounded-full bg-[#EAF4F1] border border-[#0B4F43]/20 flex items-center justify-center text-base">
-              🇦🇪
+              <div className="flex flex-wrap items-center gap-3.5 mb-8">
+                <Link
+                  href="/products"
+                  className="h-12 px-7 rounded-lg bg-[#093A31] hover:bg-[#062922] text-white font-bold text-xs uppercase tracking-[0.14em] inline-flex items-center gap-2.5 transition-all shadow-sm"
+                >
+                  <span>Explore Catalog</span>
+                  <ArrowRight className="w-4 h-4 text-[#D4A94E]" />
+                </Link>
+                <Link
+                  href="/contact"
+                  className="h-12 px-7 rounded-lg bg-white hover:bg-[#F3EDE2] border border-[#093A31]/25 text-[#093A31] font-bold text-xs uppercase tracking-[0.14em] inline-flex items-center gap-2 transition-all"
+                >
+                  <span>Request Quotation</span>
+                </Link>
+              </div>
+
+              {/* Clean Minimalist Metrics */}
+              <div className="grid grid-cols-3 gap-4 pt-5 border-t border-[#093A31]/10 max-w-md">
+                <div>
+                  <div className="text-xl sm:text-2xl font-bold text-[#093A31] heading-font">25+</div>
+                  <div className="text-[10px] font-bold uppercase tracking-wider text-slate-500">Export Markets</div>
+                </div>
+                <div>
+                  <div className="text-xl sm:text-2xl font-bold text-[#B8862D] heading-font">100%</div>
+                  <div className="text-[10px] font-bold uppercase tracking-wider text-slate-500">Halal Certified</div>
+                </div>
+                <div>
+                  <div className="text-xl sm:text-2xl font-bold text-[#093A31] heading-font">FCL/LCL</div>
+                  <div className="text-[10px] font-bold uppercase tracking-wider text-slate-500">Jebel Ali Port</div>
+                </div>
+              </div>
             </div>
-            <div className="text-left">
-              <div className="text-xs font-black text-[#0B4F43] leading-tight">AAIZA Dubai HQ</div>
-              <div className="text-[10px] font-bold text-[#C59238]">100% Halal Global Export</div>
-            </div>
-          </motion.div>
 
-          {/* Giant Layered Typography + Central Cutout Mascot */}
-          <div className="relative flex flex-col items-center justify-center min-h-[340px] sm:min-h-[430px] md:min-h-[470px]">
+            {/* Right Column: Framed Editorial Arch Gallery Composition */}
+            <div className="lg:col-span-6 relative">
+              <div className="grid grid-cols-12 gap-4 items-end">
 
-            {/* Playful Looping Ribbon Curves Behind Typography */}
-            <svg
-              viewBox="0 0 900 420"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              className="absolute inset-0 w-full h-full pointer-events-none z-0"
-            >
-              <path
-                d="M120 210 C 120 60, 350 20, 420 120 C 480 200, 740 160, 740 260 C 740 340, 520 350, 480 260"
-                stroke="#E6C260"
-                strokeWidth="12"
-                strokeLinecap="round"
-                strokeOpacity="0.65"
-              />
-              <path
-                d="M60 265 C 210 215, 310 315, 460 245 C 610 175, 760 220, 860 190"
-                stroke="#BCE6DC"
-                strokeWidth="10"
-                strokeLinecap="round"
-                strokeOpacity="0.7"
-              />
-            </svg>
-
-            {/* Giant Bold Display Words Behind the Girl */}
-            <div className="relative z-10 w-full text-center select-none pointer-events-none leading-[0.88] tracking-tighter">
-              <div className="text-[4.5rem] sm:text-[7.5rem] md:text-[9.5rem] lg:text-[11rem] font-black uppercase heading-font flex items-center justify-center gap-2 sm:gap-4">
-                <span className="text-[#1A2B27]">AAI</span>
-                <span className="relative inline-block w-14 h-14 sm:w-24 sm:h-24 md:w-28 md:h-28 -mx-1">
+                {/* Tall Arch Frame with Smiling Girl Mascot */}
+                <div className="col-span-7 relative h-[320px] sm:h-[380px] rounded-t-full rounded-b-2xl bg-gradient-to-b from-[#093A31] to-[#0E5245] border-2 border-[#B8862D]/40 overflow-hidden shadow-lg">
+                  <div className="absolute top-5 inset-x-0 text-center z-10">
+                    <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#D4A94E]">
+                      Pure Joy • Every Pack
+                    </span>
+                  </div>
                   <Image
-                    src="/transparent/DJ Conico Chocolate.png"
-                    alt="Conico Treat"
+                    src="/transparent/girl-conico.png"
+                    alt="AAIZA Confectionery Delight"
                     fill
-                    className="object-contain drop-shadow-md"
-                    sizes="120px"
+                    className="object-contain object-bottom scale-x-[-1] pt-8"
+                    sizes="(max-width: 768px) 60vw, 320px"
+                    priority
                   />
-                </span>
-                <span className="text-[#0B4F43]">ZA</span>
-              </div>
-              <div className="text-[4rem] sm:text-[6.8rem] md:text-[8.5rem] lg:text-[10rem] font-black uppercase heading-font -mt-1 sm:-mt-3">
-                <span className="text-[#1A2B27]">SWE</span>
-                <span className="text-[#C59238]">ETS</span>
+                </div>
+
+                {/* Right Stack: Boy Tang-y + Product Highlight */}
+                <div className="col-span-5 flex flex-col gap-4">
+                  <div className="relative h-[170px] sm:h-[200px] rounded-2xl bg-[#F3EDE2] border border-[#B8862D]/30 overflow-hidden shadow-xs">
+                    <Image
+                      src="/transparent/boy-tangy.png"
+                      alt="DJ Tang-y Tamarind Candy"
+                      fill
+                      className="object-contain object-bottom pt-2"
+                      sizes="220px"
+                    />
+                    <span className="absolute top-2.5 left-2.5 bg-white/95 text-[#093A31] text-[9px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-md border border-[#B8862D]/30">
+                      Tang-y Candy
+                    </span>
+                  </div>
+
+                  <div className="relative h-[134px] sm:h-[164px] rounded-2xl bg-white border border-[#093A31]/15 p-3 flex flex-col justify-between shadow-xs">
+                    <div className="flex items-center justify-between">
+                      <span className="text-[10px] font-bold uppercase tracking-wider text-[#B8862D]">Featured</span>
+                      <Award className="w-4 h-4 text-[#093A31]" />
+                    </div>
+                    <div className="relative flex-1 my-1">
+                      <Image
+                        src="/transparent/DJ Choco Eclairs Jar Markup.png"
+                        alt="DJ Choco Eclairs"
+                        fill
+                        className="object-contain"
+                        sizes="180px"
+                      />
+                    </div>
+                    <span className="text-[10px] font-bold text-[#093A31] text-center truncate">
+                      Choco Eclairs &amp; Biscuits
+                    </span>
+                  </div>
+                </div>
               </div>
             </div>
 
-            {/* Central Smiling Girl Mascot Overlapping the Typography */}
-            <motion.div
-              initial={{ opacity: 0, y: 20, scale: 0.96 }}
-              animate={{ opacity: 1, y: 0, scale: 1 }}
-              transition={{ duration: 0.7, ease: "easeOut" }}
-              className="absolute bottom-0 z-20 w-56 sm:w-72 md:w-80 lg:w-88 h-[270px] sm:h-[350px] md:h-[400px] pointer-events-none"
-            >
-              <Image
-                src="/transparent/girl-conico.png"
-                alt="AAIZA Confectionery Joy"
-                fill
-                className="object-contain object-bottom scale-x-[-1] [mask-image:linear-gradient(to_bottom,black_82%,transparent_100%)] filter drop-shadow-[0_18px_28px_rgba(11,79,67,0.22)]"
-                sizes="(max-width: 768px) 240px, 360px"
-                priority
-              />
-            </motion.div>
-          </div>
-
-          {/* Clean Hero Subtitle + CTA Pills */}
-          <div className="relative z-30 text-center max-w-xl mx-auto mt-4">
-            <p className="text-xs sm:text-sm md:text-base text-slate-600 font-semibold leading-relaxed mb-5">
-              Crafted with pure ingredients &amp; exported from <span className="text-[#0B4F43] font-black">Dubai Jebel Ali Port</span> to 25+ countries worldwide.
-            </p>
-            <div className="flex flex-wrap items-center justify-center gap-3">
-              <Link
-                href="/products"
-                className="h-11 px-7 rounded-full bg-[#0B4F43] hover:bg-[#06332B] text-white font-bold text-xs uppercase tracking-wider flex items-center gap-2 shadow-[0_4px_0_#06332B] hover:-translate-y-0.5 active:translate-y-0 transition-all"
-              >
-                <span>Explore Products 🍬</span>
-              </Link>
-              <Link
-                href="/contact"
-                className="h-11 px-7 rounded-full bg-[#FBF3DC] hover:bg-[#F7ECD2] border-2 border-[#C59238]/50 text-[#0B4F43] font-bold text-xs uppercase tracking-wider flex items-center gap-2 hover:-translate-y-0.5 transition-all"
-              >
-                <span>Bulk Inquiry</span>
-                <ArrowRight className="w-3.5 h-3.5" />
-              </Link>
-            </div>
           </div>
         </div>
       </section>
 
       {/* =========================================================================
-          SECTION 2: "OUR SWEETS" + 3 PASTEL ROUNDED-SQUARE CARDS (Reference Style!)
+          SECTION 2: THREE EDITORIAL PILLARS (FINE BORDERS + SERIF TITLES)
       ========================================================================= */}
-      <section className="py-14 sm:py-20 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-
-        {/* Top Header Row: "Our Sweets" + Tilted Hashtag Pills */}
-        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 mb-10 relative">
-          <div className="relative">
-            {/* Soft scalloped gear behind heading */}
-            <svg
-              viewBox="0 0 100 100"
-              fill="#EAF4F1"
-              className="w-20 h-20 absolute -top-5 -left-6 -z-10"
-            >
-              <path d="M50 5 L58 18 L73 13 L73 28 L88 30 L81 44 L93 54 L80 63 L86 78 L71 78 L69 93 L55 86 L45 96 L36 83 L21 88 L22 73 L7 70 L14 56 L3 46 L16 37 L11 22 L26 22 L29 7 L43 15 Z" />
-            </svg>
-            <h2 className="text-3xl sm:text-4xl font-black text-[#1A2B27] leading-[0.95] heading-font">
-              Our <br />
-              <span className="text-[#0B4F43]">Sweets</span>
+      <section className="py-14 sm:py-16 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10">
+          <div>
+            <span className="text-[10px] font-bold uppercase tracking-[0.22em] text-[#B8862D] block mb-1.5">
+              THE AAIZA STANDARD
+            </span>
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#093A31] tracking-tight heading-font">
+              Crafted for Taste, Built for Global Trade
             </h2>
           </div>
-
-          {/* Tilted Hashtag Pills (Like #flavorful, #sweet, #testy in reference) */}
-          <div className="flex flex-wrap items-center gap-2.5 sm:gap-3">
-            <span className="px-4 py-1.5 rounded-full bg-[#FAF8F2] border border-[#0B4F43]/15 text-[#0B4F43] text-xs font-bold -rotate-6 shadow-xs">
-              #flavorful
-            </span>
-            <span className="px-4 py-1.5 rounded-full bg-[#E6C260] text-[#06332B] text-xs font-black rotate-3 shadow-xs">
-              #halalcertified
-            </span>
-            <span className="px-4 py-1.5 rounded-full bg-[#A8DDD0] text-[#06332B] text-xs font-black -rotate-3 shadow-xs">
-              #dubaiexport
-            </span>
-          </div>
+          <Link
+            href="/about"
+            className="text-xs font-bold uppercase tracking-wider text-[#093A31] hover:text-[#B8862D] inline-flex items-center gap-1.5"
+          >
+            <span>Our Story</span>
+            <ArrowRight className="w-3.5 h-3.5" />
+          </Link>
         </div>
 
-        {/* 3 Rounded-Square Feature Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-
-          {/* Card 1: Soft Mint */}
-          <motion.div
-            whileHover={{ y: -6 }}
-            className="rounded-[2.2rem] bg-[#EAF4F1] p-7 relative overflow-hidden flex flex-col justify-between min-h-[250px] border border-[#0B4F43]/10 shadow-xs"
-          >
-            {/* Playful squiggle doodle */}
-            <svg viewBox="0 0 120 120" fill="none" className="absolute right-0 bottom-2 w-28 h-28 pointer-events-none opacity-60">
-              <path d="M10 80 Q 45 20, 70 65 T 115 35" stroke="#C59238" strokeWidth="4" strokeLinecap="round" />
-            </svg>
-            <div className="w-14 h-14 rounded-2xl bg-white p-2 shadow-xs mb-6 flex items-center justify-center relative">
-              <Image src="/transparent/DJ CREMO COMBINE.png" alt="Balanced Flavors" fill className="object-contain p-1.5" sizes="60px" />
+          <div className="rounded-2xl bg-white p-7 border border-[#093A31]/12 shadow-2xs hover:border-[#B8862D]/60 transition-all flex flex-col justify-between">
+            <div className="flex items-center justify-between mb-6">
+              <div className="w-12 h-12 rounded-xl bg-[#E9F2EF] flex items-center justify-center text-[#093A31]">
+                <ShieldCheck className="w-6 h-6" />
+              </div>
+              <span className="text-xs font-bold text-[#B8862D] heading-font">01</span>
             </div>
-            <div className="relative z-10">
-              <h3 className="text-xl font-black text-[#1A2B27] leading-tight mb-2 heading-font">
-                Balanced <br />flavors
-              </h3>
-              <p className="text-xs text-slate-600 font-medium leading-relaxed max-w-[230px]">
-                Taste the carefully crafted balance of rich cocoa, creamy milk, and real fruit essences in every treat.
+            <div>
+              <h3 className="text-xl font-bold text-[#093A31] mb-2 heading-font">Balanced Flavors</h3>
+              <p className="text-xs sm:text-sm text-slate-600 font-medium leading-relaxed">
+                Pure Halal-certified ingredients, rich Belgian-style cocoa, and vibrant fruit essences formulated for international retail palates.
               </p>
             </div>
-          </motion.div>
+          </div>
 
-          {/* Card 2: Warm Gold / Biscuit */}
-          <motion.div
-            whileHover={{ y: -6 }}
-            className="rounded-[2.2rem] bg-[#F5DFB0] p-7 relative overflow-hidden flex flex-col justify-between min-h-[250px] border border-[#C59238]/25 shadow-xs"
-          >
-            {/* Curved corner lines doodle */}
-            <svg viewBox="0 0 100 100" fill="none" className="absolute right-0 top-0 w-28 h-28 pointer-events-none opacity-45">
-              <path d="M35 0 Q 35 65, 100 65" stroke="#FFFFFF" strokeWidth="6" />
-              <path d="M58 0 Q 58 42, 100 42" stroke="#FFFFFF" strokeWidth="6" />
-            </svg>
-            <div className="w-14 h-14 rounded-2xl bg-white p-2 shadow-xs mb-6 flex items-center justify-center relative">
-              <Image src="/transparent/DJ American Biscuits Markup Combine.png" alt="Perfect Texture" fill className="object-contain p-1.5" sizes="60px" />
+          <div className="rounded-2xl bg-[#F3EDE2] p-7 border border-[#B8862D]/25 shadow-2xs hover:border-[#093A31]/40 transition-all flex flex-col justify-between">
+            <div className="flex items-center justify-between mb-6">
+              <div className="w-12 h-12 rounded-xl bg-white flex items-center justify-center text-[#B8862D]">
+                <Award className="w-6 h-6" />
+              </div>
+              <span className="text-xs font-bold text-[#093A31] heading-font">02</span>
             </div>
-            <div className="relative z-10">
-              <h3 className="text-xl font-black text-[#06332B] leading-tight mb-2 heading-font">
-                Perfect <br />texture
-              </h3>
-              <p className="text-xs text-[#083830]/80 font-medium leading-relaxed max-w-[230px]">
-                Export-grade baking and coating delivers a crisp crunch and smooth melt tailored for warm climates.
+            <div>
+              <h3 className="text-xl font-bold text-[#093A31] mb-2 heading-font">Climate-Resilient Texture</h3>
+              <p className="text-xs sm:text-sm text-slate-700 font-medium leading-relaxed">
+                Moisture-locked export packaging preserves biscuit crispness and candy gloss across Middle East and African transit routes.
               </p>
             </div>
-          </motion.div>
+          </div>
 
-          {/* Card 3: Pastel Emerald-Teal */}
-          <motion.div
-            whileHover={{ y: -6 }}
-            className="rounded-[2.2rem] bg-[#9ED9CC] p-7 relative overflow-hidden flex flex-col justify-between min-h-[250px] border border-[#0B4F43]/15 shadow-xs"
-          >
-            {/* Vertical wavy lines doodle */}
-            <svg viewBox="0 0 80 140" fill="none" className="absolute right-3 top-4 w-16 h-32 pointer-events-none opacity-65">
-              <path d="M15 5 Q 30 25, 15 45 T 15 85 T 15 125" stroke="#FFFFFF" strokeWidth="5" strokeLinecap="round" />
-              <path d="M40 5 Q 55 25, 40 45 T 40 85 T 40 125" stroke="#FFFFFF" strokeWidth="5" strokeLinecap="round" />
-            </svg>
-            <div className="w-14 h-14 rounded-2xl bg-white p-2 shadow-xs mb-6 flex items-center justify-center relative">
-              <Image src="/transparent/DJ Choco Eclairs Jar Markup.png" alt="Every Moment" fill className="object-contain p-1.5" sizes="60px" />
+          <div className="rounded-2xl bg-[#093A31] p-7 border border-[#093A31] text-white shadow-sm flex flex-col justify-between">
+            <div className="flex items-center justify-between mb-6">
+              <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center text-[#D4A94E]">
+                <Ship className="w-6 h-6" />
+              </div>
+              <span className="text-xs font-bold text-[#D4A94E] heading-font">03</span>
             </div>
-            <div className="relative z-10">
-              <h3 className="text-xl font-black text-[#06332B] leading-tight mb-2 heading-font">
-                Every <br />moment
-              </h3>
-              <p className="text-xs text-[#06332B]/80 font-medium leading-relaxed max-w-[230px]">
-                From supermarket counter jars to 40ft container shipments dispatched via Jebel Ali Port, Dubai.
+            <div>
+              <h3 className="text-xl font-bold text-white mb-2 heading-font">Dubai Sea Freight Dispatch</h3>
+              <p className="text-xs sm:text-sm text-emerald-100/85 font-medium leading-relaxed">
+                Seamless 20ft, 40ft High Cube, and mixed LCL container loading directly from Jebel Ali Port to 25+ destinations.
               </p>
             </div>
-          </motion.div>
-
+          </div>
         </div>
       </section>
 
       {/* =========================================================================
-          SECTION 3: SIGNATURE FLAVORS (Reference's Centered "Ingredients" Section)
+          SECTION 3: SIGNATURE FLAVORS SHOWCASE
       ========================================================================= */}
-      <section className="py-12 sm:py-16 bg-[#FAF8F2] border-y border-[#0B4F43]/10">
+      <section className="py-14 bg-white border-y border-[#093A31]/10">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-
           <div className="text-center max-w-2xl mx-auto mb-10">
-            <span className="text-[11px] font-black uppercase tracking-widest text-[#0B4F43] bg-white px-4 py-1.5 rounded-full border border-[#0B4F43]/15 inline-block mb-3">
-              Pure Ingredients &amp; Aromas
+            <span className="text-[10px] font-bold uppercase tracking-[0.22em] text-[#B8862D] block mb-2">
+              PURE INGREDIENTS &amp; AROMAS
             </span>
-            <h2 className="text-3xl sm:text-5xl font-black text-[#C59238] tracking-tight heading-font mb-3">
-              Signature Flavors
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#093A31] tracking-tight heading-font mb-2">
+              Signature Confectionery Flavors
             </h2>
             <p className="text-xs sm:text-sm text-slate-600 font-medium">
-              Formulated with Halal-certified ingredients and vibrant fruit essences loved across 25+ countries.
+              A diverse export portfolio spanning chocolates, cream wafers, lollipops, and butter cookies.
             </p>
           </div>
 
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-5">
             {[
-              { name: "Rich Belgian Chocolate", tag: "Cocoa Delight", image: "/transparent/DJ Conico Chocolate.png", bg: "bg-white border-[#C59238]/25" },
-              { name: "Fresh Alpine Strawberry", tag: "Fruity Burst", image: "/transparent/BABA LOVELY POP STRAWBERRY MARKUP.png", bg: "bg-white border-[#0B4F43]/15" },
-              { name: "Crispy Wheat & Butter", tag: "Golden Crunch", image: "/transparent/DJ BUTTER COOKIES.png", bg: "bg-white border-[#C59238]/25" },
-              { name: "Creamy Milky Caramel", tag: "Silky Toffee", image: "/transparent/DJ Butter and Milk Candy.png", bg: "bg-white border-[#0B4F43]/15" },
-              { name: "Tropical Juicy Mango", tag: "King of Fruits", image: "/transparent/BABA LOVELY POP MANGO MARKUP.png", bg: "bg-white border-[#C59238]/25" },
-              { name: "Tangy Tamarind Blast", tag: "Spicy & Sweet", image: "/transparent/DJ TAMARIND BLAST MARKUP.png", bg: "bg-white border-[#0B4F43]/15" },
-              { name: "Toasted Coconut Bliss", tag: "Tropical Nut", image: "/transparent/DJ COCONUT COOKIES.png", bg: "bg-white border-[#C59238]/25" },
-              { name: "Wild Blue Blueberry", tag: "Berry Magic", image: "/transparent/BABA LOVELY POP BLUEBERRY MARKUP.png", bg: "bg-white border-[#0B4F43]/15" },
+              { name: "Rich Belgian Chocolate", tag: "Cocoa Delight", image: "/transparent/DJ Conico Chocolate.png" },
+              { name: "Fresh Alpine Strawberry", tag: "Fruity Burst", image: "/transparent/BABA LOVELY POP STRAWBERRY MARKUP.png" },
+              { name: "Crispy Wheat & Butter", tag: "Golden Crunch", image: "/transparent/DJ BUTTER COOKIES.png" },
+              { name: "Creamy Milky Caramel", tag: "Silky Toffee", image: "/transparent/DJ Butter and Milk Candy.png" },
+              { name: "Tropical Juicy Mango", tag: "King of Fruits", image: "/transparent/BABA LOVELY POP MANGO MARKUP.png" },
+              { name: "Tangy Tamarind Blast", tag: "Spicy & Sweet", image: "/transparent/DJ TAMARIND BLAST MARKUP.png" },
+              { name: "Toasted Coconut Bliss", tag: "Tropical Nut", image: "/transparent/DJ COCONUT COOKIES.png" },
+              { name: "Wild Blue Blueberry", tag: "Berry Magic", image: "/transparent/BABA LOVELY POP BLUEBERRY MARKUP.png" },
             ].map((flavor, idx) => (
               <motion.div
                 key={idx}
-                whileHover={{ y: -5 }}
-                className={cn(
-                  "p-4 rounded-3xl border transition-all shadow-xs hover:shadow-md text-center flex flex-col items-center justify-between",
-                  flavor.bg
-                )}
+                whileHover={{ y: -4 }}
+                className="p-4 rounded-xl bg-[#FBF9F4] border border-[#093A31]/10 hover:border-[#B8862D] transition-all text-center flex flex-col items-center justify-between"
               >
                 <div className="relative w-20 h-20 sm:w-24 sm:h-24 mb-2">
-                  <Image
-                    src={flavor.image}
-                    alt={flavor.name}
-                    fill
-                    className="object-contain"
-                    sizes="100px"
-                  />
+                  <Image src={flavor.image} alt={flavor.name} fill className="object-contain" sizes="100px" />
                 </div>
                 <div>
-                  <span className="text-[10px] font-black uppercase text-[#C59238] tracking-wider block mb-0.5">
+                  <span className="text-[10px] font-bold uppercase text-[#B8862D] tracking-wider block mb-0.5">
                     {flavor.tag}
                   </span>
-                  <h4 className="text-xs sm:text-sm font-black text-[#1A2B27] uppercase heading-font leading-snug">
+                  <h4 className="text-xs sm:text-sm font-bold text-[#093A31] heading-font leading-snug">
                     {flavor.name}
                   </h4>
                 </div>
@@ -381,74 +306,48 @@ export default function Home() {
       </section>
 
       {/* =========================================================================
-          SECTION 4: DUBAI EXPORT ORDER BUILDER + SKETCH & MASCOT SHOWCASE
+          SECTION 4: DUBAI TRADE DESK ORDER ESTIMATOR + ARCHITECTURAL SKETCH
       ========================================================================= */}
-      <section className="py-14 sm:py-16 bg-white">
+      <section className="py-14 sm:py-16 bg-[#FBF9F4]">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
 
-            {/* Left: Dubai Sketch + Boy Tang-y Mascot */}
-            <div className="lg:col-span-5 text-center lg:text-left">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#EAF4F1] text-[#0B4F43] font-black text-[11px] uppercase tracking-wider mb-3 border border-[#0B4F43]/15">
-                <Sparkles className="w-3.5 h-3.5 text-[#C59238]" />
-                <span>Dubai Trade Desk</span>
+            <div className="lg:col-span-5 text-left">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-white border border-[#B8862D]/30 text-[#093A31] font-bold text-[10px] uppercase tracking-widest mb-3">
+                <Sparkles className="w-3.5 h-3.5 text-[#B8862D]" />
+                <span>Dubai Silicon Oasis HQ</span>
               </div>
 
-              <h2 className="text-2xl sm:text-4xl font-black text-[#1A2B27] uppercase tracking-tight heading-font mb-3">
-                Build Your <span className="text-[#C59238]">Dubai Export</span> Order
+              <h2 className="text-3xl sm:text-4xl font-bold text-[#093A31] tracking-tight heading-font mb-3">
+                Configure Your <span className="italic text-[#B8862D]">Export Container</span>
               </h2>
 
               <p className="text-xs sm:text-sm text-slate-600 font-medium leading-relaxed mb-5">
-                Tailor your shipment with custom carton quantities, assorted products, and sea routing directly from Jebel Ali Port.
+                Select container capacity, product assortment, and destination port to receive an instant FOB / CIF quotation from our Dubai trade desk.
               </p>
 
-              <DubaiSkyline variant="card" className="mb-4 max-w-md mx-auto lg:mx-0" />
-
-              <div className="flex items-end justify-center lg:justify-start gap-4">
-                <div className="relative w-40 h-40 shrink-0">
-                  <Image
-                    src="/transparent/boy-tangy.png"
-                    alt="Boy enjoying DJ Tang-y Tamarind Candy"
-                    fill
-                    className="object-contain object-bottom [mask-image:linear-gradient(to_bottom,black_80%,transparent_100%)]"
-                    sizes="180px"
-                  />
-                  <span className="absolute top-1 -right-2 bg-[#FAF8F2] text-[#0B4F43] border border-[#C59238]/40 text-[10px] font-black px-2.5 py-0.5 rounded-full shadow-xs">
-                    Tang-y Tamarind 😋
-                  </span>
-                </div>
-                <div className="relative w-28 h-28 hidden sm:block mb-2">
-                  <Image
-                    src="/transparent/girl-gumpop.png"
-                    alt="Girl enjoying Gum Pop"
-                    fill
-                    className="object-contain object-bottom [mask-image:linear-gradient(to_bottom,black_80%,transparent_100%)]"
-                    sizes="120px"
-                  />
-                </div>
-              </div>
+              <DubaiSkyline variant="card" className="max-w-md" />
             </div>
 
-            {/* Right: Clean Emerald Export Estimator Card */}
             <div className="lg:col-span-7">
-              <div className="bg-[#0B4F43] rounded-[2.2rem] p-6 sm:p-8 text-white shadow-xl border-4 border-[#EAF4F1]">
-                <h3 className="text-xl font-black uppercase heading-font mb-5 tracking-tight flex items-center justify-between">
+              <div className="bg-[#093A31] rounded-2xl p-6 sm:p-8 text-white shadow-lg border border-[#B8862D]/30">
+                <h3 className="text-xl font-bold heading-font mb-5 flex items-center justify-between">
                   <span>Custom Export Specification</span>
-                  <span className="text-[11px] font-bold bg-white/15 px-3 py-1 rounded-full text-[#E6C260]">
-                    🇦🇪 Dubai HQ
+                  <span className="text-[10px] font-bold uppercase tracking-widest bg-white/10 px-3 py-1 rounded-md text-[#D4A94E]">
+                    🇦🇪 Dubai Hub
                   </span>
                 </h3>
 
                 <div className="space-y-4">
                   <div>
-                    <label className="text-[11px] font-black uppercase tracking-wider block mb-1 text-[#E6C260]">
-                      1. Select Container Size
+                    <label className="text-[10px] font-bold uppercase tracking-widest block mb-1.5 text-[#D4A94E]">
+                      1. Container Size
                     </label>
                     <div className="relative">
                       <select
                         value={containerType}
                         onChange={(e) => handleContainerChange(e.target.value)}
-                        className="w-full h-11 px-4 rounded-xl bg-white text-slate-800 font-bold text-xs uppercase appearance-none outline-none focus:ring-2 focus:ring-[#E6C260] cursor-pointer"
+                        className="w-full h-11 px-4 rounded-lg bg-white text-[#11221E] font-semibold text-xs appearance-none outline-none focus:ring-2 focus:ring-[#D4A94E] cursor-pointer"
                       >
                         <option value="40ft High Cube (FCL)">40ft High Cube Container (FCL - 2,600 Cartons)</option>
                         <option value="20ft Standard (FCL)">20ft Standard Container (FCL - 1,250 Cartons)</option>
@@ -459,14 +358,14 @@ export default function Home() {
                   </div>
 
                   <div>
-                    <label className="text-[11px] font-black uppercase tracking-wider block mb-1 text-[#E6C260]">
-                      2. Preferred Confectionery Assortment
+                    <label className="text-[10px] font-bold uppercase tracking-widest block mb-1.5 text-[#D4A94E]">
+                      2. Confectionery Assortment
                     </label>
                     <div className="relative">
                       <select
                         value={productMix}
                         onChange={(e) => setProductMix(e.target.value)}
-                        className="w-full h-11 px-4 rounded-xl bg-white text-slate-800 font-bold text-xs uppercase appearance-none outline-none focus:ring-2 focus:ring-[#E6C260] cursor-pointer"
+                        className="w-full h-11 px-4 rounded-lg bg-white text-[#11221E] font-semibold text-xs appearance-none outline-none focus:ring-2 focus:ring-[#D4A94E] cursor-pointer"
                       >
                         <option>Assorted Mix (Lollipops + Biscuits + Toffees)</option>
                         <option>Lollipops &amp; Bubblegum Special Container</option>
@@ -479,14 +378,14 @@ export default function Home() {
                   </div>
 
                   <div>
-                    <label className="text-[11px] font-black uppercase tracking-wider block mb-1 text-[#E6C260]">
-                      3. Destination Port &amp; Delivery Routing
+                    <label className="text-[10px] font-bold uppercase tracking-widest block mb-1.5 text-[#D4A94E]">
+                      3. Destination Port
                     </label>
                     <div className="relative">
                       <select
                         value={targetPort}
                         onChange={(e) => setTargetPort(e.target.value)}
-                        className="w-full h-11 px-4 rounded-xl bg-white text-slate-800 font-bold text-xs uppercase appearance-none outline-none focus:ring-2 focus:ring-[#E6C260] cursor-pointer"
+                        className="w-full h-11 px-4 rounded-lg bg-white text-[#11221E] font-semibold text-xs appearance-none outline-none focus:ring-2 focus:ring-[#D4A94E] cursor-pointer"
                       >
                         <option>Port Jebel Ali, Dubai (UAE &amp; GCC)</option>
                         <option>Port of Mombasa (Kenya / East Africa)</option>
@@ -499,25 +398,25 @@ export default function Home() {
                     </div>
                   </div>
 
-                  <div className="p-3.5 rounded-xl bg-white/10 border border-white/15 flex items-center justify-between">
+                  <div className="p-3.5 rounded-lg bg-white/10 border border-white/15 flex items-center justify-between">
                     <div>
-                      <span className="text-[10px] font-black uppercase tracking-widest text-[#E6C260] block">
+                      <span className="text-[10px] font-bold uppercase tracking-widest text-[#D4A94E] block">
                         Est. Packing Volume
                       </span>
-                      <span className="text-base font-black text-white">{estimatedBoxes}</span>
+                      <span className="text-base font-bold text-white">{estimatedBoxes}</span>
                     </div>
-                    <span className="text-[11px] font-bold bg-[#E6C260] text-[#06332B] px-3 py-1 rounded-full">
-                      100% Halal Verified
+                    <span className="text-[10px] font-bold uppercase tracking-wider bg-[#D4A94E] text-[#093A31] px-3 py-1 rounded-md">
+                      Halal Verified
                     </span>
                   </div>
 
                   <a
                     href={`https://wa.me/971545897386?text=${encodeURIComponent(
-                      `Hello AAIZA Dubai Trade Desk, I built a custom export request:\n• Container: ${containerType}\n• Assortment: ${productMix}\n• Destination: ${targetPort}\n• Est. Cartons: ${estimatedBoxes}\nPlease share FOB / CIF pricing.`
+                      `Hello AAIZA FOOD TRADING FZCO Dubai Trade Desk, I built a custom export request:\n• Container: ${containerType}\n• Assortment: ${productMix}\n• Destination: ${targetPort}\n• Est. Cartons: ${estimatedBoxes}\nPlease share FOB / CIF pricing.`
                     )}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-full h-12 bg-[#E6C260] hover:bg-[#FFD54F] text-[#06332B] rounded-xl font-black uppercase tracking-wider text-xs flex items-center justify-center gap-2 shadow-md transition-all hover:-translate-y-0.5"
+                    className="w-full h-12 bg-[#D4A94E] hover:bg-[#B8862D] text-[#093A31] hover:text-white rounded-lg font-bold uppercase tracking-widest text-xs flex items-center justify-center gap-2 transition-all"
                   >
                     <span>Request Instant Dubai Quotation</span>
                     <Send className="w-4 h-4" />
@@ -533,89 +432,85 @@ export default function Home() {
       {/* =========================================================================
           SECTION 5: BESTSELLING CONFECTIONERY MENU GRID
       ========================================================================= */}
-      <section className="py-14 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-        <div className="flex flex-col sm:flex-row items-center justify-between mb-8 gap-4">
-          <div>
-            <span className="text-[11px] font-black uppercase tracking-widest text-[#0B4F43] bg-[#FBF3DC] px-4 py-1 rounded-full border border-[#C59238]/30 inline-block mb-2">
-              Dubai Export Menu 🍬
-            </span>
-            <h2 className="text-2xl sm:text-4xl font-black text-[#1A2B27] uppercase tracking-tight heading-font">
-              Our Bestselling Confectionery
-            </h2>
+      <section className="py-14 bg-white border-t border-[#093A31]/10">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-8 gap-4">
+            <div>
+              <span className="text-[10px] font-bold uppercase tracking-[0.22em] text-[#B8862D] block mb-1.5">
+                DUBAI EXPORT PORTFOLIO
+              </span>
+              <h2 className="text-2xl sm:text-4xl font-bold text-[#093A31] tracking-tight heading-font">
+                Bestselling Confectionery
+              </h2>
+            </div>
+
+            <Link
+              href="/products"
+              className="px-6 py-2.5 rounded-lg border border-[#093A31] text-[#093A31] font-bold text-xs uppercase tracking-wider hover:bg-[#093A31] hover:text-white transition-all"
+            >
+              View Full Catalog →
+            </Link>
           </div>
 
-          <Link
-            href="/products"
-            className="px-6 py-2.5 rounded-full border-2 border-[#0B4F43] text-[#0B4F43] font-black text-xs uppercase tracking-wider hover:bg-[#0B4F43] hover:text-white transition-all"
-          >
-            Explore Complete Menu →
-          </Link>
-        </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-          {[
-            { id: 101, name: "BABA Lovely Pop Strawberry", category: "Lollipops", image: "/transparent/BABA LOVELY POP STRAWBERRY MARKUP.png", price: "Export Case" },
-            { id: 102, name: "DJ Cremo Chocolate & Vanilla", category: "Cookies", image: "/transparent/DJ CREMO COMBINE.png", price: "Export Case" },
-            { id: 103, name: "DJ Conico Chocolate Crunch", category: "Cones", image: "/transparent/DJ Conico Chocolate.png", price: "Export Case" },
-            { id: 104, name: "DJ Choco Eclairs Jar", category: "Toffees", image: "/transparent/DJ Choco Eclairs Jar Markup.png", price: "Export Case" },
-            { id: 105, name: "DJ American Biscuits", category: "Biscuits", image: "/transparent/DJ American Biscuits Markup Combine.png", price: "Export Case" },
-            { id: 106, name: "DJ Butter Cookies", category: "Cookies", image: "/transparent/DJ BUTTER COOKIES.png", price: "Export Case" },
-            { id: 107, name: "DJ Cocovibe Milk Chocolate", category: "Chocolates", image: "/transparent/DJ Cocovibe Markup.png", price: "Export Case" },
-            { id: 108, name: "BABA Lovely Pop Blueberry", category: "Lollipops", image: "/transparent/BABA LOVELY POP BLUEBERRY MARKUP.png", price: "Export Case" },
-          ].map((item) => {
-            const isFav = favorites.includes(item.id);
-            return (
-              <motion.div
-                key={item.id}
-                whileHover={{ y: -6 }}
-                className="bg-white rounded-3xl p-4 border border-slate-200/80 shadow-xs hover:border-[#C59238] hover:shadow-md transition-all flex flex-col justify-between group relative"
-              >
-                <button
-                  onClick={() => toggleFavorite(item.id)}
-                  className="absolute top-3.5 right-3.5 z-20 w-8 h-8 rounded-full bg-white/90 hover:bg-[#FBF3DC] flex items-center justify-center transition-colors shadow-xs"
-                  aria-label="Add to favorites"
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            {[
+              { id: 101, name: "BABA Lovely Pop Strawberry", category: "Lollipops", image: "/transparent/BABA LOVELY POP STRAWBERRY MARKUP.png", price: "Export Case" },
+              { id: 102, name: "DJ Cremo Chocolate & Vanilla", category: "Cookies", image: "/transparent/DJ CREMO COMBINE.png", price: "Export Case" },
+              { id: 103, name: "DJ Conico Chocolate Crunch", category: "Cones", image: "/transparent/DJ Conico Chocolate.png", price: "Export Case" },
+              { id: 104, name: "DJ Choco Eclairs Jar", category: "Toffees", image: "/transparent/DJ Choco Eclairs Jar Markup.png", price: "Export Case" },
+              { id: 105, name: "DJ American Biscuits", category: "Biscuits", image: "/transparent/DJ American Biscuits Markup Combine.png", price: "Export Case" },
+              { id: 106, name: "DJ Butter Cookies", category: "Cookies", image: "/transparent/DJ BUTTER COOKIES.png", price: "Export Case" },
+              { id: 107, name: "DJ Cocovibe Milk Chocolate", category: "Chocolates", image: "/transparent/DJ Cocovibe Markup.png", price: "Export Case" },
+              { id: 108, name: "BABA Lovely Pop Blueberry", category: "Lollipops", image: "/transparent/BABA LOVELY POP BLUEBERRY MARKUP.png", price: "Export Case" },
+            ].map((item) => {
+              const isFav = favorites.includes(item.id);
+              return (
+                <motion.div
+                  key={item.id}
+                  whileHover={{ y: -4 }}
+                  className="bg-[#FBF9F4] rounded-2xl p-4 border border-[#093A31]/10 hover:border-[#B8862D] transition-all flex flex-col justify-between group relative"
                 >
-                  <Heart className={cn("w-4 h-4 transition-colors", isFav ? "fill-[#C59238] text-[#C59238]" : "text-slate-400")} />
-                </button>
+                  <button
+                    onClick={() => toggleFavorite(item.id)}
+                    className="absolute top-3.5 right-3.5 z-20 w-8 h-8 rounded-full bg-white hover:bg-[#F3EDE2] flex items-center justify-center transition-colors shadow-2xs"
+                    aria-label="Add to favorites"
+                  >
+                    <Heart className={cn("w-4 h-4 transition-colors", isFav ? "fill-[#B8862D] text-[#B8862D]" : "text-slate-400")} />
+                  </button>
 
-                <div className="relative aspect-square w-full rounded-2xl bg-[#FAF6F0] p-4 mb-3.5 flex items-center justify-center overflow-hidden">
-                  <div className="relative w-full h-full transition-transform duration-300 -rotate-3 group-hover:rotate-0 group-hover:scale-105">
-                    <Image
-                      src={item.image}
-                      alt={item.name}
-                      fill
-                      className="object-contain p-1"
-                      sizes="220px"
-                    />
-                  </div>
-                </div>
-
-                <div className="flex items-end justify-between gap-2">
-                  <div className="min-w-0">
-                    <h4 className="text-xs sm:text-sm font-black text-[#1A2B27] uppercase heading-font leading-snug group-hover:text-[#0B4F43] transition-colors truncate">
-                      {item.name}
-                    </h4>
-                    <p className="text-[10px] font-bold text-slate-400 uppercase tracking-wider truncate mt-0.5">
-                      {item.category} • {item.price}
-                    </p>
-                    <div className="flex items-center gap-0.5 mt-1.5 text-[#C59238]">
-                      {[...Array(5)].map((_, sIdx) => (
-                        <Star key={sIdx} className="w-3 h-3 fill-current" />
-                      ))}
+                  <div className="relative aspect-square w-full rounded-xl bg-white p-4 mb-3.5 flex items-center justify-center overflow-hidden border border-[#093A31]/5">
+                    <div className="relative w-full h-full transition-transform duration-300 group-hover:scale-105">
+                      <Image src={item.image} alt={item.name} fill className="object-contain p-1" sizes="220px" />
                     </div>
                   </div>
 
-                  <Link
-                    href={`/contact?items=${item.id}`}
-                    className="w-9 h-9 rounded-full bg-[#0B4F43] hover:bg-[#06332B] text-white flex items-center justify-center shrink-0 shadow-xs transition-all"
-                    aria-label={`Inquire about ${item.name}`}
-                  >
-                    <ShoppingBag className="w-4 h-4" />
-                  </Link>
-                </div>
-              </motion.div>
-            );
-          })}
+                  <div className="flex items-end justify-between gap-2">
+                    <div className="min-w-0">
+                      <h4 className="text-xs sm:text-sm font-bold text-[#093A31] heading-font leading-snug truncate">
+                        {item.name}
+                      </h4>
+                      <p className="text-[10px] font-semibold text-slate-500 uppercase tracking-wider truncate mt-0.5">
+                        {item.category} • {item.price}
+                      </p>
+                      <div className="flex items-center gap-0.5 mt-1.5 text-[#B8862D]">
+                        {[...Array(5)].map((_, sIdx) => (
+                          <Star key={sIdx} className="w-3 h-3 fill-current" />
+                        ))}
+                      </div>
+                    </div>
+
+                    <Link
+                      href={`/contact?items=${item.id}`}
+                      className="w-9 h-9 rounded-lg bg-[#093A31] hover:bg-[#B8862D] text-white flex items-center justify-center shrink-0 transition-all"
+                      aria-label={`Inquire about ${item.name}`}
+                    >
+                      <ShoppingBag className="w-4 h-4" />
+                    </Link>
+                  </div>
+                </motion.div>
+              );
+            })}
+          </div>
         </div>
       </section>
 

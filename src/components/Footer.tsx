@@ -117,9 +117,9 @@ export default function Footer() {
             </ul>
 
             <div className="flex items-center justify-center md:justify-start gap-3 mt-6">
-              <a href="https://www.linkedin.com/company/treeindiaexports" target="_blank" className="w-9 h-9 rounded-full bg-white border border-[#0B4F43]/15 flex items-center justify-center text-[#0B4F43] hover:bg-[#0B4F43] hover:text-white transition-all"><Globe className="w-4 h-4" /></a>
-              <a href="https://www.facebook.com/treeindiaexports" target="_blank" className="w-9 h-9 rounded-full bg-white border border-[#C59238]/25 flex items-center justify-center text-[#C59238] hover:bg-[#C59238] hover:text-white transition-all"><ShieldCheck className="w-4 h-4" /></a>
-              <a href="https://twitter.com/treeindiaexports" target="_blank" className="w-9 h-9 rounded-full bg-white border border-[#0B4F43]/15 flex items-center justify-center text-[#0B4F43] hover:bg-[#0B4F43] hover:text-white transition-all"><Globe className="w-4 h-4" /></a>
+              <a href="https://www.linkedin.com/company/aaizafoodtrading" target="_blank" className="w-9 h-9 rounded-lg bg-white border border-[#093A31]/15 flex items-center justify-center text-[#093A31] hover:bg-[#093A31] hover:text-white transition-all"><Globe className="w-4 h-4" /></a>
+              <a href="https://www.facebook.com/aaizafoodtrading" target="_blank" className="w-9 h-9 rounded-lg bg-white border border-[#B8862D]/25 flex items-center justify-center text-[#B8862D] hover:bg-[#B8862D] hover:text-white transition-all"><ShieldCheck className="w-4 h-4" /></a>
+              <a href="https://twitter.com/aaizafoodtrading" target="_blank" className="w-9 h-9 rounded-lg bg-white border border-[#093A31]/15 flex items-center justify-center text-[#093A31] hover:bg-[#093A31] hover:text-white transition-all"><Globe className="w-4 h-4" /></a>
             </div>
           </div>
         </div>

@@ -20,7 +20,7 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
   useEffect(() => {
     setMounted(true);
     // Load from local storage if available
-    const savedLang = localStorage.getItem("tree-india-lang");
+    const savedLang = localStorage.getItem("aaiza-lang");
     if (savedLang && translations[savedLang]) {
       setLanguageState(savedLang);
       setIsRTL(savedLang === "AR");
@@ -32,7 +32,7 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
   const setLanguage = (lang: string) => {
     if (translations[lang]) {
       setLanguageState(lang);
-      localStorage.setItem("tree-india-lang", lang);
+      localStorage.setItem("aaiza-lang", lang);
       // Handle RTL for Arabic
       setIsRTL(lang === "AR");
       // Update body direction

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Nunito, Fredoka, Outfit } from "next/font/google";
+import { Plus_Jakarta_Sans, Fraunces } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -7,11 +7,10 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 
 import { LanguageProvider } from "@/context/LanguageContext";
 
-const nunito = Nunito({ subsets: ["latin"], variable: "--font-inter", weight: ["400", "500", "600", "700", "800", "900"], display: "swap" });
-const fredoka = Fredoka({ subsets: ["latin"], variable: "--font-fredoka", weight: ["400", "500", "600", "700"], display: "swap" });
-const outfit = Outfit({ subsets: ["latin"], variable: "--font-outfit", weight: ["400", "500", "600", "700", "800", "900"], display: "swap" });
+const jakarta = Plus_Jakarta_Sans({ subsets: ["latin"], variable: "--font-jakarta", weight: ["400", "500", "600", "700", "800"], display: "swap" });
+const fraunces = Fraunces({ subsets: ["latin"], variable: "--font-fraunces", weight: ["600", "700", "800", "900"], display: "swap" });
 
-const baseUrl = 'https://www.treeindiaexports.com';
+const baseUrl = 'https://www.aaizafoodtrading.com';
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
@@ -60,7 +59,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${nunito.variable} ${fredoka.variable} ${outfit.variable} font-sans antialiased flex flex-col min-h-screen bg-slate-50 text-slate-900`}>
+      <body className={`${jakarta.variable} ${fraunces.variable} font-sans antialiased flex flex-col min-h-screen bg-[#FBF9F4] text-[#11221E]`}>
         <LanguageProvider>
           <Navbar />
           <script
@@ -70,8 +69,8 @@ export default function RootLayout({
                 "@context": "https://schema.org",
                 "@type": "Organization",
                 "name": "AAIZA FOOD TRADING FZCO",
-                "url": "https://www.treeindiaexports.com",
-                "logo": "https://www.treeindiaexports.com/tree.png",
+                "url": "https://www.aaizafoodtrading.com",
+                "logo": "https://www.aaizafoodtrading.com/aaiza-logo.jpg",
                 "contactPoint": {
                   "@type": "ContactPoint",
                   "telephone": "+971545897386",
@@ -80,10 +79,10 @@ export default function RootLayout({
                   "availableLanguage": ["en", "pt", "es", "fr"]
                 },
                 "sameAs": [
-                  "https://www.facebook.com/treeindiaexports",
-                  "https://twitter.com/treeindiaexports",
-                  "https://www.instagram.com/treeindiaexports",
-                  "https://www.linkedin.com/company/treeindiaexports"
+                  "https://www.facebook.com/aaizafoodtrading",
+                  "https://twitter.com/aaizafoodtrading",
+                  "https://www.instagram.com/aaizafoodtrading",
+                  "https://www.linkedin.com/company/aaizafoodtrading"
                 ]
               })
             }}
@@ -95,9 +94,9 @@ export default function RootLayout({
                 "@context": "https://schema.org",
                 "@type": "LocalBusiness",
                 "name": "AAIZA FOOD TRADING FZCO",
-                "image": "https://www.treeindiaexports.com/tree.png",
-                "@id": "https://www.treeindiaexports.com",
-                "url": "https://www.treeindiaexports.com",
+                "image": "https://www.aaizafoodtrading.com/aaiza-logo.jpg",
+                "@id": "https://www.aaizafoodtrading.com",
+                "url": "https://www.aaizafoodtrading.com",
                 "telephone": "+971545897386",
                 "address": {
                   "@type": "PostalAddress",
