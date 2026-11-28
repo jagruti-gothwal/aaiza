@@ -131,7 +131,7 @@ export default function Footer() {
           <p className="text-[10px] text-slate-500 font-bold tracking-[0.18em] uppercase">
             Developed by{" "}
             <a
-              href="https://www.ajstudio.dev/"
+              href="https://ajstudio.pro/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-[#0B4F43] underline decoration-[#C59238]/50 underline-offset-4 hover:text-[#C59238]"
